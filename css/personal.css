@@ -1,0 +1,131 @@
+
+
+/* 伸缩容器 */
+.wrap{	
+	text-align: center;
+	max-width: 1440px;
+	width: 100%;
+	margin: 165px auto 80px;
+	display: flex;
+	/*flex-direction:row; 居左(默认)*/
+	/*flex-direction:row-reverse; 居右*/
+	/*flex-direction:column; 从上往下排列(默认)*/
+	/*flex-direction:column-reverse; 从下往上排列*/
+	flex-wrap:wrap; /*自动换行*/
+	/*flex-wrap:wrap-reverse; 自动换行从下往上*/
+	/*justify-content:space-between; 把空出来的间距平均分配（不包括第一个和最后一个）*/
+	/*justify-content:space-around; 把空出来的间距平均分配 （包括第一个和最后一个）*/
+	align-items:stretch;
+}
+.wrap .item{
+	width: 240px;
+    height: auto;
+	/*flex-basis:20%;
+	display: flex;
+	flex-grow:1;*/
+	align-self: flex-end;
+	padding: 0 24px;
+    margin-bottom: 3.75rem;
+    overflow: hidden;
+}
+.wrap .item .img-box .img-a{
+	display: flex;
+	flex-grow:1;
+	align-items:center;
+	background-color: #f1f1f1;
+	cursor: -webkit-zoom-in;
+}
+.wrap .item a img{
+	width: 100%;
+}
+
+.present{
+	max-width: 100%;
+    text-align: left;
+    line-height: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.present,.present a{
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+    font-family: "微软雅黑",arial;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*弹出层 开始*/
+.MediaModal{
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    display: none;
+}
+.MediaImage{
+	max-width: 640px;
+	margin: 90px auto;
+	display: flex;
+	/*flex-direction:row; 居左(默认)*/
+	/*flex-direction:row-reverse; 居右*/
+	flex-direction:column; /*从上往下排列(默认)*/
+	/*flex-direction:column-reverse; 从下往上排列*/
+	flex-wrap:wrap; /*自动换行*/
+	/*flex-wrap:wrap-reverse; 自动换行从下往上*/
+	/*justify-content:space-between; 把空出来的间距平均分配（不包括第一个和最后一个）*/
+	/*justify-content:space-around; 把空出来的间距平均分配 （包括第一个和最后一个）*/
+	align-items: center;
+}
+.MediaItem{
+	padding: 0 24px;
+}
+.MediaImage img{
+	margin: 15px 0;
+	width: 100%;
+	cursor: -webkit-zoom-out;
+    cursor: zoom-out;
+}
+
+.modalClose{
+	position: fixed;
+	top: 35px;
+    right: 45px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	opacity: 0.3;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.modalClose:hover{
+	opacity: 1;
+    transform:rotate(-90deg);
+}
+.nextPost,.prevPost{
+	position: fixed;
+	top: 50%;
+	width: 16px;
+	height: 25px;
+	margin-top: -12px;
+	cursor: pointer;
+}
+.nextPost{
+	left: 45px;
+	opacity: 0.3;
+}
+.prevPost{
+    right: 45px;
+}
+/*弹出层 结束*/
+
