@@ -1,10 +1,80 @@
 // JavaScript Document
 $(function(){
-	
-					
-	num=[
-		6,2,3,1,3,2,4,3,3,3,2,2
-	];
+
+	var json = [  
+		{ 	// img1
+			imgNum:6,
+			title:'clemm',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'一月 28，2017',
+		},
+		{ 	// img2
+			imgNum:2,
+			title:'victoriamichalsen',
+			link:'',
+			date:'二月 28，2017',
+		},
+		{ 	// img3
+			imgNum:3,
+			title:'linnealinnanmaki',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'三月 28，2017',
+		},
+		{ 	// img4
+			imgNum:2,
+			title:'briannnalynne3',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'四月 28，2017',
+		},
+		{ 	// img5
+			imgNum:3,
+			title:'averyh11',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'五月 28，2017',
+		},
+		{ 	// img6
+			imgNum:2,
+			title:'carlalrosado',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'六月 28，2017',
+		},
+		{ 	// img7
+			imgNum:4,
+			title:'alicebbrown',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'七月 28，2017',
+		},
+		{ 	// img8
+			imgNum:3,
+			title:'dinahpena',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'八月 28，2017',
+		},
+		{ 	// img9
+			imgNum:3,
+			title:'lorenapinotto',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'九月 28，2017',
+		},
+		{ 	// img10
+			imgNum:3,
+			title:'flatz',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'十月 28，2017',
+		},
+		{ 	// img11
+			imgNum:2,
+			title:'flatz',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'十一月 28，2017',
+		},
+		{ 	// img12
+			imgNum:2,
+			title:'flatz',
+			link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
+			date:'十二月 28，2017',
+		}
+	];	
 
 	var item = $('.item');
 		item.each(function(){
@@ -33,7 +103,6 @@ $(function(){
 			})
 
 			img_a.click(function(){			
-				// var e = $(this).attr('data');
 				index = _this.index()+1;
 				MediaModal();
 				$('body').addClass("overflow-hidden");
@@ -43,14 +112,14 @@ $(function(){
 				var img_str='';
 				img_str +='<div class="MediaModal">'+
 								'<div class="MediaImage">';
-								for(var i=1;i<=num[index-1];i++){
+								for(var i=1;i<=json[index-1].imgNum;i++){
 									img_str +='<i class="MediaItem"><img src="images/personal/img'+index+'/img'+i+'.jpg" /></i>';
 								}	
 								img_str +='</div>'+
 								'<div class="infor">'+
-									'<h2>比利假日的岩石在Nunhead的高街艺术品！</h2>'+
-									'<p class="visit"><a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a></p>'+
-									'<p class="time">十一月 28，2017</p>'+
+									'<h2>'+json[index-1].title+'</h2>'+
+									'<p class="visit">'+json[index-1].link+'</p>'+
+									'<p class="time">'+json[index-1].date+'</p>'+
 								'</div>'+
 								'<i class="modalClose"><img src="images/global/x_img.png" /></i>'+
 								'<samp class="nextPost"><img src="images/global/l_ico.png" /></samp>'+
@@ -62,8 +131,7 @@ $(function(){
 				{	
 					$('samp').addClass("btnActive");
 				}
-
-				if(index == item.length) 
+				else if(index == item.length)
 				{	
 					$('span').addClass("btnActive");
 				}
