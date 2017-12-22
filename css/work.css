@@ -36,7 +36,9 @@
 	flex-grow:1;
 	align-items:center;
 	background-color: #f1f1f1;
-	cursor: -webkit-zoom-in;
+	cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
 }
 .wrap .item a img{
 	width: 100%;
@@ -56,5 +58,6 @@
     text-decoration: none;
     font-weight: normal;
 }
+
 
 
