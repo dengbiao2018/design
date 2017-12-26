@@ -51,14 +51,16 @@
     white-space: nowrap;
     overflow: hidden;
 }
-.present a{
+.present,.present a{
+	width: 80%;
     font-size: 12px;
     color: rgb(136, 136, 136);
     font-family: "微软雅黑",arial;
     text-decoration: none;
     font-weight: normal;
-    cursor: pointer;
 }
-
+.present a{
+	cursor: pointer;
+}
 
 
