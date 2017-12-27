@@ -11,6 +11,10 @@ $(function() {
 	} else if (loc == 'personal.html') {
 		wrapItem('personal', 'img1');
 	}
+	else
+	{
+		wrapItem('work', 'cover');
+	}
 
 	function wrapItem(ev, img) {
 
@@ -59,10 +63,10 @@ $(function() {
 			}
 		})
 
-		img_a.click(function() {
+		img_a.on('click',function() {
 			index = _this.index() + 1;
 			imgHref();
-			$('body').addClass("overflow-hidden");
+			$('html,body').addClass("overflow-hidden");
 		});
 
 		function imgHref() {
@@ -74,11 +78,15 @@ $(function() {
 			} else if (loc == 'personal.html') {
 				MediaModal('personal');
 			}
+			else
+			{
+				MediaModal('work');
+			}
 		}
 
 		function MediaModal(id) {
 			var img_str = '';
-				img_str += '<div class="MediaModal">' + 
+				img_str += '<figure class="MediaModal">' + 
 								'<div class="MediaImage">';
 				for (var i = 1; i <= json[index - 1].num; i++) {
 					img_str += '<i class="MediaItem"><img src="images/' + id + '/img' + index + '/img' + i + '.jpg" /></i>';
@@ -92,7 +100,7 @@ $(function() {
 								'<i class="modalClose"><img src="images/global/x_img.png" /></i>' + 
 								'<samp class="nextPost"><img src="images/global/l_ico.png" /></samp>' + 
 								'<span class="prevPost"><img src="images/global/r_ico.png" /></span>' + 
-							'</div>';
+							'</figure>';
 			_this.prepend(img_str);
 
 			if (index == 1) {
@@ -108,42 +116,63 @@ $(function() {
 
 	$("#main").on('click', 'i', function() {
 		$(".MediaModal").remove();
-		$('body').removeClass("overflow-hidden");
+		$('html,body').removeClass("overflow-hidden");
 	});
 
 	//mobile nav
+	var move = window.document.ontouchmove;
 	var navTrigger = $('.nav-trigger'),
 		mobileNav = $('.mobile-nav'),
 		navMenu = $('.nav-menu'),
-		btnClick = false;
+		btnClick = false,
+		time;
 
 		navTrigger.click(function(){
-			if(!btnClick)
-			{	
-				mobileNav.removeClass('mobile_block');
-				mobileNav.animate({'opacity':'1'},200);
-				navMenu.removeClass('nav-menu-active');
-				$('.nav-trigger img').attr('src','images/global/x_img.png'); 
-				navTrigger.addClass('active');
-				$('body').addClass("overflow-hidden");
-				
-				btnClick = true;
-			}
-			else if(btnClick)
-			{	
-				mobileNav.animate({'opacity':'0'},200)
-				navMenu.addClass('nav-menu-active');
-				$('.nav-trigger img').attr('src','images/global/nav_img.png');
-				setTimeout(function(){
-					mobileNav.addClass('mobile_block');
-				},500);
-				navTrigger.removeClass('active');
-				$('body').removeClass("overflow-hidden");
 
-				btnClick = false;
-			}
+			clearTimeout(time);
+
+			time=setTimeout(function () {
+
+				if(!btnClick)
+				{	
+					mobileNav.removeClass('mobile_block');
+					mobileNav.animate({'opacity':'1'},200);
+					navMenu.removeClass('nav-menu-active');
+					$('.nav-trigger img').attr('src','images/global/x_img.png'); 
+					navTrigger.addClass('active');
+					$('html,body').addClass("overflow-hidden");
+
+					window.document.ontouchmove = function (e) {
+						e.preventDefault();
+					};
+
+					btnClick = true;
+				}
+				else if(btnClick)
+				{	
+					mobileNav.animate({'opacity':'0'},200)
+					navMenu.addClass('nav-menu-active');
+					$('.nav-trigger img').attr('src','images/global/nav_img.png');
+					setTimeout(function(){
+						mobileNav.addClass('mobile_block');
+					},500);
+					navTrigger.removeClass('active');
+					$('html,body').removeClass("overflow-hidden");
+
+					window.document.ontouchmove = move;
+
+					btnClick = false;
+				}
+
+			}, 200);
 
 		});
+
+	// $("#main").on("touchmove","figure",function(e){
+
+	// 	e.stopPropagation();
+
+	// });
 
 	//禁止手表右键
 	document.oncontextmenu = function() {

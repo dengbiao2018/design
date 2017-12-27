@@ -10,8 +10,10 @@ ul,li,ol,ul {
 	list-style:none;
 }
 .overflow-hidden{
-	overflow: hidden;
+	/*height: 100%;*/
+	overflow:hidden;
 }
+
 /* 头部CSS 开始*/
 #header{
 	overflow: hidden;
@@ -107,7 +109,7 @@ ul,li,ol,ul {
 .mobile-nav .nav-menu{
     width: 85%;
     overflow: hidden;
-    margin: 10rem auto 0;
+    margin: 8rem auto 0;
     line-height: 5rem;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -117,12 +119,12 @@ ul,li,ol,ul {
     transform: rotate(0deg);
 }
 .mobile-nav .nav-menu-active{
-	margin: 15rem auto 0;
+	margin: 10rem auto 0;
 }
 .mobile-nav .nav-link{
     width: 85%;
     overflow: hidden;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
     line-height: 2.5rem;
 }
 .mobile-nav ul li{
@@ -160,8 +162,8 @@ ul,li,ol,ul {
     background-color: rgb(255, 255, 255);
     overflow-y: scroll;
     z-index: 9999;
-    -webkit-overflow-scrolling: touch; /* 当手指从触摸屏上移开，会保持一段时间的滚动 */
-	-webkit-overflow-scrolling: auto; /* 当手指从触摸屏上移开，滚动会立即停止 */
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
 }
 .MediaImage{
 	max-width: 640px;
@@ -362,7 +364,7 @@ ul,li,ol,ul {
 		width: 16px;
 	    height: 16px;
 	    top: 0.2rem;
-	    right: 1.3rem;
+	    right: 0rem;
 	    position: fixed;
 	    padding: 1.3rem;
 	    opacity: 1;
