@@ -2,6 +2,7 @@
 
 $(function() {
 
+	//item
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
 
@@ -30,6 +31,7 @@ $(function() {
 
 	}
 
+	//MediaModal
 	var item = $('.item');
 
 	item.each(function() {
@@ -121,30 +123,31 @@ $(function() {
 				mobileNav.removeClass('mobile_block');
 				mobileNav.animate({'opacity':'1'},200);
 				navMenu.removeClass('nav-menu-active');
-
-				navTrigger.addClass('active');
 				$('.nav-trigger img').attr('src','images/global/x_img.png'); 
+				navTrigger.addClass('active');
 				$('body').addClass("overflow-hidden");
+				
 				btnClick = true;
 			}
 			else if(btnClick)
 			{	
 				mobileNav.animate({'opacity':'0'},200)
 				navMenu.addClass('nav-menu-active');
+				$('.nav-trigger img').attr('src','images/global/nav_img.png');
 				setTimeout(function(){
 					mobileNav.addClass('mobile_block');
 				},500);
-				
 				navTrigger.removeClass('active');
-				$('.nav-trigger img').attr('src','images/global/nav_img.png'); 
 				$('body').removeClass("overflow-hidden");
+
 				btnClick = false;
 			}
+
 		});
 
 	//禁止手表右键
-	// document.oncontextmenu = function() {
-	// 	return false;
-	// }
+	document.oncontextmenu = function() {
+		return false;
+	}
 
 });
