@@ -87,11 +87,11 @@ $(function() {
 			}
 
 			//判断安卓/IOS
-			if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
+			if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
 
 				$('#main figcaption').css({'padding-bottom':'100000000rem'});
 			}
-			else if(navigator.userAgent.match(/Android/i) ? true : false){
+			else if (navigator.userAgent.match(/Android/i) ? true : false) {
 
 				$('#main figcaption').css({'padding-bottom':'100000000rem'});
 
@@ -199,9 +199,9 @@ $(function() {
 		});
 
 	//禁止手表右键
-	document.oncontextmenu = function() {
-		return false;
-	}
+	// document.oncontextmenu = function() {
+	// 	return false;
+	// }
 
 	function checkMobile(){
 		var isMobile = {  

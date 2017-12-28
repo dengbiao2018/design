@@ -110,7 +110,7 @@ ul,li,ol,ul {
     width: 85%;
     overflow: hidden;
     margin: 8rem auto 0;
-    line-height: 5rem;
+    line-height: 4rem;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
