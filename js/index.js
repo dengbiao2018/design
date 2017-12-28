@@ -11,7 +11,12 @@ $(function() {
 	} else if (loc == 'personal.html') {
 		wrapItem('personal', 'img1');
 	}
+<<<<<<< HEAD
 	else{
+=======
+	else
+	{
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 		wrapItem('work', 'cover');
 	}
 
@@ -69,7 +74,10 @@ $(function() {
 			index = _this.index() + 1;
 			imgHref();
 			$('html,body').addClass("overflow-hidden");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 		});
 
 		//判断IOS 判断安卓
@@ -97,6 +105,7 @@ $(function() {
 			{
 				MediaModal('work');
 			}
+<<<<<<< HEAD
 
 			//判断IOS 判断安卓
 			if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
@@ -109,6 +118,8 @@ $(function() {
 
 			}
 
+=======
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 		}
 
 		function MediaModal(id) {
@@ -123,10 +134,17 @@ $(function() {
 									'<h2>' + json[index - 1].title + '</h2>' + 
 									'<p class="visit">' + json[index - 1].link + '</p>' + 
 									'<p class="time">' + json[index - 1].date + '</p>' + 
+<<<<<<< HEAD
 								'</figcaption>' + 
 								'<i class="modalClose"><img src="images/global/close_img.png" /></i>' + 
 								'<samp class="nextPost"><img src="images/global/left_ico.png" /></samp>' + 
 								'<span class="prevPost"><img src="images/global/right_ico.png" /></span>' + 
+=======
+								'</div>' + 
+								'<i class="modalClose"><img src="images/global/x_img.png" /></i>' + 
+								'<samp class="nextPost"><img src="images/global/l_ico.png" /></samp>' + 
+								'<span class="prevPost"><img src="images/global/r_ico.png" /></span>' + 
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 							'</figure>';
 			_this.prepend(img_str);
 
@@ -147,6 +165,7 @@ $(function() {
 	});
 
 	//mobile nav
+	var move = window.document.ontouchmove;
 	var navTrigger = $('.nav-trigger'),
 		mobileNav = $('.mobile-nav'),
 		navMenu = $('.nav-menu'),
@@ -164,7 +183,11 @@ $(function() {
 					mobileNav.removeClass('mobile_block');
 					mobileNav.animate({'opacity':'1'},200);
 					navMenu.removeClass('nav-menu-active');
+<<<<<<< HEAD
 					$('.nav-trigger img').attr('src','images/global/close_img.png'); 
+=======
+					$('.nav-trigger img').attr('src','images/global/x_img.png'); 
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 					navTrigger.addClass('active');
 					$('html,body').addClass("overflow-hidden");
 
@@ -193,6 +216,12 @@ $(function() {
 			}, 200);
 
 		});
+
+	// $("#main").on("touchmove","figure",function(e){
+
+	// 	e.stopPropagation();
+
+	// });
 
 	//禁止手表右键
 	document.oncontextmenu = function() {

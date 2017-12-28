@@ -10,7 +10,12 @@ ul,li,ol,ul {
 	list-style:none;
 }
 .overflow-hidden{
+<<<<<<< HEAD
 	overflow-y:hidden;
+=======
+	/*height: 100%;*/
+	overflow:hidden;
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 }
 
 /* 头部CSS 开始*/
@@ -162,7 +167,11 @@ ul,li,ol,ul {
     overflow-y: scroll;
     z-index: 9999;
 	-webkit-overflow-scrolling: touch;
+<<<<<<< HEAD
 	overflow-y: auto !important;
+=======
+	overflow: auto;
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 }
 .MediaImage{
 	max-width: 640px;
@@ -361,9 +370,15 @@ ul,li,ol,ul {
 	    margin: -15px auto 60px;
 	}
 	.modalClose{
+<<<<<<< HEAD
 		width: 18px;
 	    height: 18px;
 	    top: 0rem;
+=======
+		width: 16px;
+	    height: 16px;
+	    top: 0.2rem;
+>>>>>>> 95d1f993cd4dd454c4a290b8fb32bc4a147d0c6c
 	    right: 0rem;
 	    position: fixed;
 	    padding: 1.3rem;
