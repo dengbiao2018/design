@@ -71,19 +71,7 @@ $(function() {
 			imgHref();
 			$('html,body').addClass("overflow-hidden");
 		});
-
-		//判断IOS 判断安卓
-		if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
-			$("#main").on('touchmove',function(){
-				$('#main figcaption').css({'padding-bottom':'0'});
-			});
-		}
-		else if(navigator.userAgent.match(/Android/i) ? true : false){
-			$("#main").on('touchmove',function(){
-				$('#main figcaption').css({'padding-bottom':'0'});
-			});
-		};
-			
+	
 		function imgHref() {
 			var url = window.location.href;
 			var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
@@ -98,21 +86,37 @@ $(function() {
 				MediaModal('work');
 			}
 
-			//判断IOS 判断安卓
+			//判断安卓/IOS
 			if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
 
-				$('#main figcaption').css({'padding-bottom':'100000rem'});
+				$('#main figcaption').css({'padding-bottom':'100000000rem'});
 			}
 			else if(navigator.userAgent.match(/Android/i) ? true : false){
 
-				$('#main figcaption').css({'padding-bottom':'100000rem'});
+				$('#main figcaption').css({'padding-bottom':'100000000rem'});
 
 			}
+
+			//判断安卓/IOS
+			setTimeout(function(){
+
+				if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
+					
+					$('#main figcaption').css({'padding-bottom':'0'});
+					
+				}
+				else if(navigator.userAgent.match(/Android/i) ? true : false){
+					
+					$('#main figcaption').css({'padding-bottom':'0'});
+					
+				};
+
+			},200);
 		}
 
 		function MediaModal(id) {
 			var img_str = '';
-				img_str += '<figure class="MediaModal">' + 
+				img_str += '<figure id="figure" class="MediaModal">' + 
 								'<div class="MediaImage">';
 				for (var i = 1; i <= json[index - 1].num; i++) {
 					img_str += '<i class="MediaItem"><img src="images/' + id + '/img' + index + '/img' + i + '.jpg" /></i>';
