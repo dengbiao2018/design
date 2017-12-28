@@ -69,6 +69,7 @@ $(function() {
 			index = _this.index() + 1;
 			imgHref();
 			$('html,body').addClass("overflow-hidden");
+
 		});
 
 		//判断IOS 判断安卓
