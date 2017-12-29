@@ -210,10 +210,9 @@ $(function() {
 	var imgNum=$('img').length;
 
 	$('img').load(function(){
-	    if(!--imgNum){
-	        $('section').css({'padding-top' : '0'});
-	        //alert('加载完成');
-	    }
+	    //if(!--imgNum){
+        $('section').css({'padding-top' : '0'});
+	    //}
 	});
 
 	function checkMobile(){
