@@ -64,9 +64,7 @@ $(function() {
 		if(itemImg.width == 0){
 			
 		} else{
-			setTimeout(function(){
-				itemImg.parent().css({'padding-top' : '0'});
-			},1000);
+			itemImg.parent().css({'padding-top' : '0'});
 		}
 
 		_this.on('click', 'samp', function() {
