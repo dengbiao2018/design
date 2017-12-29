@@ -50,7 +50,7 @@ $(function() {
 	var TimeImg = $('img');
 	
 	if(TimeImg.width == 0){
-		alert('图片加载失败')
+		
 	} else{
 		$('section').css({'padding-top' : '0'});
 	}
