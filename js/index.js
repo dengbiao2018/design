@@ -37,6 +37,34 @@ $(function() {
 
 	}
 
+	//随机数
+	var arr = ['159px','320px','239px','360px','180px','192px'];
+
+	for (var i = 0; i <= json.length; i++) {
+			var Anum = Math.floor(Math.random() * 6 + 0);
+			console.log(Anum);
+			$('section').eq(i).css({'padding-top' : arr[Anum]});
+			console.log(arr[Anum]);
+		}
+
+	var imgNum=$('img').length;
+
+	$(function(){
+
+		$('img').load(function(){
+			for (var i = 0; i <= json.length; i++) {
+					$('section').eq(i).css({'padding-top' : '0'});
+			}
+		});
+
+	})
+	
+	// $('img').load(function(){
+	//     if(!--imgNum){
+	//         $('section').css({'padding-top' : '0'});
+	//     }
+	// });
+
 	//MediaModal
 	var move = window.document.ontouchmove;
 	var item = $('.item');
@@ -197,29 +225,6 @@ $(function() {
 			}, 200);
 
 		});
-
-	var arr = ['159px','320px','239px','360px','180px','192px'];
-
-	for (var i = 0; i <= json.length; i++) {
-			var Anum = Math.floor(Math.random() * 6 + 0);
-			console.log(Anum);
-			$('section').eq(i).css({'padding-top' : arr[Anum]});
-			console.log(arr[Anum]);
-		}
-
-	var imgNum=$('img').length;
-
-	$('img').load(function(){
-		for (var i = 0; i <= json.length; i++) {
-				$('section').eq(i).css({'padding-top' : '0'});
-		}
-	});
-	
-	// $('img').load(function(){
-	//     if(!--imgNum){
-	//         $('section').css({'padding-top' : '0'});
-	//     }
-	// });
 
 	function checkMobile(){
 		var isMobile = {  
