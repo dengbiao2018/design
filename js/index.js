@@ -47,14 +47,6 @@ $(function() {
 			console.log(arr[Anum]);
 		}
 
-	var TimeImg = $('img');
-	
-	if(TimeImg.width == 0){
-		
-	} else{
-		$('section').css({'padding-top' : '0'});
-	}
-
 	//MediaModal
 	var move = window.document.ontouchmove;
 	var item = $('.item');
@@ -65,6 +57,13 @@ $(function() {
 			img_a = _this.find('.img-a,h2 a'),
 			itemImg = _this.find('img'),
 			index = _this.index() + 1;
+
+		//随机函数
+		if(itemImg.width == 0){
+			
+		} else{
+			itemImg.parent().css({'padding-top' : '0'});
+		}
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();
