@@ -35,33 +35,25 @@ $(function() {
 
 		wrap.prepend(list);
 
-		//随机数
-		var arr = ['159px','320px','239px','360px','180px','192px'];
+	};
 
-		for (var i = 0; i <= json.length; i++) {
-				var Anum = Math.floor(Math.random() * 6 + 0);
-				console.log(Anum);
-				$('section').eq(i).css({'padding-top' : arr[Anum]});
-				console.log(arr[Anum]);
-			}
+	//随机数
+	var arr = ['159px','320px','239px','360px','180px','192px'];
 
-		for (var i = 1; i <= json.length; i++) {
-
-			var TimeImg = new Image();
-			TimeImg.src = 'images/' + ev + '/img' + i + '/' + img +'.jpg';
-			console.log(TimeImg);
-			if(TimeImg.width == 0){
-				alert('图片加载失败')
-			} else{
-				$('section').eq(i-1).css({'padding-top' : '0'});
-				//alert('图片加载成功')
-			}
-
+	for (var i = 0; i <= json.length; i++) {
+			var Anum = Math.floor(Math.random() * 6 + 0);
+			console.log(Anum);
+			$('section').eq(i).css({'padding-top' : arr[Anum]});
+			console.log(arr[Anum]);
 		}
 
-		//$('section').eq(i).css({'padding-top' : '0'});
-
-	};
+	var TimeImg = $('img');
+	
+	if(TimeImg.width == 0){
+		alert('图片加载失败')
+	} else{
+		$('section').css({'padding-top' : '0'});
+	}
 
 	//MediaModal
 	var move = window.document.ontouchmove;
