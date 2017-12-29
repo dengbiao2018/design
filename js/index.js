@@ -207,10 +207,8 @@ $(function() {
 			console.log(arr[Anum]);
 		}
 
-	var imgNum=$('img').length;
-
 	$('img').load(function(){
-	    if(!--imgNum){
+	    for (var i = 0; i <= $('img').length; i++) {
 	        $('section').css({'padding-top' : '0'});
 	    }
 	});
