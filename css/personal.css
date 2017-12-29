@@ -36,7 +36,7 @@
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
-.wrap .item a img{
+.wrap .item section img{
 	width: 100%;
 }
 

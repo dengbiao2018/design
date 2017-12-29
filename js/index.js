@@ -27,7 +27,7 @@ $(function() {
 		for (var i = 1; i <= json.length; i++) {
 			list += '<div class="item">' + 
 						'<div class="img-box">' + 
-							'<a class="img-a"><img src="images/' + ev + '/img' + i + '/' + img + '.jpg" /></a>' + 
+							'<section class="img-a"><img src="images/' + ev + '/img' + i + '/' + img + '.jpg" /></section>' + 
 							'<h2 class="present"><a title='+ json[i - 1].title +'>' + json[i - 1].title + '</a></h2>' + 
 						'</div>' + 
 					'</div>';
@@ -198,10 +198,23 @@ $(function() {
 
 		});
 
-	//禁止手表右键
-	// document.oncontextmenu = function() {
-	// 	return false;
-	// }
+	var arr = ['159px','320px','239px','360px','180px','192px'];
+
+	for (var i = 0; i <= json.length; i++) {
+			var Anum = Math.floor(Math.random() * 6 + 0);
+			console.log(Anum);
+			$('section').eq(i).css({'padding-top' : arr[Anum]});
+			console.log(arr[Anum]);
+		}
+
+	var imgNum=$('img').length;
+
+	$('img').load(function(){
+	    if(!--imgNum){
+	        $('section').css({'padding-top' : '0'});
+	        //alert('加载完成');
+	    }
+	});
 
 	function checkMobile(){
 		var isMobile = {  
