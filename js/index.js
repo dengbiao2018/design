@@ -54,7 +54,7 @@ $(function() {
 				alert('图片加载失败')
 			} else{
 				$('section').eq(i-1).css({'padding-top' : '0'});
-				alert('图片加载成功')
+				//alert('图片加载成功')
 			}
 
 		}
