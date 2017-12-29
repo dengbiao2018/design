@@ -35,35 +35,33 @@ $(function() {
 
 		wrap.prepend(list);
 
-	}
+		//随机数
+		var arr = ['159px','320px','239px','360px','180px','192px'];
 
-	//随机数
-	var arr = ['159px','320px','239px','360px','180px','192px'];
+		for (var i = 0; i <= json.length; i++) {
+				var Anum = Math.floor(Math.random() * 6 + 0);
+				console.log(Anum);
+				$('section').eq(i).css({'padding-top' : arr[Anum]});
+				console.log(arr[Anum]);
+			}
 
-	for (var i = 0; i <= json.length; i++) {
-			var Anum = Math.floor(Math.random() * 6 + 0);
-			console.log(Anum);
-			$('section').eq(i).css({'padding-top' : arr[Anum]});
-			console.log(arr[Anum]);
+		for (var i = 1; i <= json.length; i++) {
+
+			var TimeImg = new Image();
+			TimeImg.src = 'images/' + ev + '/img' + i + '/' + img +'.jpg';
+			console.log(TimeImg);
+			if(TimeImg.width == 0){
+				alert('图片加载失败')
+			} else{
+				$('section').eq(i-1).css({'padding-top' : '0'});
+				alert('图片加载成功')
+			}
+
 		}
 
-	var imgNum=$('img').length;
+		//$('section').eq(i).css({'padding-top' : '0'});
 
-	$(function(){
-
-		$('img').load(function(){
-			for (var i = 0; i <= json.length; i++) {
-					$('section').eq(i).css({'padding-top' : '0'});
-			}
-		});
-
-	})
-	
-	// $('img').load(function(){
-	//     if(!--imgNum){
-	//         $('section').css({'padding-top' : '0'});
-	//     }
-	// });
+	};
 
 	//MediaModal
 	var move = window.document.ontouchmove;
