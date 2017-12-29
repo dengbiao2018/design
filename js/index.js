@@ -66,7 +66,7 @@ $(function() {
 		} else{
 			setTimeout(function(){
 				itemImg.parent().css({'padding-top' : '0'});
-			},500);
+			},1000);
 		}
 
 		_this.on('click', 'samp', function() {
