@@ -207,9 +207,12 @@ $(function() {
 			console.log(arr[Anum]);
 		}
 
+	var imgNum=$('img').length;
+
 	$('img').load(function(){
-	    for (var i = 0; i <= $('img').length; i++) {
+	    if(!--imgNum){
 	        $('section').css({'padding-top' : '0'});
+	        //alert('加载完成');
 	    }
 	});
 
