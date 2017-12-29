@@ -210,11 +210,16 @@ $(function() {
 	var imgNum=$('img').length;
 
 	$('img').load(function(){
-	    if(!--imgNum){
-	        $('section').css({'padding-top' : '0'});
-	        //alert('加载完成');
-	    }
+		for (var i = 0; i <= json.length; i++) {
+				$('section').eq(i).css({'padding-top' : '0'});
+		}
 	});
+	
+	// $('img').load(function(){
+	//     if(!--imgNum){
+	//         $('section').css({'padding-top' : '0'});
+	//     }
+	// });
 
 	function checkMobile(){
 		var isMobile = {  
