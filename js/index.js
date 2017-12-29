@@ -40,6 +40,8 @@ $(function() {
 	//随机数
 	var arr = ['159px','320px','239px','360px','180px','192px'];
 
+	if(loc == 'information.html'){return false;};
+
 	for (var i = 0; i <= json.length; i++) {
 			var Anum = Math.floor(Math.random() * 6 + 0);
 			console.log(Anum);
@@ -62,7 +64,7 @@ $(function() {
 		if(itemImg.width == 0){
 			
 		} else{
-			itemImg.parent().css({'padding-top' : '0'});
+			itemImg.parent(0).css({'padding-top' : '0'});
 		}
 
 		_this.on('click', 'samp', function() {
