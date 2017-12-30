@@ -43,11 +43,11 @@ $(function() {
 	if(loc == 'information.html'){return false;};
 
 	for (var i = 0; i <= json.length; i++) {
-			var Anum = Math.floor(Math.random() * 6 + 0);
-			console.log(Anum);
-			$('section').eq(i).css({'padding-top' : arr[Anum]});
-			console.log(arr[Anum]);
-		}
+		var Anum = Math.floor(Math.random() * 6 + 0);
+		console.log(Anum);
+		$('section').eq(i).css({'padding-top' : arr[Anum]});
+		console.log(arr[Anum]);
+	}
 
 	//MediaModal
 	var move = window.document.ontouchmove;
@@ -58,14 +58,24 @@ $(function() {
 		var _this = $(this),
 			img_a = _this.find('.img-a,h2 a'),
 			itemImg = _this.find('img'),
-			index = _this.index() + 1;
+			index = _this.index() + 1,
+			num = 0;
 
-		//随机函数
-		if(itemImg.width == 0){
-			
-		} else{
-			itemImg.parent().css({'padding-top' : '0'});
-		}
+		//加载完成
+		var imgNum = $('img').length;
+		$('img').load(function(){
+		    if(!--imgNum){
+				imgLoad();
+		    }
+		});
+
+		function imgLoad(){
+			setInterval(function(){
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
+			},100)
+		};
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();

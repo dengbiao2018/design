@@ -281,6 +281,47 @@ ul,li,ol,ul {
 }
 /*弹出层 结束*/
 
+
+/* 伸缩容器 */
+.wrap{	
+	text-align: center;
+	max-width: 1440px;
+	width: 100%;
+	margin: 165px auto 80px;
+	display: flex;
+	/*flex-direction:row; 居左(默认)*/
+	/*flex-direction:row-reverse; 居右*/
+	/*flex-direction:column; 从上往下排列(默认)*/
+	/*flex-direction:column-reverse; 从下往上排列*/
+	flex-wrap:wrap; /*自动换行*/
+	/*flex-wrap:wrap-reverse; 自动换行从下往上*/
+	/*justify-content:space-between; 把空出来的间距平均分配（不包括第一个和最后一个）*/
+	/*justify-content:space-around; 把空出来的间距平均分配 （包括第一个和最后一个）*/
+	align-items:stretch;
+}
+.wrap .item section img{
+	width: 0%;
+}
+.present{
+    text-align: left;
+    line-height: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.present,.present a{
+	width: 80%;
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+    font-family: "微软雅黑",arial;
+    text-decoration: none;
+    font-weight: normal;
+}
+.present a{
+	cursor: pointer;
+}
+
+
 /* footer css 开始*/
 #footer{
 	position: fixed;
