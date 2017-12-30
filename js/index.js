@@ -49,6 +49,24 @@ $(function() {
 		console.log(arr[Anum]);
 	}
 
+	//随机函数
+	var itemNum = 0;
+
+	setInterval(function(){
+		imgLoad();
+	},100);
+
+	function imgLoad(){
+		if($('section img').eq(itemNum).width == 0){
+			
+		}else{
+			$('section img').eq(itemNum).css({'width' : '100%'});
+			$('section').eq(itemNum).css({'padding-top' : '0'});
+			itemNum++;
+		};
+		//alert(itemNum);
+	}
+
 	//MediaModal
 	var move = window.document.ontouchmove;
 	var item = $('.item');
@@ -60,21 +78,6 @@ $(function() {
 			itemImg = _this.find('img'),
 			index = _this.index() + 1,
 			num = 0;
-
-		//随机函数
-		setInterval(function(){
-			imgLoad();
-		},100);
-
-		function imgLoad(){
-			if(itemImg.eq(num).width == 0){
-				
-			}else{
-				$('section img').eq(num).css({'width' : '100%'});
-				$('section').eq(num).css({'padding-top' : '0'});
-				num++;
-			};
-		}
 			
 		//加载完成
 		// var imgNum = $('img').length;
@@ -88,8 +91,8 @@ $(function() {
 		// 	setInterval(function(){
 		// 		$('section img').eq(num).css({'width' : '100%'});
 		// 		$('section').eq(num).css({'padding-top' : '0'});
+		// 		num++;
 		// 	},100)
-		// 	num++;
 		// };
 
 		_this.on('click', 'samp', function() {
