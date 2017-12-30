@@ -37,36 +37,23 @@ $(function() {
 
 	};
 
-	// 随机数
-	var arr = ['159px','320px','239px','360px','180px','192px'];
-
-	if(loc == 'information.html'){return false;};
-
-	for (var i = 0; i <= json.length; i++) {
-		var Anum = Math.floor(Math.random() * 6 + 0);
-		console.log(Anum);
-		$('section').eq(i).css({'padding-top' : arr[Anum]});
-		console.log(arr[Anum]);
-	}
-
 	// 加载完成
-	// var itemNum = 0;
+	var itemNum = 0;
 
-	// setInterval(function(){
-	// 	imgLoad();
-	// },100);
+	setInterval(function(){
+		imgLoad();
+	},100);
 
-	// function imgLoad(){
-	// 	alert($('section img').length);
-	// 	if($('section img').eq(0).width == 0){
-	// 		return false;
-	// 	}else{
-	// 		$('section img').eq(itemNum).css({'width' : '100%'});
-	// 		$('section').eq(itemNum).css({'padding-top' : '0'});
-	// 		itemNum++;
-	// 	};
+	function imgLoad(){
+		if($('section img').eq(0).width == 0){
+			return false;
+		}else{
+			$('section img').eq(itemNum).css({'width' : '100%'});
+			$('section').eq(itemNum).css({'padding-top' : '0'});
+			itemNum++;
+		};
 		//alert(itemNum);
-	// }
+	}
 
 	//MediaModal
 	var move = window.document.ontouchmove;
@@ -81,19 +68,19 @@ $(function() {
 			num = 0;
 			
 		//加载完成
-		var imgNum = $('img').length;
-		$('img').load(function(){
-		    if(!--imgNum){
-				imgLoad();
-		    }
-		});
+		// var imgNum = $('img').length;
+		// $('img').load(function(){
+		//     if(!--imgNum){
+		// 		imgLoad();
+		//     }
+		// });
 
 		function imgLoad(){
 			setInterval(function(){
 				$('section img').eq(num).css({'width' : '100%'});
 				$('section').eq(num).css({'padding-top' : '0'});
 				num++;
-			},50)
+			},100)
 		};
 
 		_this.on('click', 'samp', function() {
@@ -245,6 +232,18 @@ $(function() {
 			}, 200);
 
 		});
+
+	// 随机数
+	var arr = ['159px','320px','239px','360px','180px','192px'];
+
+	if(loc == 'information.html'){return false;};
+
+	for (var i = 0; i <= json.length; i++) {
+		var Anum = Math.floor(Math.random() * 6 + 0);
+		console.log(Anum);
+		$('section').eq(i).css({'padding-top' : arr[Anum]});
+		console.log(arr[Anum]);
+	}
 
 	function checkMobile(){
 		var isMobile = {  
