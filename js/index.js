@@ -63,12 +63,18 @@ $(function() {
 
 		//随机函数
 		setInterval(function(){
-			if(itemImg.width == 0){
-				
-			} else{
-				imgLoad();
-			}
+			imgLoad();
 		},100);
+
+		function imgLoad(){
+			if(itemImg.eq(num).width == 0){
+				
+			}else{
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
+			};
+		}
 			
 		//加载完成
 		// var imgNum = $('img').length;
@@ -78,13 +84,13 @@ $(function() {
 		//     }
 		// });
 
-		function imgLoad(){
-			setInterval(function(){
-				$('section img').eq(num).css({'width' : '100%'});
-				$('section').eq(num).css({'padding-top' : '0'});
-				num++;
-			},100)
-		};
+		// function imgLoad(){
+		// 	setInterval(function(){
+		// 		$('section img').eq(num).css({'width' : '100%'});
+		// 		$('section').eq(num).css({'padding-top' : '0'});
+		// 	},100)
+		// 	num++;
+		// };
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();
