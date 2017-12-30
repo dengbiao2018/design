@@ -51,7 +51,7 @@ $(function() {
 			$('section img').eq(itemNum).css({'width' : '100%'});
 			$('section').eq(itemNum).css({'padding-top' : '0'});
 			itemNum++;
-			$('section').eq(i).css({'padding-top' : arr[Anum]});
+			$('section').eq(itemNum).css({'padding-top' : arr[Anum]});
 		};
 		//alert(itemNum);
 	}
