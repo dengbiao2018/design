@@ -66,9 +66,7 @@ $(function() {
 			if(itemImg.width == 0){
 				
 			} else{
-				$('section img').eq(num).css({'width' : '100%'});	
-				$('section').eq(num).css({'padding-top' : '0'});
-				num++;
+				imgLoad();
 			}
 		},100);
 			
@@ -80,13 +78,13 @@ $(function() {
 		//     }
 		// });
 
-		// function imgLoad(){
-		// 	setInterval(function(){
-		// 		$('section img').eq(num).css({'width' : '100%'});
-		// 		$('section').eq(num).css({'padding-top' : '0'});
-		// 		num++;
-		// 	},100)
-		// };
+		function imgLoad(){
+			setInterval(function(){
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
+			},100)
+		};
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();
