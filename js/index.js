@@ -49,7 +49,7 @@ $(function() {
 		console.log(arr[Anum]);
 	}
 
-	//随机函数
+	//加载完成
 	var itemNum = 0;
 
 	setInterval(function(){
@@ -57,12 +57,12 @@ $(function() {
 	},100);
 
 	function imgLoad(){
-		if($('section img').eq(itemNum).width == 0){
-			
-		}else{
+		if($('section img').eq(itemNum).width != 0){
 			$('section img').eq(itemNum).css({'width' : '100%'});
 			$('section').eq(itemNum).css({'padding-top' : '0'});
 			itemNum++;
+		}else{
+
 		};
 		//alert(itemNum);
 	}
