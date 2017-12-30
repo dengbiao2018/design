@@ -56,18 +56,25 @@ $(function() {
 	item.each(function() {
 		
 		var _this = $(this),
-			img_a = _this.find('.img-a,h2 a'),
+			img_a = _this.find('.img-a img,h2 a'),
 			itemImg = _this.find('img'),
 			index = _this.index() + 1,
 			num = 0;
 
-		//加载完成
-		var imgNum = $('img').length;
-		$('img').load(function(){
-		    if(!--imgNum){
-				imgLoad();
-		    }
-		});
+		//随机函数
+		if(itemImg.width == 0){
+			
+		} else{
+			imgLoad();
+		}
+
+		// //加载完成
+		// var imgNum = $('img').length;
+		// $('img').load(function(){
+		//     if(!--imgNum){
+		// 		imgLoad();
+		//     }
+		// });
 
 		function imgLoad(){
 			setInterval(function(){
