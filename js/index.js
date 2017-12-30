@@ -57,12 +57,12 @@ $(function() {
 	},100);
 
 	function imgLoad(){
-		if($('section img').eq(itemNum).width != 0){
+		if($('section img').eq(itemNum).width == 0){
+			return false;
+		}else{
 			$('section img').eq(itemNum).css({'width' : '100%'});
 			$('section').eq(itemNum).css({'padding-top' : '0'});
 			itemNum++;
-		}else{
-
 		};
 		//alert(itemNum);
 	}
