@@ -66,13 +66,11 @@ $(function() {
 			if(itemImg.width == 0){
 				
 			} else{
-				setTimeout(function(){
-					$('section img').eq(num).css({'width' : '100%'});
-					$('section').eq(num).css({'padding-top' : '0'});
-					num++;
-				},100)
+				$('section img').eq(num).css({'width' : '100%'});	
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
 			}
-		},50);
+		},100);
 			
 		//加载完成
 		// var imgNum = $('img').length;
