@@ -62,13 +62,19 @@ $(function() {
 			num = 0;
 
 		//随机函数
-		if(itemImg.width == 0){
+		setInterval(function(){
+			if(itemImg.width == 0){
+				
+			} else{
+				setTimeout(function(){
+					$('section img').eq(num).css({'width' : '100%'});
+					$('section').eq(num).css({'padding-top' : '0'});
+					num++;
+				},100)
+			}
+		},50);
 			
-		} else{
-			imgLoad();
-		}
-
-		// //加载完成
+		//加载完成
 		// var imgNum = $('img').length;
 		// $('img').load(function(){
 		//     if(!--imgNum){
@@ -76,13 +82,13 @@ $(function() {
 		//     }
 		// });
 
-		function imgLoad(){
-			setInterval(function(){
-				$('section img').eq(num).css({'width' : '100%'});
-				$('section').eq(num).css({'padding-top' : '0'});
-				num++;
-			},100)
-		};
+		// function imgLoad(){
+		// 	setInterval(function(){
+		// 		$('section img').eq(num).css({'width' : '100%'});
+		// 		$('section').eq(num).css({'padding-top' : '0'});
+		// 		num++;
+		// 	},100)
+		// };
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();
