@@ -38,23 +38,21 @@ $(function() {
 	};
 
 	// 加载完成
-	var itemNum = 0;
+	// var itemNum = 0;
 
-	setInterval(function(){
-		imgLoad();
-	},100);
+	// setInterval(function(){
+	// 	imgLoad();
+	// },100);
 
-	function imgLoad(){
-		if($('section img').eq(itemNum).width == 0){
-			return false;
-		}else{
-			$('section img').eq(itemNum).css({'width' : '100%'});
-			$('section').eq(itemNum).css({'padding-top' : '0'});
-			itemNum++;
-			$('section').eq(itemNum).css({'padding-top' : arr[Anum]});
-		};
-		//alert(itemNum);
-	}
+	// function imgLoad(){
+	// 	if($('section img').eq(itemNum).width == 0){
+	// 		return false;
+	// 	}else{
+	// 		$('section img').eq(itemNum).css({'width' : '100%'});
+	// 		$('section').eq(itemNum).css({'padding-top' : '0'});
+	// 		itemNum++;
+	// 	};
+	// }
 
 	//MediaModal
 	var move = window.document.ontouchmove;
@@ -69,12 +67,12 @@ $(function() {
 			num = 0;
 			
 		//加载完成
-		// var imgNum = $('img').length;
-		// $('img').load(function(){
-		//     if(!--imgNum){
-		// 		imgLoad();
-		//     }
-		// });
+		var imgNum = $('img').length;
+		$('img').load(function(){
+		    if(!--imgNum){
+				imgLoad();
+		    }
+		});
 
 		function imgLoad(){
 			setInterval(function(){
