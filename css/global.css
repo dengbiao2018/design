@@ -301,6 +301,9 @@ ul,li,ol,ul {
 }
 .wrap .item section img{
 	width: 0%;
+	cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
 }
 .load{
 	width: 24px;

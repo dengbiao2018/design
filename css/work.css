@@ -19,9 +19,6 @@
 	flex-grow:1;
 	align-items:center;
 	background-color: #f1f1f1;
-	cursor: pointer;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
 }
 
 
