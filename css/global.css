@@ -313,9 +313,18 @@ ul,li,ol,ul {
 	left: 50%;
 	margin-top: -12px;
 	margin-left: -15px;
+	animation: spin 1s linear infinite;
 }
 .load-svg{
 	opacity: 0;
+}
+@keyframes spin {
+0% {
+   	transform:rotate(0deg);
+ }
+ 100% {
+   	transform:rotate(-360deg);
+ }
 }
 
 .present{

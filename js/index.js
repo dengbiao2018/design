@@ -41,7 +41,7 @@ $(function() {
 		$('img').load(function(){
 		    if(!--imgNum){
 		    	$('body').removeClass('overflow-hidden');
-		    	//$('.load').remove();
+		    	$('.load').remove();
 		    	wrap.removeClass('load-svg');	
 	    		setTimeout(function(){
 	    			imgLoad();
