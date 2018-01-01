@@ -43,9 +43,7 @@ $(function() {
 		    	$('body').removeClass('overflow-hidden');
 		    	$('.load').remove();
 		    	wrap.removeClass('load-svg');	
-	    		setTimeout(function(){
-	    			imgLoad();
-	    		},500)
+				imgLoad();   		
 		    }
 		});
 
@@ -238,15 +236,16 @@ $(function() {
 		});
 
 	// 随机数
-	var arr = ['159px','320px','239px','360px','180px','192px'];
+	var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
+	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 	if(loc == 'information.html'){return false;};
 
 	for (var i = 0; i <= json.length; i++) {
 		var Anum = Math.floor(Math.random() * 6 + 0);
 		console.log(Anum);
-		$('section').eq(i).css({'padding-top' : arr[Anum]});
-		console.log(arr[Anum]);
+		$('section').eq(i).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+		console.log(ArrHeight[Anum]); 
 	}
 
 	function checkMobile(){

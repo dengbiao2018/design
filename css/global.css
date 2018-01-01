@@ -10,6 +10,7 @@ ul,li,ol,ul {
 	list-style:none;
 }
 .overflow-hidden{
+	height: 100%;
 	overflow:hidden;
 }
 
@@ -141,7 +142,7 @@ ul,li,ol,ul {
 	font-size: 1.333em;
 	font-family: "微软雅黑",arial;
 	text-align: right;
-	color: #8c8c8a;
+	color: #ae995a;
 	text-decoration: none;
 }
 .mobile_block{
