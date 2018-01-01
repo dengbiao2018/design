@@ -40,7 +40,8 @@ $(function() {
 			imgNum = $('.wrap img').length;
 		$('img').load(function(){
 		    if(!--imgNum){
-		    	$('#Layer_1').remove();
+		    	$('body').removeClass('overflow-hidden');
+		    	$('.load').remove();
 		    	wrap.removeClass('load-svg');	
 	    		setTimeout(function(){
 	    			imgLoad();
