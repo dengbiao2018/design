@@ -302,6 +302,19 @@ ul,li,ol,ul {
 .wrap .item section img{
 	width: 0%;
 }
+#Layer_1{
+	width: 24px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -12px;
+	margin-left: -15px;
+}
+.load-svg{
+	opacity: 0;
+}
+
 .present{
     text-align: left;
     line-height: 42px;

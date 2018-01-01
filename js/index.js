@@ -35,6 +35,27 @@ $(function() {
 
 		wrap.prepend(list);
 
+		//加载完成
+		var num = 0,
+			imgNum = $('.wrap img').length;
+		$('img').load(function(){
+		    if(!--imgNum){
+		    	$('#Layer_1').remove();
+		    	wrap.removeClass('load-svg');	
+	    		setTimeout(function(){
+	    			imgLoad();
+	    		},500)
+		    }
+		});
+
+		function imgLoad(){
+			setInterval(function(){
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
+			},100)
+		};
+
 	};
 
 	// 加载完成
@@ -63,24 +84,7 @@ $(function() {
 		var _this = $(this),
 			img_a = _this.find('.img-a img,h2 a'),
 			itemImg = _this.find('img'),
-			index = _this.index() + 1,
-			num = 0;
-			
-		//加载完成
-		var imgNum = $('img').length;
-		$('img').load(function(){
-		    if(!--imgNum){
-				imgLoad();
-		    }
-		});
-
-		function imgLoad(){
-			setInterval(function(){
-				$('section img').eq(num).css({'width' : '100%'});
-				$('section').eq(num).css({'padding-top' : '0'});
-				num++;
-			},100)
-		};
+			index = _this.index() + 1;
 
 		_this.on('click', 'samp', function() {
 			$(".MediaModal").remove();
