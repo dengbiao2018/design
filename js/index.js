@@ -6,10 +6,6 @@ $(function() {
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
 
-	window.document.ontouchmove = function (e) {
-		e.preventDefault();
-	};
-
 	if (loc == 'index.html') {
 		wrapItem('work', 'cover');
 	} else if (loc == 'personal.html') {
@@ -49,7 +45,6 @@ $(function() {
 		    	$('.load').remove();
 		    	wrap.removeClass('load-svg');
 				imgLoad();
-				window.document.ontouchmove = move;
 		    }
 		});
 
