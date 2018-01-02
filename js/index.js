@@ -25,7 +25,7 @@ $(function() {
 		var list = '';
 
 		for (var i = 1; i <= json.length; i++) {
-			list += '<div class="item item-vague">' + 
+			list += '<div class="item">' + 
 						'<div class="img-box">' + 
 							'<section class="img-a"><img src="images/' + ev + '/img' + i + '/' + img + '.jpg" /></section>' + 
 							'<h2 class="present"><a title='+ json[i - 1].title +'>' + json[i - 1].title + '</a></h2>' + 
@@ -49,17 +49,17 @@ $(function() {
 		});
 
 		function imgLoad(){
-			$('section img').css({'width' : '100%'});
-			$('section').css({'padding-top' : '0'});
+			
 			var iCount  = setInterval(function(){
-				item.eq(num).removeClass('item-vague');
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
 				num++;
 				console.log(num);
 				if(num == json.length)
 		    	{
 		    		clearInterval(iCount);
 		    	}
-			},300)
+			},100)
 		};
 
 	};

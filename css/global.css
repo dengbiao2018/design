@@ -298,16 +298,16 @@ ul,li,ol,ul {
 	/*justify-content:space-around; 把空出来的间距平均分配 （包括第一个和最后一个）*/
 	align-items:stretch;
 }
-.wrap .item-vague{
-	filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+/*.wrap .item-vague{
+	filter: url(blur.svg#blur); 
     
-    -webkit-filter: blur(10px); /* Chrome, Opera */
+    -webkit-filter: blur(10px); 
        -moz-filter: blur(10px);
         -ms-filter: blur(10px);    
             filter: blur(10px);
     
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
-}
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); 
+}*/
 
 .wrap .item section img{
 	width: 0%;
