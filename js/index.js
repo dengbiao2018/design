@@ -38,41 +38,31 @@ $(function() {
 		//加载完成
 		var num = 0,
 			imgNum = $('.wrap img').length;
+
 		$('img').load(function(){
 		    if(!--imgNum){
 		    	$('body').removeClass('overflow-hidden');
 		    	$('.load').remove();
-		    	wrap.removeClass('load-svg');	
-				imgLoad();   		
+		    	wrap.removeClass('load-svg');
+				imgLoad();
 		    }
 		});
 
 		function imgLoad(){
-			setInterval(function(){
+			
+			var iCount  = setInterval(function(){
 				$('section img').eq(num).css({'width' : '100%'});
 				$('section').eq(num).css({'padding-top' : '0'});
 				num++;
+				console.log(num);
+				if(num == json.length)
+		    	{
+		    		clearInterval(iCount);
+		    	}
 			},100)
 		};
 
 	};
-
-	// 加载完成
-	// var itemNum = 0;
-
-	// setInterval(function(){
-	// 	imgLoad();
-	// },100);
-
-	// function imgLoad(){
-	// 	if($('section img').eq(itemNum).width == 0){
-	// 		return false;
-	// 	}else{
-	// 		$('section img').eq(itemNum).css({'width' : '100%'});
-	// 		$('section').eq(itemNum).css({'padding-top' : '0'});
-	// 		itemNum++;
-	// 	};
-	// }
 
 	//MediaModal
 	var move = window.document.ontouchmove;
@@ -237,6 +227,7 @@ $(function() {
 
 	// 随机数
 	var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
+
 	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 	if(loc == 'information.html'){return false;};
