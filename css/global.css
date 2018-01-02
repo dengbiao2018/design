@@ -10,7 +10,6 @@ ul,li,ol,ul {
 	list-style:none;
 }
 .overflow-hidden{
-	height: 100%;
 	overflow:hidden;
 }
 
