@@ -96,7 +96,6 @@ $(function() {
 		img_a.on('click',function() {
 			index = _this.index() + 1;
 			imgHref();
-			$('html,body').addClass("overflow-hidden");
 		});
 	
 		function imgHref() {
