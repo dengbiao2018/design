@@ -20,8 +20,6 @@ ul,li,ol,ul {
 }
 #header .logo{
 	position: fixed;
-	width: 45px;
-	height: 38px;
 	top:35px; 
 	left:45px;
 	z-index: 9998;
@@ -205,7 +203,7 @@ ul,li,ol,ul {
 }
 .infor .visit a{
 	font-family: "微软雅黑",arial;
-	font-size: 14px;
+	font-size: 16px;
 	color: #292926;
 	-webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -222,7 +220,7 @@ ul,li,ol,ul {
 
 .infor p{
 	font-family: "微软雅黑",arial;
-	font-size: 14px;
+	font-size: 16px;
 	color: #292926;
 	padding: 0 45px;
 }
@@ -300,6 +298,17 @@ ul,li,ol,ul {
 	/*justify-content:space-around; 把空出来的间距平均分配 （包括第一个和最后一个）*/
 	align-items:stretch;
 }
+.wrap .item-vague{
+	filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+
 .wrap .item section img{
 	width: 0%;
 	cursor: pointer;
