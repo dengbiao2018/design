@@ -105,7 +105,7 @@ ul,li,ol,ul {
     overflow-y: scroll;
 }
 .mobile-nav .nav-menu{
-    width: 85%;
+    width: 90%;
     overflow: hidden;
     margin: 8rem auto 0;
     line-height: 4rem;
@@ -120,7 +120,7 @@ ul,li,ol,ul {
 	margin: 10rem auto 0;
 }
 .mobile-nav .nav-link{
-    width: 85%;
+    width: 90%;
     overflow: hidden;
     margin: 2rem auto 0;
     line-height: 2.5rem;
