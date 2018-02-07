@@ -9,6 +9,21 @@ img{
 ul,li,ol,ul {
 	list-style:none;
 }
+::selection {
+    background:#000; 
+    color:#fff;
+}
+
+::-moz-selection {
+    background:#000; 
+    color:#fff;
+}
+
+::-webkit-selection {
+    background:#000; 
+    color:#fff;
+}
+
 .overflow-hidden{
 	overflow:hidden;
 }
@@ -22,6 +37,7 @@ ul,li,ol,ul {
 	top:35px; 
 	left:45px;
 	z-index: 9998;
+	cursor: pointer;
 }
 #header .logo a img{
 	-webkit-transition: all 0.3s ease-in-out;
@@ -222,6 +238,8 @@ ul,li,ol,ul {
 	font-size: 16px;
 	color: #292926;
 	padding: 0 45px;
+	line-height: 30px;
+    word-break:break-all;
 }
 
 .modalClose{
@@ -281,11 +299,20 @@ ul,li,ol,ul {
 
 
 /* 伸缩容器 */
+.container{
+	padding: 165px 0 80px 0; 
+}
+.wrap-box{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
 .wrap{	
 	text-align: center;
 	max-width: 1440px;
 	width: 100%;
-	margin: 165px auto 80px;
+	margin: 0 auto;
+	/*margin: 165px auto 80px;*/
 	display: flex;
 	/*flex-direction:row; 居左(默认)*/
 	/*flex-direction:row-reverse; 居右*/
@@ -314,14 +341,22 @@ ul,li,ol,ul {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
-.load{
-	width: 24px;
-	height: 30px;
+.load-win{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-top: -12px;
 	margin-left: -15px;
+}
+.load-page{
+	display: none;
+	position: absolute;
+	left: 50%;
+	margin-left: -15px;
+}
+.load{
+	width: 24px;
+	height: 30px;
 	animation: spin 0.6s linear infinite;
 }
 .load-svg{
@@ -355,6 +390,23 @@ ul,li,ol,ul {
 	cursor: pointer;
 }
 
+/* 数据加载 */
+.more{
+	cursor: pointer;
+    width: 80%;
+    max-width: 22.1875rem;
+    padding: 1.5rem;
+    color: #fff;
+    font-size: .6875rem;
+    letter-spacing: .0625rem;
+    text-transform: uppercase;
+    font-family: "微软雅黑",arial;
+    margin: 1.5rem auto;
+    background: #000;
+    text-align: center;
+    border:none;
+    display: block;
+}
 
 /* footer css 开始*/
 #footer{
@@ -382,9 +434,13 @@ ul,li,ol,ul {
 	}
 }
 @media(max-width: 930px){
+	.container{
+		padding: 132px 0 80px 0;
+	}
 	.wrap{
 		max-width: 576px;	
-	    margin: 132px auto 80px;
+	    margin: 0 auto;
+        /*margin: 132px auto 80px;*/
 	}
 	.wrap .item{
 		margin-bottom: 1.75rem;

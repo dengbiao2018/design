@@ -2,21 +2,82 @@
 
 $(function() {
 
-	//item
+	//数据加载
+	var Null = 1,
+		_work = 6, //Work 默认显示图片个数 
+		_personal = 15, //Personal 默认显示图片个数 
+		_loading = 500;  //每次点击按钮后加载的个数
+
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
 
+	$('.more').click(function(){
+		
+		var item = $('.item');
+
+		if (loc == 'index.html') {
+			_content(_work);
+		} else if (loc == 'personal.html') {
+			_content(_personal);
+		}
+		else
+		{
+			wrapItem('work', 'cover', _work, int);
+		}
+
+		function _content(en){
+
+			timer=setInterval(function(){ //存储循环内容
+				var int = en + Null;
+				Null++;
+
+				if (loc == 'index.html') {
+					wrapItem('work', 'cover', int, int);
+				} else if (loc == 'personal.html') {
+					wrapItem('personal', 'img1', int, int);
+				}
+				else
+				{
+					wrapItem('work', 'cover', int, int);
+				}
+
+				$('section img').css({'width' : '100%'});
+
+				$('section').css({'padding-top' : '0'});
+
+				wrapIfn();
+
+			},100);
+
+		};
+
+		setTimeout(function(){
+
+			clearInterval(timer);   
+
+		},_loading);
+
+		if(item.length >= json.length - 5)
+		{	
+			$(this).fadeOut();
+	
+			return false;
+		}
+
+	});
+
+	//item
 	if (loc == 'index.html') {
-		wrapItem('work', 'cover');
+		wrapItem('work', 'cover', _work, 1);
 	} else if (loc == 'personal.html') {
-		wrapItem('personal', 'img1');
+		wrapItem('personal', 'img1', _personal, 1);
 	}
 	else
 	{
-		wrapItem('work', 'cover');
+		wrapItem('work', 'cover', _work, 1);
 	}
 
-	function wrapItem(ev, img) {
+	function wrapItem(ev, img, number, int) {
 
 		if(loc == 'information.html'){return false;};
 
@@ -24,7 +85,7 @@ $(function() {
 
 		var list = '';
 
-		for (var i = 1; i <= json.length; i++) {
+		for (var i = int; i <= number; i++) {
 			list += '<div class="item">' + 
 						'<div class="img-box">' + 
 							'<section class="img-a"><img src="images/' + ev + '/img' + i + '/' + img + '.jpg" /></section>' + 
@@ -33,7 +94,7 @@ $(function() {
 					'</div>';
 		}
 
-		wrap.prepend(list);
+		wrap.append(list);
 
 		//加载完成
 		var num = 0,
@@ -42,7 +103,7 @@ $(function() {
 		$('img').load(function(){
 		    if(!--imgNum){
 		    	$('body').removeClass('overflow-hidden');
-		    	$('.load').remove();
+		    	$('.load-win').remove();
 		    	wrap.removeClass('load-svg');
 				imgLoad();
 		    }
@@ -54,123 +115,129 @@ $(function() {
 				$('section img').eq(num).css({'width' : '100%'});
 				$('section').eq(num).css({'padding-top' : '0'});
 				num++;
-				console.log(num);
 				if(num == json.length)
 		    	{
 		    		clearInterval(iCount);
 		    	}
 			},100)
 		};
-
 	};
 
 	//MediaModal
 	var move = window.document.ontouchmove;
-	var item = $('.item');
+	var wrap = $('.wrap');
 
-	item.each(function() {
-		
-		var _this = $(this),
-			img_a = _this.find('.img-a img,h2 a'),
-			itemImg = _this.find('img'),
-			index = _this.index() + 1;
-
-		_this.on('click', 'samp', function() {
-			$(".MediaModal").remove();
-			index--;
-			imgHref();
-			if (index == 1) {
-				$('samp').addClass("btnActive");
-			}
-		})
-
-		_this.on('click', 'span', function() {
-			$(".MediaModal").remove();
-			index++;
-			imgHref();
-			if (index == item.length) {
-				$('span').addClass("btnActive");
-			}
-		})
-
-		img_a.on('click',function() {
-			index = _this.index() + 1;
-			imgHref();
-			$('html,body').addClass("overflow-hidden");
-
-		});
+	wrapIfn();
 	
-		function imgHref() {
-			var url = window.location.href;
-			var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
+	function wrapIfn(){
 
-			if (loc == 'index.html') {
-				MediaModal('work');
-			} else if (loc == 'personal.html') {
-				MediaModal('personal');
-			}
-			else
-			{
-				MediaModal('work');
-			}
+		wrap.each(function(){
 
-			//判断安卓/IOS
-			if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
+			var __this = $(this),
+				item = __this.find('.item');
 
-				$('#main figcaption').css({'padding-bottom':'100000000rem'});
-			}
-			else if (navigator.userAgent.match(/Android/i) ? true : false) {
+			item.each(function() {
+				
+				var _this = $(this),
+					img_a = _this.find('.img-a img,h2 a'),
+					itemImg = _this.find('img'),
+					index = _this.index() + 1;
 
-				$('#main figcaption').css({'padding-bottom':'100000000rem'});
+				_this.on('click', 'samp', function() {
+					$(".MediaModal").remove();
+					index--;
+					imgHref();
+					if (index == 1) {
+						$('samp').addClass("btnActive");
+					}
+				})
 
-			}
+				_this.on('click', 'span', function() {
+					$(".MediaModal").remove();
+					index++;
+					imgHref();
+					if (index == item.length) {
+						$('span').addClass("btnActive");
+					}
+				})
 
-			//判断安卓/IOS
-			setTimeout(function(){
+				img_a.on('click',function() {
+					index = _this.index() + 1;
+					imgHref();
+					$('html,body').addClass("overflow-hidden");
+				});
 
-				if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
-					
-					$('#main figcaption').css({'padding-bottom':'0'});
-					
+				function imgHref() {
+
+					if (loc == 'index.html') {
+						MediaModal('work');
+					} else if (loc == 'personal.html') {
+						MediaModal('personal');
+					}
+					else
+					{
+						MediaModal('work');
+					}
+
+					//判断安卓/IOS
+					if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
+
+						$('#main figcaption').css({'padding-bottom':'100000000rem'});
+					}
+					else if (navigator.userAgent.match(/Android/i) ? true : false) {
+
+						$('#main figcaption').css({'padding-bottom':'100000000rem'});
+
+					}
+
+					//判断安卓/IOS
+					setTimeout(function(){
+
+						if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
+							
+							$('#main figcaption').css({'padding-bottom':'0'});
+							
+						}
+						else if(navigator.userAgent.match(/Android/i) ? true : false){
+							
+							$('#main figcaption').css({'padding-bottom':'0'});
+							
+						};
+
+					},200);
 				}
-				else if(navigator.userAgent.match(/Android/i) ? true : false){
-					
-					$('#main figcaption').css({'padding-bottom':'0'});
-					
+
+				function MediaModal(id) {
+					var img_str = '';
+						img_str += '<figure id="figure" class="MediaModal">' + 
+										'<div class="MediaImage">';
+						for (var i = 1; i <= json[index - 1].num; i++) {
+							img_str += '<i class="MediaItem"><img src="images/' + id + '/img' + index + '/img' + i + '.jpg" /></i>';
+						}
+							img_str += '</div>' + 
+										'<figcaption class="infor">' + 
+											'<h2>' + json[index - 1].title + '</h2>' + 
+											'<p class="visit">' + json[index - 1].link + '</p>' + 
+											'<p class="time">' + json[index - 1].date + '</p>' + 
+										'</figcaption>' + 
+										'<i class="modalClose"><img src="images/global/close_img.png" /></i>' + 
+										'<samp class="nextPost"><img src="images/global/left_ico.png" /></samp>' + 
+										'<span class="prevPost"><img src="images/global/right_ico.png" /></span>' + 
+									'</figure>';
+					_this.prepend(img_str);
+
+					if (index == 1) {
+						$('samp').addClass("btnActive");
+					} else if (index != item.length) {
+						$('span').removeClass("btnActive");
+					}else if (index == item.length) {
+						$('span').addClass("btnActive");
+					}
+
 				};
-
-			},200);
-		}
-
-		function MediaModal(id) {
-			var img_str = '';
-				img_str += '<figure id="figure" class="MediaModal">' + 
-								'<div class="MediaImage">';
-				for (var i = 1; i <= json[index - 1].num; i++) {
-					img_str += '<i class="MediaItem"><img src="images/' + id + '/img' + index + '/img' + i + '.jpg" /></i>';
-				}
-					img_str += '</div>' + 
-								'<figcaption class="infor">' + 
-									'<h2>' + json[index - 1].title + '</h2>' + 
-									'<p class="visit">' + json[index - 1].link + '</p>' + 
-									'<p class="time">' + json[index - 1].date + '</p>' + 
-								'</figcaption>' + 
-								'<i class="modalClose"><img src="images/global/close_img.png" /></i>' + 
-								'<samp class="nextPost"><img src="images/global/left_ico.png" /></samp>' + 
-								'<span class="prevPost"><img src="images/global/right_ico.png" /></span>' + 
-							'</figure>';
-			_this.prepend(img_str);
-
-			if (index == 1) {
-				$('samp').addClass("btnActive");
-			} else if (index == item.length) {
-				$('span').addClass("btnActive");
-			}
-
-		};
-
-	});
-
+			});
+		});
+	};
 
 	$("#main").on('click', 'i', function() {
 		$(".MediaModal").remove();
@@ -235,9 +302,9 @@ $(function() {
 
 	for (var i = 0; i <= json.length; i++) {
 		var Anum = Math.floor(Math.random() * 6 + 0);
-		console.log(Anum);
+		//console.log(Anum);
 		$('section').eq(i).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
-		console.log(ArrHeight[Anum]); 
+		//console.log(ArrHeight[Anum]); 
 	}
 
 	function checkMobile(){
