@@ -5,7 +5,7 @@ $(function() {
 	//数据加载
 	var Null = 1,
 		_work = 6, //Work 默认显示图片个数 
-		_personal = 5, //Personal 默认显示图片个数 
+		_personal = 15, //Personal 默认显示图片个数 
 		_loading = 500;  //每次点击按钮后加载的个数
 
 	var url = window.location.href;
