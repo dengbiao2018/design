@@ -41,24 +41,39 @@ $(function() {
 					wrapItem('work', 'cover', int, int);
 				}
 
-				$('section img').css({'width' : '100%'});
-
-				$('section').css({'padding-top' : '0'});
-
 				wrapIfn();
+
+				_random(int);
 
 			},100);
 
 		};
 
+		//随机数
+		function _random(int){
+
+			var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
+
+			var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
+
+			if(loc == 'information.html'){return false;};
+
+			for (var i = int; i <= json.length; i++) {
+				var Anum = Math.floor(Math.random() * 6 + 0);
+				$('#main section').eq(i - 1).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+			}
+		};
+
 		//加载完成
 		var num = 0,
 			imgNum = $('.wrap img').length;
-			console.log(imgNum);
-			console.log(item.length);
+
 		$('.load-page-css').fadeIn();
+
 	    if(imgNum==item.length){
+
 	    	$('.load-page-css').fadeOut();
+
 			imgLoad();
 	    }
 
@@ -89,6 +104,7 @@ $(function() {
 		}
 
 	});
+
 
 	//item
 	if (loc == 'index.html') {
