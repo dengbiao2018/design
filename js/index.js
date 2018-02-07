@@ -5,7 +5,7 @@ $(function() {
 	//数据加载
 	var Null = 1,
 		_work = 6, //Work 默认显示图片个数 
-		_personal = 15, //Personal 默认显示图片个数 
+		_personal = 5, //Personal 默认显示图片个数 
 		_loading = 500;  //每次点击按钮后加载的个数
 
 	var url = window.location.href;
@@ -49,6 +49,30 @@ $(function() {
 
 			},100);
 
+		};
+
+		//加载完成
+		var num = 0,
+			imgNum = $('.wrap img').length;
+			console.log(imgNum);
+			console.log(item.length);
+		$('.load-page-css').fadeIn();
+	    if(imgNum==item.length){
+	    	$('.load-page-css').fadeOut();
+			imgLoad();
+	    }
+
+		function imgLoad(){
+			
+			var iCount  = setInterval(function(){
+				$('section img').eq(num).css({'width' : '100%'});
+				$('section').eq(num).css({'padding-top' : '0'});
+				num++;
+				if(num == json.length)
+		    	{
+		    		clearInterval(iCount);
+		    	}
+			},100)
 		};
 
 		setTimeout(function(){
@@ -179,7 +203,6 @@ $(function() {
 						MediaModal('work');
 					}
 
-					//判断安卓/IOS
 					if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
 
 						$('#main figcaption').css({'padding-bottom':'100000000rem'});
@@ -190,7 +213,6 @@ $(function() {
 
 					}
 
-					//判断安卓/IOS
 					setTimeout(function(){
 
 						if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){

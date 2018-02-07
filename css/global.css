@@ -348,8 +348,11 @@ ul,li,ol,ul {
 	margin-top: -12px;
 	margin-left: -15px;
 }
-.load-page{
+.load-page-css{
 	display: none;
+    padding-bottom: 25px;
+}
+.load-page{
 	position: absolute;
 	left: 50%;
 	margin-left: -15px;
