@@ -22,7 +22,7 @@ $(function() {
 		}
 		else
 		{
-			wrapItem('work', 'cover', _work, int);
+			_content(_work);
 		}
 
 		function _content(en){
