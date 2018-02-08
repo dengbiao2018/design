@@ -4,12 +4,15 @@ $(function() {
 
 	//数据加载
 	var Null = 1,
-		_work = 6, //Work 默认显示图片个数 
-		_personal = 15, //Personal 默认显示图片个数 
-		_loading = 500;  //每次点击按钮后加载的个数
+		_work = 6, _personal = 15, //默认显示图片个数 
+		_loading = 500; //每次点击按钮后加载的个数
 
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
+
+	var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
+
+	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 	$('.more').click(function(){
 		
@@ -51,10 +54,6 @@ $(function() {
 
 		//随机数
 		function _random(int){
-
-			var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
-
-			var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 			if(loc == 'information.html'){return false;};
 
@@ -332,9 +331,6 @@ $(function() {
 		});
 
 	// 随机数
-	var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
-
-	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 	if(loc == 'information.html'){return false;};
 
