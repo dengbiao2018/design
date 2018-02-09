@@ -2,8 +2,6 @@
 
 $(function() {
 
-	alert(1);
-
 	//数据加载
 	var Null = 1,
 		_work = 6, _personal = 15, //默认显示图片个数 
