@@ -397,8 +397,8 @@ ul,li,ol,ul {
 .more{
 	cursor: pointer;
     width: 80%;
-    max-width: 22.1875rem;
-    padding: 1.5rem;
+    max-width: 20rem;
+    padding: 1rem;
     color: #fff;
     font-size: .6875rem;
     letter-spacing: .0625rem;
