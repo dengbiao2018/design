@@ -5,7 +5,7 @@ $(function() {
 	//数据加载
 	var Null = 1,
 		_work = 6, _personal = 15, //默认显示图片个数 
-		_loading = 500; //每次点击按钮后加载的个数
+		_loading = 5; //每次点击按钮后加载的个数
 
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
@@ -93,7 +93,7 @@ $(function() {
 
 			clearInterval(timer);   
 
-		},_loading);
+		},_loading + '00');
 
 		if(item.length >= json.length - 5)
 		{	
