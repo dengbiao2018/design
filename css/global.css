@@ -312,7 +312,6 @@ ul,li,ol,ul {
 	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
-	/*margin: 165px auto 80px;*/
 	display: flex;
 	/*flex-direction:row; 居左(默认)*/
 	/*flex-direction:row-reverse; 居右*/

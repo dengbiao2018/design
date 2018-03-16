@@ -10,7 +10,9 @@ $(function() {
 	var url = window.location.href;
 	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
 
-	var ArrHeight = ['159px','320px','239px','360px','180px','192px'];
+	var ArrHeight = ['67%','134%','100%','150%','75%','80%'];
+
+	var WorkHeight = ['70%','90%','80%','100%','82%','78%'];
 
 	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
@@ -59,7 +61,15 @@ $(function() {
 
 			for (var i = int; i <= json.length; i++) {
 				var Anum = Math.floor(Math.random() * 6 + 0);
-				$('#main section').eq(i - 1).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+				if (loc == 'index.html') {
+					$('#main section').eq(i - 1).css({'padding-top' : WorkHeight[Anum] , 'background-color' : ArrBg[Anum]});
+				} else if (loc == 'personal.html') {
+					$('#main section').eq(i - 1).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+				}
+				else
+				{
+					$('#main section').eq(i - 1).css({'padding-top' : WorkHeight[Anum] , 'background-color' : ArrBg[Anum]});
+				}
 			}
 		};
 
@@ -95,7 +105,7 @@ $(function() {
 
 		},_loading + '00');
 
-		if(item.length >= json.length - 5)
+		if(item.length >= json.length - _loading)
 		{	
 			$(this).fadeOut();
 	
@@ -380,7 +390,15 @@ $(function() {
 	for (var i = 0; i <= json.length; i++) {
 		var Anum = Math.floor(Math.random() * 6 + 0);
 		//console.log(Anum);
-		$('section').eq(i).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+		if (loc == 'index.html') {
+			$('#main section').eq(i - 1).css({'padding-top' : WorkHeight[Anum] , 'background-color' : ArrBg[Anum]});
+		} else if (loc == 'personal.html') {
+			$('#main section').eq(i - 1).css({'padding-top' : ArrHeight[Anum] , 'background-color' : ArrBg[Anum]});
+		}
+		else
+		{
+			$('#main section').eq(i - 1).css({'padding-top' : WorkHeight[Anum] , 'background-color' : ArrBg[Anum]});
+		}
 		//console.log(ArrHeight[Anum]); 
 	}
 
