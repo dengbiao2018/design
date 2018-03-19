@@ -7,14 +7,14 @@ $(function() {
 		_work = 6, _personal = 15, //默认显示图片个数 
 		_loading = 5; //每次点击按钮后加载的个数
 
-	var url = window.location.href;
-	var loc = url.substring(url.lastIndexOf('/') + 1, url.length);
+	var url = window.location.href,
+		loc = url.substring(url.lastIndexOf('/') + 1, url.length);
 
-	var ArrHeight = ['67%','134%','100%','150%','75%','80%'];
+	var ArrHeight = ['67%','134%','100%','150%','75%','80%'],
 
-	var WorkHeight = ['70%','90%','80%','100%','82%','78%'];
+		WorkHeight = ['70%','90%','80%','100%','82%','78%'],
 
-	var ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
+		ArrBg = ['#8c8d87','#999999','#f6f6f6','#666666','#ae995a','#cccccc'];
 
 	$('.more').click(function(){
 		
