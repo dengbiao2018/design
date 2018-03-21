@@ -79,7 +79,7 @@ $(function() {
 
 		$('.load-page-css').fadeIn();
 
-	    if(imgNum==item.length){
+	    if(imgNum == item.length){
 
 	    	$('.load-page-css').fadeOut();
 

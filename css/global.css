@@ -24,6 +24,10 @@ ul,li,ol,ul {
     color:#fff;
 }
 
+.overflow-hidden{
+	overflow:hidden;
+}
+
 /* 头部CSS 开始*/
 #header{
 	overflow: hidden;
