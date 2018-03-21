@@ -146,11 +146,11 @@ $(function() {
 		wrap.append(list);
 
 		//禁止屏幕出滚动条
-		//$(document.body).bind('touchmove', function (e) {e.preventDefault();});
-		//var scroll = setInterval(function(){
-			//$(window).scrollTop(0).scrollLeft(0);
-		//},0);   
-		$('body').addClass('scroll');
+		$(document.body).bind('touchmove', function (e) {e.preventDefault();});
+		var scroll = setInterval(function(){
+			$(window).scrollTop(0).scrollLeft(0);
+		},0);   
+		//$('body').addClass('scroll');
 
 		//加载完成
 		var num = 0,
@@ -158,8 +158,8 @@ $(function() {
 
 		$('img').load(function(){
 		    if(!--imgNum){
-		    	//clearInterval(scroll);
-		    	$('body').removeClass('scroll');
+		    	clearInterval(scroll);
+		    	//$('body').removeClass('scroll');
 		    	$('.load-win').remove();
 		    	wrap.removeClass('load-svg');
 				imgLoad();
