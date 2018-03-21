@@ -148,7 +148,8 @@ $(function() {
 		//禁止屏幕出滚动条
 		$(document.body).bind('touchmove', function (e) {e.preventDefault();});
 		var scroll = setInterval(function(){
-			$(window).scrollTop(0).scrollLeft(0);
+			//$(window).scrollTop(0).scrollLeft(0);
+			$(body).addClass('scroll');
 		},0);   
 
 		//加载完成

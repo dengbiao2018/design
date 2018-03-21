@@ -23,6 +23,10 @@ ul,li,ol,ul {
     background:#000; 
     color:#fff;
 }
+.scroll{
+	height: 100%;
+	overflow: hidden;
+}
 
 .overflow-hidden{
 	overflow:hidden;
