@@ -23,10 +23,6 @@ ul,li,ol,ul {
     background:#000; 
     color:#fff;
 }
-.scroll{
-	height: 100%;
-	overflow: hidden;
-}
 
 /* 头部CSS 开始*/
 #header{
