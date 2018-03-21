@@ -114,6 +114,10 @@ $(function() {
 
 	});
 
+	//禁止屏幕出滚动条
+	var scroll = setInterval(function(){
+		$(window).scrollTop(0).scrollLeft(0);
+	},0);  
 
 	//item
 	if (loc == 'index.html') {
@@ -144,11 +148,6 @@ $(function() {
 		}
 
 		wrap.append(list);
-
-		//禁止屏幕出滚动条
-		var scroll = setInterval(function(){
-			$(window).scrollTop(0).scrollLeft(0);
-		},0);   
 
 		//加载完成
 		var num = 0,
