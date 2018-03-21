@@ -149,7 +149,7 @@ $(function() {
 		$(document.body).bind('touchmove', function (e) {e.preventDefault();});
 		var scroll = setInterval(function(){
 			//$(window).scrollTop(0).scrollLeft(0);
-			$(body).addClass('scroll');
+			$('body').addClass('scroll');
 		},0);   
 
 		//加载完成
