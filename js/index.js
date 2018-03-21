@@ -117,7 +117,9 @@ $(function() {
 	//禁止屏幕出滚动条
 	var scroll = setInterval(function(){
 		$(window).scrollTop(0).scrollLeft(0);
-	},0);  
+	},0); 
+
+	if(loc == 'information.html'){clearInterval(scroll);}; 
 
 	//item
 	if (loc == 'index.html') {
