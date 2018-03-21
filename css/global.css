@@ -28,10 +28,6 @@ ul,li,ol,ul {
 	overflow: hidden;
 }
 
-.overflow-hidden{
-	overflow:hidden;
-}
-
 /* 头部CSS 开始*/
 #header{
 	overflow: hidden;
