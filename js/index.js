@@ -146,7 +146,7 @@ $(function() {
 		wrap.append(list);
 
 		//禁止屏幕出滚动条
-		$(document.body).bind('touchmove', function (e) {e.preventDefault();});
+		//$(document.body).bind('touchmove', function (e) {e.preventDefault();});
 		var scroll = setInterval(function(){
 			$(window).scrollTop(0).scrollLeft(0);
 		},0);   
