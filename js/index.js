@@ -79,13 +79,21 @@ $(function() {
 
 		$('.load-page-css').fadeIn();
 
-		$(this).fadeOut();
+		$(this).hide();
 
 	    if(imgNum == item.length){
 
-	    	$('.load-page-css').fadeOut();
-
-	    	$(this).fadeIn();
+	    	$('.load-page-css').fadeOut(2000,function(){
+	    		
+	    		if(item.length >= json.length - _loading)
+				{	
+					$('.more').hide();
+				}
+				else
+				{
+					$('.more').show();
+				}
+	    	});
 
 			imgLoad();
 	    }
