@@ -79,9 +79,13 @@ $(function() {
 
 		$('.load-page-css').fadeIn();
 
+		$(this).fadeOut();
+
 	    if(imgNum == item.length){
 
 	    	$('.load-page-css').fadeOut();
+
+	    	$(this).fadeIn();
 
 			imgLoad();
 	    }
@@ -247,7 +251,8 @@ $(function() {
 					imgHref();
 					if (index == 1) {
 						$('samp').addClass("btnActive");
-					}
+					};
+					ImgCenter();
 				})
 
 				_this.on('click', 'span', function() {
@@ -256,14 +261,39 @@ $(function() {
 					imgHref();
 					if (index == item.length) {
 						$('span').addClass("btnActive");
-					}
+					};
+					ImgCenter();
 				})
 
 				img_a.on('click',function() {
 					index = _this.index() + 1;
 					imgHref();
 					$('html,body').addClass("overflow-hidden");
+					ImgCenter();
 				});
+
+				//ImagesCenter
+				$(window).resize(function () {
+					ImgCenter();
+				});
+				
+				function ImgCenter(){
+					var windowWidth  = $(document).width(),
+						windowHeight  = $(document).height(),
+						ImgHeight = $('.MediaImage img').height(),
+						ImagesCenter = windowHeight - ImgHeight,
+						MediaImageI = $('.MediaImage i').length;
+					if(MediaImageI == 1){
+						$('.MediaImage').css({'margin-top':ImagesCenter / 15});
+					}
+					if(windowWidth < 768 && MediaImageI == 1){
+						$('.MediaImage').css({'margin':'50px auto 0'});				
+					}
+					if(windowWidth > 767 && MediaImageI == 1){
+				        $('.MediaImage').css({'margin-top':ImagesCenter / 15});
+				    }
+				    //alert(ImagesCenter);
+				}
 
 				function imgHref() {
 
