@@ -10,18 +10,18 @@ ul,li,ol,ul {
 	list-style:none;
 }
 ::selection {
-    background:#000; 
-    color:#fff;
+    background:#fff; 
+    color:#000;
 }
 
 ::-moz-selection {
-    background:#000; 
-    color:#fff;
+    background:#fff; 
+    color:#000;
 }
 
 ::-webkit-selection {
-    background:#000; 
-    color:#fff;
+    background:#fff; 
+    color:#000;
 }
 
 .overflow-hidden{
@@ -252,9 +252,9 @@ ul,li,ol,ul {
     margin-bottom: 2em;
     display: inline-block;
 }
-.infor .visit a:hover{
+/*.infor .visit a:hover{
 	color: #9e9e9e;
-}
+}*/
 
 .infor p{
 	font-family: "微软雅黑",arial;
