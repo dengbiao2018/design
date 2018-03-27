@@ -20,7 +20,7 @@ var json = [
 		date:'三月 28，2017',
 	},
 	{ 	// img4
-		num:2,
+		num:1,
 		title:'briannnalynne3',
 		link:'<a href="https://juejin.im/" target="_blank">https://juejin.im/</a>',
 		date:'四月 28，2017',

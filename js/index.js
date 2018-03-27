@@ -354,9 +354,9 @@ $(function() {
 											'<p class="visit">' + json[index - 1].link + '</p>' + 
 											'<p class="time">' + json[index - 1].date + '</p>' + 
 										'</figcaption>' + 
-										'<i class="modalClose"><img src="images/global/close_img.png" /></i>' + 
-										'<samp class="nextPost"><img src="images/global/left_ico.png" /></samp>' + 
-										'<span class="prevPost"><img src="images/global/right_ico.png" /></span>' + 
+										'<i class="modalClose"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Close</title><polygon points="16 14 7.5 5.5 5.5 7.5 14 16 5.5 24.5 7.5 26.5 16 18 24.5029945 26.5 26.5 24.5 18 16 26.5 7.5 24.5029945 5.5"></polygon></svg></i>' + 
+										'<samp class="nextPost"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Next post</title><polygon points="12.5 15.5 22.5 25.5 20.5 27.5 8.5 15.5 20.5 3.5 22.5 5.50242448"></polygon></svg></samp>' + 
+										'<span class="prevPost"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Previous post</title><polygon points="19.5 15.5 9.5 25.5 11.5 27.5 23.5 15.5 11.5 3.5 9.5 5.50242448"></polygon></svg></span>' + 
 									'</figure>';
 					_this.prepend(img_str);
 

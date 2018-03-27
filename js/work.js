@@ -3,13 +3,13 @@
 var json = [  
 	{ 	// img1
 		num:4,
-		title:'adidasOriginals：#bluestreeter# 型塑未来中国街头文化！',
+		title:'Resn FWA Club 100  - 互动设计 / 前端开发',
 		link:'<a href="http://www.moving-picture.com/" target="_blank">http://www.moving-picture.com/</a>',
 		date:'一月 28，2017',
 	},
 	{ 	// img3
 		num:3,
-		title:'日本"银之盘"魔性广告来了：寿司上等，好吃又便宜！',
+		title:'Mailchimp活动 - 前端开发',
 		link:'',
 		date:'二月 28，2017',
 	},
