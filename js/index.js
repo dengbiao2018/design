@@ -253,32 +253,56 @@ $(function() {
 				// });
 				
 				//详情页
-				_this.on('click', 'samp', function() {
-					$(".MediaModal").remove();
-					index--;
-					imgHref();
-					if (index == 1) {
-						$('samp').addClass("btnActive");
-					};
-					ImgCenter();
+				_this.on('click', 'samp', function(e) {
+					e.stopPropagation();
+					$('#figure .ConBox-Css').fadeOut(200);
+					setTimeout(function(){
+						$(".MediaModal").remove();
+						index--;
+						imgHref();
+						if (index == 1) {
+							$('samp').addClass("btnActive");
+						};
+						ImgCenter();
+						Media_fadeIn();
+					},200);
 				})
 
-				_this.on('click', 'span', function() {
-					$(".MediaModal").remove();
-					index++;
-					imgHref();
-					if (index == item.length) {
-						$('span').addClass("btnActive");
-					};
-					ImgCenter();
+				_this.on('click', 'span', function(e) {
+					e.stopPropagation();
+					$('#figure .ConBox-Css').fadeOut(200);
+					setTimeout(function(){
+						$(".MediaModal").remove();
+						index++;
+						imgHref();
+						if (index == item.length) {
+							$('span').addClass("btnActive");
+						};
+						ImgCenter();
+						Media_fadeIn();
+					},200);
 				})
 
 				img_a.on('click',function() {
+					_this.children('.img-box').addClass('itemActive');
 					index = _this.index() + 1;
 					imgHref();
 					$('html,body').addClass("overflow-hidden");
 					ImgCenter();
+					Media_fadeIn();
 				});
+
+				//淡入
+				function Media_fadeIn(){
+					$('#figure .ConBox-Css').css({'height':'0','opacity':'0'});
+					$('#figure .ConBox-Css').fadeOut(100,function(){
+						setTimeout(function(){
+							$('.MediaModal-load').remove();
+							$('#figure .ConBox-Css').fadeIn();
+						},400);
+						$('#figure .ConBox-Css').css({'height':'','opacity':'1'}); 
+					});
+				};
 
 				//ImagesCenter
 				$(window).resize(function () {
@@ -342,14 +366,15 @@ $(function() {
 				}
 
 				function MediaModal(id) {
+					var Media_lad = '<svg version="1.1" class="load MediaModal-load" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50"style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"></path></svg>';
 					var img_str = '';
 						img_str += '<figure id="figure" class="MediaModal">' + 
-										'<div class="MediaImage">';
+										'<div class="MediaImage ConBox-Css">';
 						for (var i = 1; i <= json[index - 1].num; i++) {
 							img_str += '<i class="MediaItem"><img src="images/' + id + '/img' + index + '/img' + i + '.jpg" /></i>';
 						}
 							img_str += '</div>' + 
-										'<figcaption class="infor">' + 
+										'<figcaption class="infor ConBox-Css">' + 
 											'<h2>' + json[index - 1].title + '</h2>' + 
 											'<p class="visit">' + json[index - 1].link + '</p>' + 
 											'<p class="time">' + json[index - 1].date + '</p>' + 
@@ -359,6 +384,8 @@ $(function() {
 										'<span class="prevPost"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Previous post</title><polygon points="19.5 15.5 9.5 25.5 11.5 27.5 23.5 15.5 11.5 3.5 9.5 5.50242448"></polygon></svg></span>' + 
 									'</figure>';
 					_this.prepend(img_str);
+
+					$('.MediaModal').prepend(Media_lad);
 
 					if (index == 1) {
 						$('samp').addClass("btnActive");
@@ -374,6 +401,7 @@ $(function() {
 	};
 
 	$("#main").on('click', 'i', function() {
+		$('.img-box').removeClass('itemActive');
 		$(".MediaModal").remove();
 		$('html,body').removeClass("overflow-hidden");
 	});

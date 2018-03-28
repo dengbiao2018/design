@@ -41,6 +41,9 @@
 	margin: 35px 0;
 	display: block;
 }
+.info-box .link{
+	line-height: 25px;
+}
 .info-box .title{
 	font-size: 14px;
 	font-weight: normal;
