@@ -221,7 +221,6 @@ $(function() {
 						if (index == 1) {
 							$('samp').addClass("btnActive");
 						};
-						ImgCenter();
 						Media_fadeIn();
 					},200);
 				})
@@ -236,7 +235,6 @@ $(function() {
 						if (index == item.length) {
 							$('span').addClass("btnActive");
 						};
-						ImgCenter();
 						Media_fadeIn();
 					},200);
 				})
@@ -256,7 +254,6 @@ $(function() {
 					index = _this.index() + 1;
 					imgHref();
 					$('html,body').addClass("overflow-hidden");
-					ImgCenter();
 					Media_fadeIn();
 				});
 
@@ -272,29 +269,6 @@ $(function() {
 					});
 				};
 
-				//ImagesCenter
-				$(window).resize(function () {
-					ImgCenter();
-				});
-				
-				function ImgCenter(){
-					var windowWidth  = $(document).width(),
-						windowHeight  = $(document).height(),
-						ImgHeight = $('.MediaImage img').height(),
-						ImagesCenter = windowHeight - ImgHeight,
-						MediaImageI = $('.MediaImage i').length;
-					if(MediaImageI == 1){
-						$('.MediaImage').css({'margin-top':ImagesCenter / 15});
-					}
-					if(windowWidth < 768 && MediaImageI == 1){
-						$('.MediaImage').css({'margin':'50px auto 0'});				
-					}
-					if(windowWidth > 767 && MediaImageI == 1){
-				        $('.MediaImage').css({'margin-top':ImagesCenter / 15});
-				    }
-				    //alert(ImagesCenter);
-				}
-
 				function imgHref() {
 
 					if (loc == 'index.html') {
@@ -307,34 +281,10 @@ $(function() {
 						MediaModal('work');
 					}
 
-					if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
-
-						$('#main figcaption').css({'padding-bottom':'100000000rem'});
-					}
-					else if (navigator.userAgent.match(/Android/i) ? true : false) {
-
-						$('#main figcaption').css({'padding-bottom':'100000000rem'});
-
-					}
-
-					setTimeout(function(){
-
-						if(navigator.userAgent.match(/iPod|iPhone/i) ? true : false){
-							
-							$('#main figcaption').css({'padding-bottom':'0'});
-							
-						}
-						else if(navigator.userAgent.match(/Android/i) ? true : false){
-							
-							$('#main figcaption').css({'padding-bottom':'0'});
-							
-						};
-
-					},200);
-				}
+				};
 
 				function MediaModal(id) {
-					var Media_lad = '<svg version="1.1" class="load MediaModal-load" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50"style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"></path></svg>';
+					var Media_lad = '<svg version="1.1" class="load MediaModal-load"  x="0px" y="0px" viewBox="0 0 50 50"style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"></path></svg>';
 					var img_str = '';
 						img_str += '<figure id="figure" class="MediaModal">' + 
 										'<div class="MediaImage ConBox-Css">';
@@ -364,6 +314,28 @@ $(function() {
 					}
 
 				};
+
+				//判断滚动条
+				setInterval(function(){
+					if($('figure').scrollTop() == 0)
+					{
+						$('figure').scrollTop(1);
+					}
+					// else if(scrollTop + windowHeight >= scrollHeight)
+					// {
+					// 	$('figure').scrollTop(100);
+					// } 
+
+				    // if(window.innerHeight + $(document).scrollTop() == document.body.scrollHeight){
+				    //     $('figure').scrollTop(100);
+				    //     console.log('底部');
+				    // }
+
+				    $('figure:gt(0)').remove();
+
+				},0); 
+
+				
 			});
 		});
 	};
