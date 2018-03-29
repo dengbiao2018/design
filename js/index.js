@@ -209,48 +209,6 @@ $(function() {
 					img_a = _this.find('.img-a img,h2 a'),
 					itemImg = _this.find('img'),
 					index = _this.index() + 1;
-
-				//滑动手势
-				// $('body').on('touchstart', function(e) {
-				//     var touch = e.originalEvent,
-				//         startX = touch.changedTouches[0].pageX;
-
-		  //   		$(this).on('touchmove', function(e) {
-
-		  //       		e.preventDefault();
-				//         touch = e.originalEvent.touches[0] ||
-				//             e.originalEvent.changedTouches[0];
-				//         if (touch.pageX - startX > 20) {//向左
-				//         	console.log('a'+index);
-				//         	if (index == item.length) {
-				// 				index = 1;
-				// 			}
-				//             $(".MediaModal").remove();
-				//    			index++; 
-				// 			imgHref();
-				// 			if (index == 1) {
-				// 				$('samp').addClass("btnActive");
-				// 			}
-
-				//         } else if (touch.pageX - startX < -20) {//向右
-				//         	console.log('b'+index);
-				//         	if (index == 1) {
-				// 				index = item.length;
-				// 			}
-				//             $(".MediaModal").remove();
-				//    			index--; 
-				// 			imgHref();
-				// 			if (index == item.length) {
-				// 				$('span').addClass("btnActive");
-				// 			}
-
-				//         };
-
-				//     });
-
-				// }).on('touchend', function() {
-				//     $(this).off('touchmove');
-				// });
 				
 				//详情页
 				_this.on('click', 'samp', function(e) {
@@ -284,7 +242,17 @@ $(function() {
 				})
 
 				img_a.on('click',function() {
-					_this.children('.img-box').addClass('itemActive');
+
+					if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
+
+						_this.children('.img-box').addClass('itemActive');
+					}
+					else if (navigator.userAgent.match(/Android/i) ? true : false) {
+
+						_this.children('.img-box').addClass('itemActive');
+
+					}
+					
 					index = _this.index() + 1;
 					imgHref();
 					$('html,body').addClass("overflow-hidden");
