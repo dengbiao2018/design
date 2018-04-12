@@ -321,15 +321,6 @@ $(function() {
 					{
 						$('figure').scrollTop(1);
 					}
-					// else if(scrollTop + windowHeight >= scrollHeight)
-					// {
-					// 	$('figure').scrollTop(100);
-					// } 
-
-				    // if(window.innerHeight + $(document).scrollTop() == document.body.scrollHeight){
-				    //     $('figure').scrollTop(100);
-				    //     console.log('底部');
-				    // }
 
 				    $('figure:gt(0)').remove();
 
@@ -342,7 +333,9 @@ $(function() {
 
 	$("#main").on('click', 'i', function() {
 		$('.img-box').removeClass('itemActive');
-		$(".MediaModal").remove();
+		$(".MediaModal").fadeOut(300,function(){
+			$(".MediaModal").remove();
+		});
 		$('html,body').removeClass("overflow-hidden");
 	});
 
@@ -411,7 +404,6 @@ $(function() {
 		{
 			$('#main section').eq(i - 1).css({'padding-top' : WorkHeight[Anum] , 'background-color' : ArrBg[Anum]});
 		}
-		//console.log(ArrHeight[Anum]); 
 	}
 
 	function checkMobile(){

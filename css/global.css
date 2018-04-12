@@ -188,6 +188,9 @@ ul,li,ol,ul {
 /* 头部CSS 结束 */
 
 /*弹出层 开始*/
+.MediaModal::-webkit-scrollbar{
+    display: none;
+}
 .MediaModal{
 	position: fixed;
     top: 0;
