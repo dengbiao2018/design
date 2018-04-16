@@ -208,36 +208,53 @@ $(function() {
 				var _this = $(this),
 					img_a = _this.find('.img-a img,h2 a'),
 					itemImg = _this.find('img'),
-					index = _this.index() + 1;
+					index = _this.index() + 1,
+					time;
 				
 				//详情页
 				_this.on('click', 'samp', function(e) {
-					e.stopPropagation();
-					$('#figure .ConBox-Css').fadeOut(200);
-					setTimeout(function(){
-						$(".MediaModal").remove();
-						index--;
-						imgHref();
-						if (index == 1) {
-							$('samp').addClass("btnActive");
-						};
-						Media_fadeIn();
-					},200);
-				})
+					
+					clearTimeout(time);
 
-				_this.on('click', 'span', function(e) {
-					e.stopPropagation();
-					$('#figure .ConBox-Css').fadeOut(200);
-					setTimeout(function(){
-						$(".MediaModal").remove();
-						index++;
-						imgHref();
-						if (index == item.length) {
-							$('span').addClass("btnActive");
-						};
-						Media_fadeIn();
+					time=setTimeout(function () {
+
+						e.stopPropagation();
+						$('#figure .ConBox-Css').fadeOut(200);
+						setTimeout(function(){
+							$(".MediaModal").remove();
+							index--;
+							imgHref();
+							if (index == 1) {
+								$('samp').addClass("btnActive");
+							};
+							Media_fadeIn();
+						},200);
+
 					},200);
-				})
+
+				});
+					
+				_this.on('click', 'span', function(e) {
+
+					clearTimeout(time);
+						
+					time=setTimeout(function () {
+
+						e.stopPropagation();
+						$('#figure .ConBox-Css').fadeOut(200);
+						setTimeout(function(){
+							$(".MediaModal").remove();
+							index++;
+							imgHref();
+							if (index == item.length) {
+								$('span').addClass("btnActive");
+							};
+							Media_fadeIn();
+						},200);
+
+					},200);
+
+				});
 
 				img_a.on('click',function() {
 
@@ -301,7 +318,7 @@ $(function() {
 										'<samp class="nextPost"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Next post</title><polygon points="12.5 15.5 22.5 25.5 20.5 27.5 8.5 15.5 20.5 3.5 22.5 5.50242448"></polygon></svg></samp>' + 
 										'<span class="prevPost"><svg viewBox="0 0 32 32" width="100%" height="100%"><title>Previous post</title><polygon points="19.5 15.5 9.5 25.5 11.5 27.5 23.5 15.5 11.5 3.5 9.5 5.50242448"></polygon></svg></span>' + 
 									'</figure>';
-					_this.prepend(img_str);
+					_this.append(img_str);
 
 					$('.MediaModal').prepend(Media_lad);
 
@@ -325,8 +342,7 @@ $(function() {
 				    $('figure:gt(0)').remove();
 
 				},0); 
-
-				
+			
 			});
 		});
 	};
