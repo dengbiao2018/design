@@ -523,6 +523,7 @@ ul,li,ol,ul {
 	/*弹出层 开始*/
 	.MediaImage{
 		width: 100%;
+	    max-width: 6400px;
 	    flex-wrap: nowrap;
     	align-items: normal;
     	margin: 50px auto 0;

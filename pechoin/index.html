@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<script src="js/wxmoment.js"></script>
+	<script src="js/global.js"></script>
+	
+    <title>百雀羚</title>
+</head>
+
+
+<body>
+		<!-- loading -->
+		<div id="loading">
+			<span class="loading-text">0%</span>
+			<img src="images/loading.gif" class="loading-bg" />
+		</div>
+		<!-- /loading -->
+
+		<div id="loading2">
+			<div class="shou_tips"></div>
+			<div class="product"></div>
+		</div>
+	
+		<!-- 横屏提示 -->
+		<div id="hen_tip">
+			<span></span>
+		</div>
+		<!-- /横屏提示 -->
+
+		<!-- 视频播放页 -->
+		<div id="p1">
+			<div id="video_area">
+				<div id="float_div"></div>
+				<span class="btn">
+					<img src="images/img5.png"/>
+				</span>
+				<span class="text_btn" data="1">
+					<img class="t1" src="images/img4.png"/>
+					<img class="t2" src="images/img5.png"/>
+				</span>
+			</div>
+            <div id="video_float"></div>
+
+			<video id="video" src="video/video.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/video.jpg"></video>
+		</div>
+		<!-- /视频播放页 -->
+
+		<!-- end画面 -->
+		<div id="end_page">
+			<span class="btn1"></span>
+			<span class="btn2"></span>
+			<div id="qrcode">
+				<div class="close"></div>
+				<img src="images/qr_bg.png">
+			</div>
+		</div>
+		<!-- /end画面 -->
+
+		<!-- 海报视频 -->
+		<div id="slide_tv">
+			
+			<ul id="tv_list">
+
+				<li class="t1" data="5">
+					<video class="tv_video" src="video/1.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/1.jpg"></video>
+					<div class="vlist_btn"></div>
+				</li>
+
+				<li class="t2" data="2">
+					<video class="tv_video" src="video/2.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/2.jpg"></video>
+					<div class="vlist_btn"></div>
+				</li>
+
+				<li class="t3 current" data="3">
+					<video class="tv_video" src="video/3.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/3.jpg"></video>
+					<div class="vlist_btn"></div>
+				</li>
+
+				<li class="t4" data="4">
+					<video class="tv_video" src="video/4.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/4.jpg"></video>
+					<div class="vlist_btn"></div>
+				</li>
+
+				<li class="t5" data="5">
+					<video class="tv_video" src="video/5.mp4" x5-video-player-type='h5' x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" poster="video/5.jpg"></video>
+					<div class="vlist_btn"></div>
+				</li>
+
+			</ul>
+			<div id="tv_left"></div>
+
+			<div id="tv_right"></div>
+
+			<div id="return_btn"></div>
+
+		</div>
+		<!-- /海报视频 -->
+	
+</body>
+
+
+
+
+<script>
+   var arr = ['这个H5可吸收所有不温柔的负能量','当你落入全棉世界...'];
+   var num = Math.floor(Math.random() * 2 + 0);
+
+   var base_url = '';
+   var file_url = '/pechoin';
+   var wx_title = arr[num];
+   var wx_desc = '8月10日来天猫，全棉改变世界';
+   
+   wx.config({
+       appId: '<?php echo $signPackage["appId"]; ?>',
+       timestamp: '<?php echo $signPackage["timestamp"]; ?>',
+       nonceStr: '<?php echo $signPackage["nonceStr"]; ?>',
+       signature: '<?php echo $signPackage["signature"]; ?>',
+       jsApiList: [
+           'onMenuShareTimeline', 'onMenuShareAppMessage'
+       ]
+   });
+
+   wx.ready(function () {
+       // 在这里调用 API
+
+       wx.onMenuShareTimeline({
+           title: wx_title, // 分享标题
+           link: base_url, // 分享链接
+           imgUrl: file_url + '/images/share.jpg?v=3', // 分享图标
+           success: function () {
+           },
+           cancel: function () {
+               // 用户取消分享后执行的回调函数
+           }
+       });
+
+       wx.onMenuShareAppMessage({
+           title: wx_title, // 分享标题
+           desc: wx_desc,
+           link: base_url, // 分享链接
+           imgUrl: file_url + '/images/share.jpg', // 分享图标
+           type: '', // 分享类型,music、video或link，不填默认为link
+           dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+           success: function () {
+           },
+           cancel: function () {
+               // 用户取消分享后执行的回调函数
+           }
+       });
+   });
+</script> 
+</html>
+

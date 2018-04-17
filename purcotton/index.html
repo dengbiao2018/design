@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/global.css?v=2" />
+	<script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.js"></script>
+	<script src="js/weixin-1.0.0.js"></script>
+	<script src="js/global.js"></script>
+	
+    <title>qmsd</title>
+</head>
+
+<style>
+.text_select{
+    user-select:text;
+    -webkit-user-select:text;
+    -o-user-select:text;
+    -moz-user-select:text;
+}
+.no_select{
+    user-select:none;
+    -webkit-user-select:none;
+    -o-user-select:none;
+    -moz-user-select:none;
+}
+</style>
+<body>
+		<!-- loading -->
+		<div id="loading">
+			<img src="images/loading.gif" class="loading-bg" />
+			<img src="images/loading_txt.png" class="loading-text"/>
+		</div>
+		<!-- /loading -->
+	
+		<!-- 竖屏提示 -->
+		<div id="p1_tip"></div>
+		<!-- /竖屏提示 -->
+
+		<!-- 横屏视频段 -->
+		<div id="p2">
+			<div id="video-btn"></div>
+            <div id="video-click"></div>
+			<video width="100%" src="video/video.mp4" id="video" x5-video-player-type='h5'
+                   x5-video-player-fullscreen="true" x5-video-orientation="landscape" webkit-playsinline playsinline style="object-fit:fill;" poster="images/video_bg.jpg"></video>
+		</div>
+		<!-- /横屏视频段 -->
+
+		<!-- end画面 -->
+		<div id="p3">
+			<img src="images/ending.jpg"/>
+			<img src="images/hand.gif" class="hand"/>
+			<!-- 淘宝链接 -->
+			<div id="taobao">
+				<img src="images/taobao.png"/>
+				<div class="taobao-text">
+				三生有幸，全棉时代。8月10日，全场5折起，仅此一天！，使用￥全棉时代天猫超级品牌日￥抢先预览（长按复制整段文案，打开手机淘宝即可进入活动内容）
+				</div>
+				<div class="taobao-btn"></div>
+			</div> 
+			
+			<div class="taobao-bg"></div>
+
+			<!-- /淘宝链接 -->
+
+
+
+		</div>
+		<!-- /end画面 -->
+	
+</body>
+
+<script>
+    var arr = ['这个H5可吸收所有不温柔的负能量','当你落入全棉世界...'];
+    var num = Math.floor(Math.random() * 2 + 0);
+
+    var base_url = '';
+    var file_url = '/purcotton';
+    var wx_title = arr[num];
+    var wx_desc = '8月10日来天猫，全棉改变世界';
+    
+    wx.config({
+        appId: '<?php echo $signPackage["appId"]; ?>',
+        timestamp: '<?php echo $signPackage["timestamp"]; ?>',
+        nonceStr: '<?php echo $signPackage["nonceStr"]; ?>',
+        signature: '<?php echo $signPackage["signature"]; ?>',
+        jsApiList: [
+            'onMenuShareTimeline', 'onMenuShareAppMessage'
+        ]
+    });
+
+    wx.ready(function () {
+        // 在这里调用 API
+
+        wx.onMenuShareTimeline({
+            title: wx_title, // 分享标题
+            link: base_url, // 分享链接
+            imgUrl: file_url + '/images/share.jpg?v=3', // 分享图标
+            success: function () {
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: wx_title, // 分享标题
+            desc: wx_desc,
+            link: base_url, // 分享链接
+            imgUrl: file_url + '/images/share.jpg', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+</script> 
+</html>
+

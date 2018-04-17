@@ -1,0 +1,180 @@
+img { border:0;}
+ul li { list-style:none;}
+body,ul,li,div,dl,dd,dt,img,p,h1,h2,h3 { margin:0; padding:0;}
+ul,li { display:block; list-style:none;}
+.pointer { cursor:pointer}
+.clear { clear:both; height:0; line-height:0; font-size:0;}
+h1,h2,h3 { font-size: inherit; display:inline; font-weight:normal}
+em{font-style:normal}
+*:focus{outline:none;}
+body,html{
+	overflow:hidden;
+	padding:0;margin:0;
+	background:#8e8e8e;
+	font-family:"黑体";
+}
+#loading{
+	width:16rem;
+	height:26rem;
+	position: relative;
+	z-index: 555555;
+}
+.loading-bg{
+	width:16rem;
+	height:26rem;
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.loading-text{
+	width: 6.85rem;
+	height: 4.85rem;
+	position: absolute;
+	bottom: 3.125rem;
+	left: 50%;
+	z-index: 2;
+	margin-left:-3.425rem;
+
+}
+	
+#p1_tip{
+	z-index:51;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url('../images/tips.jpg') no-repeat;
+	background-size:cover;
+	width:16rem;
+	height:26rem
+}
+#p2{
+	z-index:49;
+	position:absolute;
+	top:0;
+	left:0;
+	width:16rem;
+	height:8rem
+}
+	#video-btn{
+	    position: absolute;
+	    top: 0.77rem;
+	    left: 50%;
+	    width: 3.84rem;
+	    height: 3.84rem;
+	    z-index: 3;
+	    margin-left: -1.92rem;
+	    background: url('../images/video_btn.png') no-repeat;
+	    background-size:cover; 
+	}
+	#video-click{
+		position: absolute;
+	    bottom: 1.48rem;
+	    left: 50%;
+	    width: 2.71rem;
+	    height: 1.64rem;
+	    z-index: 3;
+	    margin-left: -1.355rem;
+	    background: url('../images/video_click.png') no-repeat;
+	    background-size:cover; 
+	}
+	.video-bg{
+		width: 16rem;
+		height: 8rem;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index: 2;
+	}
+	#video{
+		position:absolute;
+		top:0;
+		left:0;
+		z-index: 1;
+	}
+#p3{
+	display:none;
+	z-index:50;
+	position:relative;
+	top:0;
+	left:0;
+	width:16rem;
+	height:8rem;
+	background: #d0eae6;
+}
+	#p3 img{
+		width:16rem;
+		height:7.871rem;
+		position: absolute;
+		z-index: 1;
+	}
+	#p3 .hand{
+		width:2.04rem;
+		height:1.81rem;
+		position: absolute;
+		z-index: 1;
+		top: 3.75rem;
+		left: 9.62rem;
+	}
+	#taobao{
+		display: none;
+		width: 10.6rem;
+		height: 3.49rem;
+		position: absolute;
+		z-index: 2;	
+		top: 50%;
+		left: 50%;
+		margin-top: -1.745rem;
+		margin-left:-5.3rem; 
+	}
+		#taobao img{
+			width: 10.6rem;
+			height: 3.49rem;
+		}
+	.taobao-text{
+		width: 9.83rem;
+		height: 1.60rem;
+		font-size: 0.28rem;
+		line-height: 0.42rem;
+		color: #fff;
+		font-family: "微软雅黑";
+		font-weight: bold;
+		letter-spacing:0.01rem;
+		position: absolute;
+		z-index: 3;	
+		top: 50%;
+		left: 50%;
+		margin-top: -1.325rem;
+		margin-left:-4.91rem; 
+	}
+	.taobao-bg{
+		display: none;
+		width:16rem;
+		height:8rem;
+		position: absolute;
+		z-index: 1;
+		background: rgba(225,249,246,0.90);
+	}
+	
+	.taobao-btn{
+	    width: 0.64rem;
+	    height: 0.64rem;
+	    position: absolute;
+	    z-index: 3;
+	    top: -0.21rem;
+	    right: -0.21rem;
+	}
+
+
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+	#p1_tip{display:block}
+  
+} 
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+  #p1_tip{display:none}
+   
+}
+#myCanvas{z-index:49;position:absolute;top:0;left:0;width:16rem;height:8rem}
