@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/global.css?v=2" />
+	<script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.js"></script>
+	<script src="js/weixin-1.0.0.js"></script>
+
+	
+    <title>潮流探秘</title>
+</head>
+
+
+<body id="yoho_body">  
+        <div class="music_btn"></div>
+
+        <audio id="bg_music" src="images/bg.mp3" loop="loop"></audio>
+		<!-- loading -->
+		<div id="loading">
+            <div id="num"></div>
+            <img src="images/loading.gif"/>
+		</div>
+		<!-- /loading -->
+
+		<!-- 首屏 -->
+		<div id="p1" class="wh_global">
+			<!-- 余文乐说话 -->
+            <img class="yun_img" src="images/p1/img1.png"/>
+            <img class="iceberg_img" src="images/p1/img2.png"/>
+			<div id="p1_ywl">  
+                <img class="wh_global" src="images/p1/p1_ywl/1.png"/>
+				<audio id="p1_ywl_m" src="images/p1/p1_ywl/mp3.mp3"></audio>
+			</div>
+            <img class="highway_img" src="images/p1/img3.png"/>
+            <div id="p1_logo">
+                <img class="logo_img" src="images/p1/logo/1.png"/>
+            </div>
+            <img class="skate" src="images/p1/img4.png"/>
+			<!-- /余文乐说话 -->
+            <div class="text_img"></div>
+            <!-- 向上提示箭头 -->
+            <div class="p1_btn">
+                <div class="p1_btn_h"></div>
+                <div class="p1_btn_t"></div>
+            </div>
+            <!-- /向上提示箭头 -->
+
+		</div>
+		<!-- /首屏 -->
+		
+        <!-- 第一题 -->
+		<div id="p2" class="wh_global">
+            <div class="p2_a p2_abcd_css" data='a'>A</div>
+            <div class="p2_b p2_abcd_css" data='b'>B</div>
+            <div class="p2_c p2_abcd_css" data='c'>C</div>
+            <div class="p2_d p2_abcd_css" data='d'>D</div>
+            <div class="p2_hand"></div>
+            <div class="p2_btn"></div>
+            <div class="p2_cd">
+                <div class="cd_img">
+                    <img src="images/p2/cd_img.png"/>
+                </div>
+                <div class="text_img1"></div>
+            </div>
+            <audio class="mp3_a mp3_abcd_js" src="images/p2/mp3_a.mp3"></audio>
+		</div>
+        <!-- /第一题 -->
+
+        <!-- 第二题 -->
+        <div id="p3" class="wh_global">
+            <div class="p3_a p3_abcd_js" data='a'></div>
+            <div class="p3_b p3_abcd_js" data='b'></div>
+            <div class="p3_c p3_abcd_js" data='c'></div>
+            <div class="p3_d p3_abcd_js" data='d'></div>
+            <div class="p3_hand"></div>
+            <div class="p3_btn"></div>
+        </div>
+        <!-- /第二题 -->	
+
+	   <!-- 第三题 -->
+        <div id="p4" class="wh_global">
+            <div class="p4_a p4_abcd_css" data='a'>A. Neighborhood</div>
+            <div class="p4_b p4_abcd_css" data='b'>B. WTAPS</div>
+            <div class="p4_c p4_abcd_css" data='c'>C. Carhartt WIP</div>
+            <div class="p4_d p4_abcd_css" data='d'>D. DESCENDANT</div>
+            <div class="p4_hand"></div>
+            <div class="p4_btn"></div>
+            <img class="p4_img1" src="images/p4/img1.png"/>
+            <img class="p4_img2" src="images/p4/img2.png"/>
+        </div>
+        <!-- /第三题 -->
+
+        <!-- 第四题 -->
+        <div id="p5" class="wh_global">
+            <div class="p5_a p5_abcd_css" data='a'></div>
+            <div class="p5_b p5_abcd_css" data='b'></div>
+            <div class="p5_c p5_abcd_css" data='c'></div>
+            <div class="p5_d p5_abcd_css" data='d'></div>
+            <div class="p5_hand"></div>
+            <div class="p5_btn"></div>
+        </div>
+        <!-- /第四题 -->
+
+        <!-- 第五题(六屏) -->
+        <div id="p6" class="wh_global">
+            <div class="p6_img1 p6_img1_css"></div>
+            <div class="p6_img2 p6_img1_css"></div>
+            <div class="p6_img3 p6_img1_css"></div>
+            <div class="p6_img4 p6_img1_css">
+                <div class="p6_a p6_abcd_css" data='a'>
+                    <div class="p6_hand_1 p6_hand_css"></div>
+                </div>
+                <div class="p6_b p6_abcd_css" data='b'>
+                    <div class="p6_hand_2 p6_hand_css"></div>
+                </div>
+                <div class="p6_c p6_abcd_css" data='c'>
+                    <div class="p6_hand_3 p6_hand_css"></div>
+                </div>
+                <div class="p6_d p6_abcd_css" data='d'>
+                    <div class="p6_hand_4 p6_hand_css"></div>
+                </div>
+            </div>
+            <div class="p6_btn"></div>
+        </div>
+        <!-- /第五题(六屏) -->
+
+        <!-- 第六题(七屏) -->
+        <div id="p7" class="wh_global">
+            <div class="p7_a p7_abcd_css" data='a'></div>
+            <div class="p7_b p7_abcd_css" data='b'></div>
+            <div class="p7_c p7_abcd_css" data='c'></div>
+            <div class="p7_d p7_abcd_css" data='d'></div>
+            <div class="p7_hand"></div>
+            <div class="p7_btn"></div>
+        </div>
+        <!-- /第六题(七屏) -->
+
+        <!-- 第七题(八屏) -->
+        <div id="p8" class="wh_global">
+            <div class="p8_a p8_abcd_css" data='a'>
+                <div class="p8_hand"></div>
+            </div>
+            <div class="p8_b p8_abcd_css" data='b'>
+                <div class="p8_hand"></div>
+            </div>
+            <div class="p8_c p8_abcd_css" data='c'>
+                <div class="p8_hand"></div>
+            </div>
+            <div class="p8_d p8_abcd_css" data='d'>
+                <div class="p8_hand"></div>
+            </div>
+            <div class="p8_btn"></div>
+        </div>
+        <!-- /第七题(八屏) -->
+
+        <!-- 第八题(九屏) -->
+        <div id="p9" class="wh_global">
+            <div class="p9_a p9_abcd_css" data='a'></div>
+            <div class="p9_b p9_abcd_css" data='b'></div>
+            <div class="p9_c p9_abcd_css" data='c'></div>
+            <div class="p9_d p9_abcd_css" data='d'></div>
+            <div class="p9_hand"></div>
+            <div class="p9_btn"></div>
+        </div>
+        <!-- /第八题(九屏) -->
+
+        <!-- 第九题(十屏) -->
+        <div id="p10" class="wh_global">
+            <div class="p10_a p10_abcd_js" data='a'></div>
+            <div class="p10_b p10_abcd_js" data='b'></div>
+            <div class="p10_c p10_abcd_js" data='c'></div>
+            <div class="p10_d p10_abcd_js" data='d'></div>
+            <div class="p10_hand"></div>
+            <div class="p10_btn"></div>
+        </div>
+        <!-- /第九题(十屏) -->
+
+		<!-- 上半部分结果页面(成功&失败) -->
+		<div id="p11" class="result wh_global">
+			<img id="cj" src="images/p11/bg.jpg">
+			<img id="fs" src="images/p11/0/in/6.png">
+			<div class="success_page">
+				<!-- 余文乐说话 -->
+                <img class="yun_img" src="images/p1/img1.png"/>
+                <img class="iceberg_img" src="images/p1/img2.png"/>
+                <div id="p11_ywl">  
+                    <img class="wh_global" src="images/p11/p11_ywl/1.png"/>
+                    <audio id="p11_ywl_m" src="images/p11/p11_ywl/mp3.mp3"></audio>
+                </div>
+                <img class="highway_img" src="images/p11/success_page/img3.png"/>
+                <div id="p11_logo">
+                    <img class="p11_logo_img" src="images/p1/logo/20.png"/>
+                </div>
+                <img class="p11_skate" src="images/p1/img4.png"/>
+                <!-- /余文乐说话 -->
+
+                <!-- 向上提示箭头 -->
+                <div class="p11_btn">
+                    <div class="p11_btn_h"></div>
+                    <div class="p11_btn_t"></div>
+                </div>
+                <!-- /向上提示箭头 -->
+			</div>
+			<div class="gameover_page">
+                <div class="g_logo">
+                    <img class="g_logo_img" src=''/>
+                </div>
+                <div class="qr_code">
+                    <img src="images/p11/gameover_page/qr_code.jpg"/>
+                </div>
+                <a href="javascript:;" class="g_btn"></a>
+                <div class="g_text"></div>
+            </div>
+		</div>
+		<!-- /上半部分结果页面(成功&失败) -->
+
+        
+        <!-- 第一题(第二部分) -->
+        <div id="a1" class="wh_global">
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css current" data="0"></div>
+                <div class="tm_b abcde_css" data="1"></div>
+                <div class="tm_c abcde_css" data="2"></div>
+                <div class="tm_d abcde_css" data="3"></div>
+                <div class="tm_e abcde_css" data="4"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第一题(第二部分)-->
+
+         <!-- 第二题(第二部分) -->
+        <div id="a2" class="wh_global">
+            <div class="bg_f"></div>
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css"></div>
+                <div class="tm_b abcde_css"></div>
+                <div class="tm_c abcde_css"></div>
+                <div class="tm_d abcde_css"></div>
+                <div class="tm_e abcde_css"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第二题(第二部分)-->
+
+        <!-- 第三题(第二部分) -->
+        <div id="a3" class="wh_global">
+			<img class="yun_i" src="images/a3/yun_i.png"/>
+            <div class="bg_i"></div> 
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css current" data="0"></div>
+                <div class="tm_b abcde_css" data="2"></div>
+                <div class="tm_c abcde_css" data="4"></div>
+                <div class="tm_d abcde_css" data="1"></div>
+                <div class="tm_e abcde_css" data="3"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第三题(第二部分)-->
+        
+        <!-- 第四题(第二部分) -->
+        <div id="a4" class="wh_global">
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css"></div>
+                <div class="tm_b abcde_css"></div>
+                <div class="tm_c abcde_css"></div>
+                <div class="tm_d abcde_css"></div>
+                <div class="tm_e abcde_css"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第四题(第二部分)-->
+
+        <!-- 第五题(第二部分) -->
+        <div id="a5" class="wh_global">
+            <div class="bg_img"></div>
+            <div class="huaban"></div>
+            <div class="left_hand"></div>
+            <div class="right_hand"></div>
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css current" data="3"></div>
+                <div class="tm_b abcde_css" data="1"></div>
+                <div class="tm_c abcde_css" data="4"></div>
+                <div class="tm_d abcde_css" data="0"></div>
+                <div class="tm_e abcde_css" data="2"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第五题(第二部分)-->
+
+        <!-- 第六题(第二部分) -->
+        <div id="a6" class="wh_global">
+            <div class="alcohol_img"></div>
+            <div class="alcohol_hand"></div>
+            <div class="alcohol_img"></div>
+            <div class="btn_l"></div>
+            <div class="btn_r"></div>
+            <div class="tm">
+                <div class="tm_a abcde_css"></div>
+                <div class="tm_b abcde_css"></div>
+                <div class="tm_c abcde_css"></div>
+                <div class="tm_d abcde_css"></div>
+                <div class="tm_e abcde_css"></div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <!-- /第六题(第二部分)-->
+
+        <!-- 第七题(第二部分) -->
+        <div id="a7" class="wh_global">
+            <!-- 分享画面 -->
+            <div id="share" class="wh_global">
+                <div class="share_bg"></div>
+                <div class="share_ico"></div>
+            </div>
+            <!-- /分享画面 -->
+            <!-- 分享回来页面 -->
+            <div class="share_page">
+                <img class="share_page_img1 share_page_css" src="images/share_page/img1.jpg"/>
+                <img class="share_page_img2 share_page_css" src="images/share_page/img2.jpg"/>
+                <img class="share_page_img3 share_page_css" src="images/share_page/img3.jpg"/>
+                <img class="share_page_img4 share_page_css" src="images/share_page/img4.jpg"/>
+                <img class="share_page_img5 share_page_css" src="images/share_page/img5.jpg"/>
+                <div class="share_btn"></div>
+            </div>
+            <!-- /分享回来页面 -->
+            <div class="a7_tm">
+                <div class="tm_a abcde_css"></div>
+                <div class="tm_b abcde_css"></div>
+                <div class="tm_c abcde_css"></div>
+                <div class="tm_d abcde_css"></div>
+                <div class="tm_e abcde_css"></div>
+            </div>
+            <div class="a7_hand"></div>
+            <div class="a7_btn"></div>
+        </div>
+        <!-- /第七题(第二部分)-->
+
+        <!-- 结尾 -->
+        <div id="a8" class="wh_global">
+            <img class="yun_img" src="images/p1/img1.png"/>
+            <img class="iceberg_img" src="images/p1/img2.png"/>
+            <div id="a8_ywl">  
+                <img class="wh_global" src="images/a8/a8_ywl/1.png"/>
+                <audio id="a8_ywl_m" src="images/a8/a8_ywl/mp3.mp3"></audio>
+            </div>
+            <img class="highway_img" src="images/p1/img3.png"/>
+            <div id="a8_logo">
+                <img class="a8_logo_img" src="images/p1/logo/20.png"/>
+            </div>
+
+            <!-- 二维码\再玩一次\邀请好友 -->
+            <img class="a8_code" src="images/a8/code.png"/>
+            <div class="a8_btn1"></div>
+            <div class="a8_btn2"></div>
+            <!-- /二维码\再玩一次\邀请好友 -->
+
+            <img class="a8_skate" src="images/p1/img4.png"/>
+        </div>
+        <!-- /结尾 --> 
+</body>
+
+</html>
+
+<script>
+        var arr = ['这个H5可吸收所有不温柔的负能量','当你落入全棉世界...'];
+        var num = Math.floor(Math.random() * 2 + 0);
+
+        var base_url = '';
+        var file_url ='/yoho';
+        var wx_title = arr[num];
+        var wx_desc = '8月10日来天猫，全棉改变世界';
+        
+        wx.config({
+            appId: '<?php echo $signPackage["appId"]; ?>',
+            timestamp: '<?php echo $signPackage["timestamp"]; ?>',
+            nonceStr: '<?php echo $signPackage["nonceStr"]; ?>',
+            signature: '<?php echo $signPackage["signature"]; ?>',
+            jsApiList: [
+                'onMenuShareTimeline', 'onMenuShareAppMessage'
+            ]
+        });
+
+        wx.ready(function () {
+            $('#bg_music')[0].play();
+            // 在这里调用 API
+            wx.onMenuShareTimeline({
+                title: wx_title, // 分享标题
+                link: base_url, // 分享链接
+                imgUrl: file_url + '/images/share.jpg?v=3', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: wx_title, // 分享标题
+                desc: wx_desc,
+                link: base_url, // 分享链接
+                imgUrl: file_url + '/images/share.jpg', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        });
+    </script>
+    <script src="js/global.js"></script>
