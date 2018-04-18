@@ -50,7 +50,7 @@ var json = [
 		date:'八月 28，2017',
 	},
 	{ 	// img9
-		num:6,
+		num:5,
 		title:'MediaLab360度直播 - 互动设计',
 		link:'',
 		date:'2016 Year',
@@ -74,15 +74,15 @@ var json = [
 		date:'三月 28，2017',
 	},
 	{ 	// img13
-		num:4,
-		title:'汉堡王给麦当劳送了一份圣诞节大礼：火的礼物',
+		num:3,
+		title:'卡通倒计时动画/翻滚的小球/书本翻页的GIF动画 - AE特效',
 		link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
 		date:'五月 28，2017',
 	},
 	{ 	// img14
-		num:4,
-		title:'小米空气净化器亲情短片：第一次做爸爸，让我照顾好你',
-		link:'<a href="https://dribbble.com/" target="_blank">https://dribbble.com/</a>',
+		num:8,
+		title:'德福360度 - 前端开发',
+		link:'<a href="scguanchi/index.html" target="_blank">https://scguanchi.com/</a>',
 		date:'六月 28，2017',
 	},
 	{ 	// img15
