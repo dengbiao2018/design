@@ -1,0 +1,305 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/bmw_pc.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/wxmoment.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/global_pc.js"></script>
+<script type="text/javascript" src="js/bmw_pc2.js"></script>
+<script type="text/javascript" src="js/layui/layui.all.js"></script>
+<title>BMW</title>
+</head>
+
+<body>
+	
+	<div id="main">
+
+		<!-- loading -->
+		<div id="loading" class="section">
+			<span class="load_number"></span>
+			<img class="tiao_active" src="images/pc/loading/line.png"/>
+			<img class="tiao" src="images/pc/loading/line_r.png"/>
+		</div>
+		<!-- /loading -->
+		
+		<!-- logo -->
+		
+		<div id="logo">
+			<img class="log_img" src="images/pc/logo.png"/>
+		</div>
+		<!-- /logo -->
+
+		<!-- 顶部导航(nav) -->
+		<div id="nav">
+			<div class="nav_up"></div>
+			<div class="nav_link">
+				<div class="close"></div>
+				<div class="item_runner"></div>
+				<div class="item_list"></div>
+				<div class="item_testdrive"></div>
+			</div>	
+		</div>	
+		<!-- /顶部导航(nav) -->
+
+		<!-- canvas融合层(给田晨的div) -->
+		<div id="canvas_box">
+		</div>
+		<!-- /canvas融合层(给田晨的div)  -->
+
+		<!-- 生成海报 -->	
+		<div id="poster_box">
+			<div class="p_textbox">
+				<div class="p_title"></div>
+				<div class="p_con"><img src="images/pc/1_3/img1.png"/></div>
+				<div class="p_arrow"></div>
+				<div class="poster_list">
+					<ul class="p_list_box">
+						<li data="1" class="tiem_active"><img src="images/pc/1_3/text1.png"/></li>
+						<li data="2"><img src="images/pc/1_3/text2.png"/></li>
+						<li data="3"><img src="images/pc/1_3/text3.png"/></li>
+						<li data="4"><img src="images/pc/1_3/text4.png"/></li>
+						<li data="5"><img src="images/pc/1_3/text5.png"/></li>
+						<li data="6"><img src="images/pc/1_3/text6.png"/></li>
+						<li data="7"><img src="images/pc/1_3/text7.png"/></li>
+						<li data="8"><img src="images/pc/1_3/text8.png"/></li>
+					</ul>
+					<div class="poster_closebtn"></div>
+				</div>
+			</div>
+			<div class="poster_btn"></div>
+		</div>
+		<!-- /生成海报 -->	
+
+		<!-- 田晨给的海报 -->	
+		<div class="poster">
+			<div class="poster_img"><img src="images/pc/1_3/bg1.jpg"/></div>
+			<div class="prompt_text"></div>
+		</div>
+		<!-- /田晨给的海报 -->
+	
+	</div>
+	
+</body>
+</html>
+
+<script>
+	
+
+
+
+	//表单交互
+	$(function($) {
+		
+		var event = "click";
+		var data_ary = {};
+		$('#register_tips .next_btn').on(event,function(){
+			$('#register_tips').hide();
+			$('#kol_slide').fadeIn();
+		});
+
+		$('#kol_slide .next_btn').on(event,function(){
+			$('#kol_slide').hide();
+			$('.register_login').fadeIn();
+		});
+
+		$('.booking_btn').on(event,function(){
+			$('.booking').hide();
+			$('.testdrive_from').fadeIn();
+		})
+
+		$('.app_btn').on(event,function(){
+			$('.testdrive_from ').hide();
+			$('.testdrive_lastp').fadeIn();
+		})
+
+		//验证手机(当手机输入框失去焦点:取值去验证是否注册)
+		var reg = /^1[0-9]{10}$/; //验证规则
+		$('.i_phone').focusout(function() {
+			var val = $(this).val();
+			
+			//添加提示信息
+			if(!val || val == ''){
+				layer.msg('手机号码不能为空');
+				return false;
+			}else if(!reg.test(val)){
+				layer.msg('请输入正确手机号码');
+				return false;
+			}else{
+				//归叔自己弄
+                $.ajax({
+                    type: "GET",
+                    url: "/check/" + val,
+                    data: "",
+                    success: function(msg) {
+                        var code = msg.code;
+                        if (code == "200") {
+                            is_regist = true;
+                        } else {
+                            //如果没有注册过把昵称选项给显示出来
+                            $('.info_name').show();
+                            is_regist = false;
+                        }
+                    }
+                });
+			}
+		});
+		
+		//点击获取手机验证码按钮
+		var setinterval_obj,
+			setinterval_seds=60
+			get_code = true;
+		$('.obtain').on(event,function(){
+			var mobile = $('.i_phone').val();
+			if(!reg.test(mobile)){
+				layer.msg('请输入正确手机号码');
+				return false;
+			}
+			//归叔你这里自己写发送验证码逻辑
+			$.ajax({
+				type: "GET",
+				url: "/sms/" + mobile,
+				data: "",
+				success: function(msg) {
+					var code = msg.code;
+					if (code == "200") {
+						layer.msg('发送成功');
+					}
+				}
+			});
+			
+			//倒计时锁键
+			if(get_code){
+				get_code = false;
+				
+				setinterval_obj = setInterval(function(){
+					--setinterval_seds;
+					//console.log(setinterval_seds);
+					$('.obtain').text('验证码('+setinterval_seds+')');
+					if(setinterval_seds == 1){
+						clearInterval(setinterval_obj);
+						setinterval_seds=0;
+						$(this).html('获取验证码');
+					}
+				},1000)
+			}
+		});
+		
+		//检查验证码是否正确
+		$('.info_code .i_code').focusout(function() {
+			//alert(112233);
+			$('.app_select,.app_gd,.agreement').show();
+			var vcode = $(this).val();
+			var mobile = $('.info_phone .i_phone').val();
+			
+			//检查验证码
+			$.ajax({
+				type: "GET",
+				url: "/check/" + mobile + "/" + vcode,
+				data: "",
+				success: function(msg) {
+					var code = msg.code;
+					if (code == "200") {
+						//激活下一步按钮(如果验证码填写正确可以按下一步)
+						$('.info_btn').addClass('info_btn_active');
+					} else {
+						layer.msg('验证码错误');
+					}
+				}
+			});
+		});
+		
+		
+		
+		//点击注册提交按钮
+		$('.register .register_submit').on(event,function(){
+			//可以提交的状态
+			if($('.register .register_submit').hasClass('register_submit_active')){
+				//取APP分类(app1:咕咚,app2:悦跑圈,app3:悦动圈,app4:自定义)
+				get_apptype = $('.app_select_con .current').attr('data');
+				if(get_apptype == 'app1'){//如果是咕咚需要添加相对的内容
+					//取咕咚的值
+					var get_gdval = $('.user_gd').val();
+					if(!get_gdval || get_gdval ==""){
+						layer.msg('请填写咕咚的XXX');
+						return false;
+					} else {
+						//layer.msg(get_gdval);
+					}
+				}
+
+				if(get_apptype == 'app2'){//如果是咕咚需要添加相对的内容
+					//取咕咚的值
+					var get_gdval = $('.user_yd').val();
+					if(!get_gdval || get_gdval ==""){
+						layer.msg('请填写越跑的XXX');
+						return false;
+					} else {
+						//layer.msg(get_gdval);
+					}
+				}
+				//提交
+				var pt;
+				switch (get_apptype) {
+					case 'app1': //咕咚
+						pt = 1;
+						break;
+					case 'app2': //悦跑
+						pt = 2;
+						break;
+					case 'app3': //悦动
+						pt = 3;
+						break;
+					case 'app4': //手动输入
+						pt = 0;
+						break;
+					default:
+						pt = -1;
+						break;
+				}
+				if (pt >= 0) {
+					$("#pt").val(pt);
+					$("form").attr("action", "/mobile/regist");
+					$("form").submit()
+				}
+			} else {
+				layer.msg('请授权于宝马');
+			}
+		});
+
+		
+		//点击协议按钮(取协议的值0:未同意,1:同意s)
+		var appagree_1 ={dom:'.register .agreement',isclick:0};
+		appagree_setval(appagree_1);
+
+		
+
+
+		//选APP选项
+		$('.app_select_con .item').each(function(i){
+			var tmp = $(this);
+			tmp.on('click',function(){
+				
+				$('.app_select_con .item').removeClass('current');
+				tmp.addClass('current');
+				if(tmp.attr('data') == 'app1'){
+					$('.app_id').hide();
+					$('.app_gd').show();
+				}else if(tmp.attr('data') == 'app2'){
+					$('.app_id').hide();
+					$('.app_yd').show();
+				}else{
+					$('.app_id').hide();
+				}
+			});
+		});
+
+		
+
+
+		//组数据给归叔
+		data_ary.nickname = $('.i_name').val();
+		data_ary.tel = $('.i_phone').val();
+		
+	});
+</script>

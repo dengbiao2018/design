@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/bmw_middle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/wxmoment.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/bmw_middle.js"></script>
+<script type="text/javascript" src="js/layui/layui.all.js"></script>
+<title>BMW</title>
+</head>
+
+<body>
+	
+	<div id="main">		
+	
+		<!-- 悦跑输入信息页面 -->
+		<div id="info_main">
+			<div class="info_inputbox">
+				<div class="info_name">
+					<input class="i_name n_text info_css" type="text" maxlength="5" name="name">
+				</div>
+				<div class="info_phone">
+					<input class="i_phone p_text info_css" type="text" maxlength="11" name="name">
+					<span class="obtain">获取验证码</span>
+				</div>
+				<div class="info_code">
+					<input class="i_code c_text info_css" type="text" maxlength="4" name="name">
+				</div>
+				<input type="button" value="" class="start_btn" />
+				<input type="button" value="" class="make_btn" />
+			</div>
+		</div>
+		<!-- /悦跑输入信息页面 -->
+	</div>
+	
+</body>
+</html>
+
+
+<script type="text/javascript">
+	
+	new WxMoment.OrientationTip();
+	var layer = layui.layer;
+		var event = 'touchstart';
+		var is_agree = false;
+
+	//验证手机(当手机输入框失去焦点:取值去验证是否注册)
+	$('.i_phone').focusout(function() {
+		var val = $(this).val();
+		var reg = /^1[0-9]{10}$/; //验证规则
+
+		//添加提示信息
+		if(!val || val == ''){
+			layer.msg('手机号码不能为空');
+			return false;
+		}else if(!reg.test(val)){
+			layer.msg('请输入正确手机号码');
+			return false;
+		}else{
+			//归叔自己弄
+			$.ajax({
+			   type: "POST",
+			   url: "",
+			   data: "",
+			   success: function(msg){
+					
+					//如果没有注册过把昵称选项给显示出来
+					$('.info_name').show();
+			
+			   }
+			});
+		}
+
+		
+
+	});
+
+	
+	//点击获取手机验证码按钮
+	var setinterval_obj,
+		setinterval_seds=60
+		get_code = true;
+	$('.obtain').on(event,function(){
+
+		//归叔你这里自己写发送验证码逻辑
+
+		
+		//倒计时锁键
+		if(get_code){
+
+			get_code = false;
+			
+			setinterval_obj = setInterval(function(){
+
+				--setinterval_seds;
+				//console.log(setinterval_seds);
+				$('.obtain').text('验证码('+setinterval_seds+')');
+				if(setinterval_seds == 1){
+					clearInterval(setinterval_obj);
+					setinterval_seds=0;
+					$(this).html('获取验证码');
+
+				}
+			},1000)
+
+		}
+		
+		
+	});
+
+
+	//点击生成抽象画按钮
+	$('.make_btn').on(event,function(){
+
+		//取名字内容
+		var name = $('.i_name').val();
+		if(!name || name == ''){
+			layer.msg('名字不能为空');
+			return false;
+		}else{
+			layer.msg('标哥吊');
+		}
+
+	});
+
+</script>
+

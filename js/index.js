@@ -83,7 +83,7 @@ $(function() {
 
 	    if(imgNum == item.length){
 
-	    	$('.load-page-css').fadeOut(2000,function(){
+	    	$('.load-page-css').fadeOut(1000,function(){
 	    		
 	    		if(item.length >= json.length - _loading)
 				{	
@@ -340,6 +340,8 @@ $(function() {
 					}
 
 				    $('figure:gt(0)').remove();
+
+				    $('figure .MediaModal-load:gt(0)').remove();
 
 				},0); 
 			

@@ -1,0 +1,1050 @@
+img { border:0;}
+ul li { list-style:none;}
+body,ul,li,div,dl,dd,dt,img,p,h1,h2,h3 { margin:0; padding:0;}
+ul,li { display:block; list-style:none;}
+.pointer { cursor:pointer}
+.clear { clear:both; height:0; line-height:0; font-size:0;}
+h1,h2,h3 { font-size: inherit; display:inline; font-weight:normal}
+em{font-style:normal}
+*:focus{outline:none;}
+body,html{
+	overflow:hidden;
+	padding:0;margin:0;
+	background:#8e8e8e;
+	font-family:"黑体";
+}
+/* 竖屏提示 */
+#shu_tips{
+	width: 16rem;
+	height: 26rem;
+	position: absolute;
+	background: url(../images/mobile/global/tips.jpg) no-repeat;
+	background-size:cover;
+	z-index: 51;
+}
+#shu_tips .tiao_active{
+	width: 100%;
+	height: 0.3rem;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	background: url(../images/mobile/global/s_tiao_bg.jpg) no-repeat;
+	background-size:cover;
+}
+#shu_tips .tiao{
+	width: 16rem;
+	height: 0.3rem;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	background:#fff;
+}
+/* loading */
+#loading{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	background: url(../images/mobile/loading/loading.jpg) no-repeat;
+	background-size:cover;
+	text-align: center;
+	z-index: 50;
+}
+#loading .load_number{
+	font-family: arial;
+	font-size: 1.50rem;
+	color: #fff;
+	font-weight: bold;
+	line-height: 7.90rem;
+	display: block;
+}
+#loading .tiao_active{
+	width: 100%;
+	height: 0.14rem;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	background: url(../images/mobile/loading/h_tiao_bg.jpg) no-repeat;
+	background-size:cover;
+}
+#loading .tiao{
+	width: 16rem;
+	height: 0.14rem;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	background:#fff;
+}
+
+#logo{
+	position: absolute;
+	top: 0.411rem;
+	right: 0.411rem;
+	z-index: 48;
+}
+#logo .log_img{
+	width: 1.37rem;
+	height: 1.54rem;
+}
+
+#nav{
+	position: absolute;
+	top: 0.411rem;
+	left: 0.411rem;
+	z-index: 48;
+	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+#nav .nav_up{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav.png) no-repeat;
+	background-size:cover;
+}
+#nav .nav_link{
+	display: none;
+	overflow:hidden;
+	height:1.058rem;
+	opacity:0;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#nav .nav_link .close{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_close.jpg) no-repeat;
+	background-size:cover;
+}
+#nav .nav_link .item_runner{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_runner.jpg) no-repeat;
+	background-size:cover;
+}
+
+#nav .nav_link .item_list{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_list.jpg) no-repeat;
+	background-size:cover;
+}
+#nav .nav_link .item_testdrive{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_testdrive.jpg) no-repeat;
+	background-size:cover;
+}
+
+#nav .nav_link .item_runner.item_active{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_runner_active.jpg) no-repeat;
+	background-size:cover;
+}
+
+#nav .nav_link .item_list.item_active{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_list_active.jpg) no-repeat;
+	background-size:cover;
+}
+
+#nav .nav_link .item_testdrive.item_active{
+	width: 1.058rem;
+	height: 1.058rem;
+	background: url(../images/mobile/global/nav_testdrive_active.jpg) no-repeat;
+	background-size:cover;
+}
+
+
+
+/* kol区域(定时4张kol播放) */
+#runner_area{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+}
+#runner_area .introduce{
+	width: 15.247rem;
+	height: 7.082rem;
+	position: absolute;
+	top: 0.411rem;
+	left: 0.411rem;
+	background: url(../images/mobile/runner/bg5.png) no-repeat;
+	background-size:cover;
+	z-index: 49;
+}
+#runner_area .introduce .close_btn{
+	width: 0.470rem;
+	height: 0.470rem;
+	position: absolute;
+	bottom: 0.411rem;
+	right: 0.411rem;
+	background: url(../images/mobile/runner/close_btn.png) no-repeat;
+	background-size:cover;
+}
+#kol_slide{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+#kol_slide .kol_box{
+	width: 2560px;
+	height: 7.90rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#kol_slide .kol_img{
+	width: 16rem;
+	height: 7.90rem;
+	float: left;
+}
+
+#kol_slide .kol_img img{
+	width: 16rem;
+	height: 7.90rem;
+}
+#kol_slide .spot{
+	width: 2.252rem;
+	height: 0.211rem;
+	position: absolute;
+	bottom: 0.635rem;
+	left: 50%;
+	margin-left:-0.976rem; 
+	overflow: hidden;
+    margin-right: -0.352rem;
+    z-index: 2;
+}
+#kol_slide .spot li{
+	width: 0.211rem;
+	height: 0.211rem;
+	margin-right: 0.352rem;
+	background: #fff;
+	border-radius: 0.211rem;
+	float: left;
+	opacity: 0.5;
+}
+#kol_slide .spot .act{
+	opacity: 1;
+}
+#kol_slide .login_btn{
+	width: 2.623rem;
+	height: 0.670rem;
+	position: absolute;
+	right: 0.411rem;
+	bottom: 0.411rem;
+	background: url(../images/mobile/runner/btn1.png) no-repeat;
+	background-size:cover;
+	z-index: 2;
+}
+/* 注册报名 */
+.register_login{
+	display: none;
+	width: 16rem;
+    height: 7.90rem;
+    position: absolute;
+    background: url(../images/mobile/runner/yp_bg.jpg) no-repeat;
+	background-size:cover;
+}
+.register_login2{
+	background: url(../images/mobile/runner/yp_bg2.jpg) no-repeat;
+    background-size: cover;
+}
+.register_login3{
+	background: url(../images/mobile/runner/yp_bg3.jpg) no-repeat;
+    background-size: cover;
+}
+.register_login4{
+	background: url(../images/mobile/runner/yp_bg4.jpg) no-repeat;
+    background-size: cover;
+}
+#yp .login_box{
+	width: 4.635rem;
+	height: 4.705rem;
+	position: absolute;
+	top: 1.48rem;
+	right: 2.141rem;
+}
+#yp .login_box .title{
+	width: 4.588rem;
+    height: 1.317rem;
+    background: url(../images/mobile/runner/img1.png) no-repeat;
+    background-size: cover;
+}
+#yp .login_box .info_box{
+	border-top:solid 0.023rem #fff; 
+	margin-top:0.705rem; 
+}
+/* name */
+#yp .info_name{
+	display: none;
+	background: url(../images/mobile/runner/ico1.png) 0.094rem 0.294rem no-repeat;
+	background-size: cover;
+	background-size: 0.4rem 0.282rem;
+	border-bottom:solid 0.023rem #fff!important;
+}
+#yp .info_css{
+	width: 4.635rem;
+	height: 0.847rem;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 0.282rem;
+	-webkit-appearance: none;
+    border-radius: 0;
+	text-indent:0.729rem!important; 
+
+}
+#yp .n_text{
+	background: url(../images/mobile/runner/text1.png) 0.729rem 0.305rem no-repeat!important;
+	background-size: cover!important;
+	background-size: 1.129rem 0.282rem!important;
+}
+/* phone */
+#yp .info_phone{
+	background: url(../images/mobile/runner/ico2.png) 0.152rem 0.247rem no-repeat;
+	background-size: cover;
+	background-size: 0.258rem 0.4rem;
+	position: relative;
+	border-bottom:solid 0.023rem #fff!important;
+}
+#yp .p_text{
+	background: url(../images/mobile/runner/text2.png) 0.729rem 0.305rem no-repeat!important;
+	background-size: cover!important;
+	background-size: 1.152rem 0.258rem!important;
+}
+#yp .obtain{
+	font-size: 0.258rem;
+	color: #fff;
+	position: absolute;
+	top: 0.254rem;
+	right: 0.152rem;
+}
+/* code */
+#yp .info_code{
+	background: url(../images/mobile/runner/ico3.png) 0.117rem 0.305rem no-repeat;
+	background-size: cover;
+	background-size: 0.376rem 0.329rem;
+	border-bottom:solid 0.023rem #fff!important;
+}
+#yp .c_text{
+	background: url(../images/mobile/runner/text3.png) 0.729rem 0.305rem no-repeat!important;
+	background-size: cover!important;
+	background-size: 0.847rem 0.282rem!important;
+}
+#yp .info_btn{
+	width: 4.635rem;
+	height: 0.670rem;
+	background: none;
+	border: none;
+	background: url(../images/mobile/runner/btn2.png) no-repeat;
+	background-size: cover;
+	margin-top: 0.658rem;
+	border-radius: 0;
+	text-indent:0.729rem!important; 
+}
+#yp .info_btn_active{
+	background: url(../images/mobile/runner/btn3.png) no-repeat;
+	background-size: cover;
+}
+
+/* 3个app以ID区分 */
+#yp .app_box{
+	display: none;
+	width: 4.635rem;
+	height: 5.294rem;
+	position: absolute;
+	top:1.435rem;
+	right: 2.141rem;
+}
+#yp .app_box .app_t{
+	width: 4.070rem;
+	height: 1.129rem;
+	background: url(../images/mobile/runner/text4.png) no-repeat;
+	background-size: cover;
+}
+#yp .app_box .app_tab{
+	width:4.658rem;
+	height: 1.388rem;
+	background: url(../images/mobile/runner/app_ico.png) no-repeat;
+	background-size: cover;
+	margin-top: 0.423rem;
+	margin-right: -0.329rem;
+}
+#yp .app_box .app_tab li{
+	width:0.941rem;
+	height: 0.941rem;
+	float: left;
+	margin-right: 0.282rem; 
+}
+#yp .app_box .app_tab .gudong{
+	background: url(../images/mobile/runner/ico4.png) no-repeat;
+	background-size: cover;
+}
+#yp .app_box .app_tab .yuepao{
+	background: url(../images/mobile/runner/ico5.png) no-repeat;
+	background-size: cover;
+}
+#yp .app_box .app_tab .yuedong{
+	background: url(../images/mobile/runner/ico6.png) no-repeat;
+	background-size: cover;
+	
+}
+#yp .app_box .app_tab .shoudong{
+	background: url(../images/mobile/runner/ico7.png) no-repeat;
+	background-size: cover;
+}
+#yp .user_id{
+	width: 100%;
+	height: 0.705rem;
+	border: none;
+	background: none;
+	border-top: solid 0.011rem #fff;
+	border-bottom: solid 0.011rem #fff;
+	font-size: 0.282rem;
+	margin-top: 0.470rem;
+	-webkit-appearance: none;
+    border-radius: 0;
+    color: #fff;
+}
+#yp .user_text{
+    background: url(../images/mobile/runner/text6.png) 0rem 0.211rem no-repeat!important;
+    background-size: cover!important;
+    background-size: 0.811rem 0.282rem!important;
+}
+#yp .app_box .app_active{
+	padding-top: 0.470rem;
+    border-top: solid 0.011rem #fff;
+}
+.agree{
+	margin-top: 0.352rem;
+}
+.agree .agree_a{
+	width: 4.635rem;
+	height: 0.235rem;
+	background: url(../images/mobile/global/checked_bg1.png) no-repeat;
+	background-size: cover;
+	display: inline-block;
+    margin-top: 0.022rem;
+}
+.agree_active .agree_a{
+	width: 4.635rem;
+	height: 0.235rem;
+	background: url(../images/mobile/global/checked_bg2.png) no-repeat;
+	background-size: cover;
+	display: inline-block;
+    margin-top: 0.022rem;
+}
+.app_btn{
+    width: 4.635rem;
+    height: 0.682rem;
+    background: url(../images/mobile/runner/btn4.png) no-repeat;
+    background-size: cover;
+    border: none;
+    margin-top: 0.470rem;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+.app_btn_active{
+	background: url(../images/mobile/runner/btn5.png) no-repeat;
+    background-size: cover;
+}
+
+/* 试驾开始 */
+#testdrive{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+}
+#testdrive .booking{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top:0rem;
+	left: 0rem;
+}
+#testdrive .booking .booking_list{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+}
+#testdrive .booking .booking_list li{
+	width: 16rem;
+	height: 7.90rem;
+	float: left;
+	background: url(../images/mobile/testdrive/testdrive_bg2_1.jpg) no-repeat;
+    background-size: cover;
+}
+#testdrive .booking .booking_spot{
+	width: 1.152rem;
+	height: 0.211rem;
+	position: absolute;
+	bottom: 0.635rem;
+	left: 50%;
+	margin-left:-0.4rem; 
+	overflow: hidden;
+    margin-right: -0.352rem;
+    z-index: 2;
+}
+#testdrive .booking .booking_spot li{
+	width: 0.211rem;
+	height: 0.211rem;
+	margin-right: 0.352rem;
+	background: #fff;
+	border-radius: 0.211rem;
+	float: left;
+	opacity: 0.5;
+}
+#testdrive .booking .booking_spot .act{
+	opacity: 1;
+}
+#testdrive .booking .booking_btn{
+	width: 2.623rem;
+	height: 0.670rem;
+	position: absolute;
+	right: 0.411rem;
+	bottom: 0.411rem;
+	background: url(../images/mobile/testdrive/btn6.png) no-repeat;
+	background-size:cover;
+	z-index: 2;
+}
+
+/* 试驾表单 */
+#testdrive .testdrive_from{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	background: url(../images/mobile/testdrive/testdrive_bg1.jpg) no-repeat;
+	background-size:cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#testdrive .testdrive_from2{
+	width: 16rem;
+	height: 7.90rem;
+	background: url(../images/mobile/testdrive/testdrive_bg2.jpg) no-repeat;
+	background-size:cover;
+}
+#testdrive .testdrive_from .from_box{
+	width: 4.635rem;
+	height:6.741rem;
+	position: absolute;
+	top: 1.129rem;
+	right: 1.682rem;
+}
+#testdrive .testdrive_from .from_box .entry_title{
+	width: 2.047rem;
+	height:0.352rem;
+	background: url(../images/mobile/testdrive/img1.png) no-repeat;
+	background-size:cover;
+}
+#testdrive .testdrive_from .from_box .sex{
+	height: 0.588rem;
+	overflow: hidden;
+	margin-top: 0.694rem;
+	border-bottom: solid 0.023rem #fff;
+}
+#testdrive .testdrive_from .from_box .sex .r_input{
+	width: 0.258rem;
+	height: 0.258rem;
+    margin-top: 0;
+	margin-right: 0.223rem;
+	float: left;
+}
+#testdrive .testdrive_from .from_box .sex .sir_i{
+	width: 0.8rem;
+	height:0.258rem;
+	margin-right: 0.6rem;
+	float: left;
+	background: url(../images/mobile/testdrive/img2.png) no-repeat;
+	background-size:cover;
+}
+#testdrive .testdrive_from .from_box .sex .maam_i{
+	width: 0.8rem;
+	height:0.258rem;
+	float: left;
+	background: url(../images/mobile/testdrive/img3.png) no-repeat;
+	background-size:cover;
+}
+#testdrive .testdrive_from .from_box .phone{
+	height: 0.847rem;
+	border-bottom: solid 0.023rem #fff;
+	position: relative;
+}
+#testdrive .testdrive_from .from_box .name{
+	height: 0.847rem;
+	position: relative;
+	overflow: hidden;
+}
+#testdrive .testdrive_from .from_box .name .xs_input{
+	width: 1.788rem;
+	height: 0.847rem;
+	font-size: 0.282rem;
+	color: #fff;
+	line-height: 0.847rem;
+	text-indent: 0.058rem;
+	background: none;
+	border:none;
+	float: left;
+	border-bottom: solid 0.023rem #fff;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+#testdrive .testdrive_from .from_box .name .mz_input{
+	width: 2.729rem;
+	height: 0.847rem;
+	font-size: 0.282rem;
+	color: #fff;
+	line-height: 0.847rem;
+	text-indent: 0.058rem;
+	background: none;
+	border:none;
+	float: right;
+	border-bottom: solid 0.023rem #fff;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+#testdrive .testdrive_from .from_box .phone .phone_input{
+	width: 100%;
+	height: 0.847rem;
+	font-size: 0.282rem;
+	color: #fff;
+	line-height: 0.847rem;
+	text-indent: 0.058rem;
+	background: none;
+	border:none;
+}
+#testdrive .testdrive_from .from_box .name .xs_text{
+    background-image: url(../images/mobile/testdrive/img7.png);
+    background-size:0.564rem 0.282rem;
+    background-repeat: no-repeat;
+    background-position: 0.117rem 0.29rem;
+}
+#testdrive .testdrive_from .from_box .name .mz_text{
+    background-image: url(../images/mobile/testdrive/img8.png);
+    background-size:0.564rem 0.282rem;
+    background-repeat: no-repeat;
+    background-position: 0.117rem 0.29rem;
+}
+#testdrive .testdrive_from .from_box .phone .phone_text{
+    background-image: url(../images/mobile/testdrive/img5.png);
+    background-size:0.505rem 0.258rem;
+    background-repeat: no-repeat;
+    background-position: 0.117rem 0.29rem;
+}
+#testdrive .testdrive_from .from_box .city{
+	width: 100%;
+	height: 0.847rem;
+	font-size: 0.258rem;
+	color: #fff;
+	line-height: 0.847rem;
+	text-indent: 0.058rem;
+	background: none;
+	border: none!important;
+	position: relative;
+}
+#testdrive .testdrive_from .from_box .city_ico{
+    background-image: url(../images/mobile/testdrive/ico3.png);
+    background-size:0.164rem 0.141rem;
+    background-repeat: no-repeat;
+    background-position: 4.270rem 0.388rem;
+}
+#testdrive .testdrive_from .from_box .border_city{
+	width: 100%;
+	border-bottom: solid 0.023rem #fff;
+    margin-bottom: 0.294rem;
+}
+
+#testdrive .testdrive_from .from_box .phone .phone_ico{
+	width: 0.2588rem;
+	height:0.4rem;
+	position: absolute;
+	top: 0.235rem;
+	right: 0.188rem;
+	background: url(../images/mobile/testdrive/ico2.png) no-repeat;
+	background-size:cover;
+}
+
+#testdrive .testdrive_from .from_box .g_btn{
+	width: 4.635rem;
+	height: 0.682rem;
+	background: url(../images/mobile/testdrive/btn1.png) no-repeat;
+	background-size:cover;
+	border: none;
+	margin-top: 0.541rem;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+#testdrive .testdrive_from .from_box .g_btn_active{
+	background: url(../images/mobile/testdrive/btn2.png) no-repeat;
+	background-size:cover;
+}
+
+/* 试驾最终页 */
+.testdrive_lastp{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	background: url(../images/mobile/testdrive/testdrive_bg3.jpg) no-repeat;
+	background-size:cover;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+}
+.testdrive_lastp .lastp_btn{
+	width: 2.623rem;
+	height: 0.670rem;
+	position: absolute;
+	right: 0.411rem;
+	bottom: 0.411rem;
+	background: url(../images/mobile/testdrive/btn7.png) no-repeat;
+	background-size:cover;
+	z-index: 2;
+}
+
+/*-------------------index_m2------------------*/
+#canvas_box{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+}
+#canvas_box canvas{
+	width: 16rem;
+	height: 7.90rem;
+}
+
+#poster_box{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	
+}
+#poster_box .p_textbox{
+	width: 4.752rem;
+	height: 2.941rem;
+	position: absolute;
+	top: 2.541rem;
+	right: 0.411rem;	
+	border-bottom: solid 0.023rem #fff;
+}
+#poster_box .p_textbox .p_title{
+	width: 4.752rem;
+	height: 0.941rem;
+	background: url(../images/mobile/poster/t_img.png) no-repeat;
+	background-size:cover;
+}
+#poster_box .p_textbox .p_con{
+	width: 4.752rem;
+	height: 2rem;
+}
+#poster_box .p_textbox .p_con img{
+	width: 4.752rem;
+	height: 2rem;
+}
+#poster_box .p_textbox .p_arrow{
+	width: 0.282rem;
+	height: 0.258rem;
+	position: absolute;
+	bottom: 0.235rem;
+	right: 0.094rem;
+	background: url(../images/mobile/poster/arrow_ico.png) no-repeat;
+	background-size:cover;
+}
+
+/* 生成海报（点击出弹出层）*/
+#poster_box .poster_list{
+	display: none;
+	width: 15.247rem;
+	height: 7.082rem;
+	position: absolute;
+	top: 0.411rem;
+	left: 0.411rem;
+	z-index: 49;
+	background: url(../images/mobile/poster/bg1.png) no-repeat;
+	background-size:cover;
+}
+#poster_box .poster_list .poster_closebtn{
+    width: 0.470rem;
+    height: 0.470rem;
+    position: absolute;
+    bottom: 0.411rem;
+    right: 0.411rem;
+    background: url(../images/mobile/poster/close_btn.png) no-repeat;
+    background-size: cover;
+}
+#poster_box .poster_list .p_list_box{
+	padding: 0.729rem 0.752rem;
+	overflow: hidden;
+}
+#poster_box .poster_list .p_list_box li{
+	width: 6.588rem;
+	height: 1.364rem;
+	position: absolute;
+}
+#poster_box .poster_list .p_list_box li img{
+	width: 6.588rem;
+	height: 1.364rem;
+}
+#poster_box .poster_list .p_list_box .tiem_active{
+	border: solid 0.035rem #fff;
+}
+#poster_box .poster_btn{
+	width: 2.611rem;
+    height: 0.670rem;
+    position: absolute;
+    top: 6.823rem;
+    right: 0.411rem;
+    background: url(../images/mobile/poster/btn_ico.png) no-repeat;
+    background-size: cover;
+}
+#poster_box a{
+	width: 2.611rem;
+    height: 0.670rem;
+    position: absolute;
+    top: 6.823rem;
+    right: 0.411rem;
+    background: url(../images/mobile/poster/btn_ico2.png) no-repeat;
+    background-size: cover;
+}
+
+.poster_img{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+}
+.poster_img img{
+	width: 16rem;
+	height: 7.90rem;
+}
+.poster_img .prompt_text{
+	width: 1.811rem;
+	height: 0.494rem;
+	position: absolute;
+	bottom: 0.870rem;
+	right: 1.485rem;
+	background: url(../images/mobile/poster/prompt_text.png) no-repeat;
+    background-size: cover;
+}
+
+/* list(海报,数据列表) */
+#list_page{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	background: url(../images/mobile/list/bg1.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* 数据列表 */
+.shuju{
+	
+	width: 11.882rem;
+	height: 11.882rem;
+	position: absolute;
+	top: 1.294rem;
+	left: 2.517rem;
+}
+/*.haibao .shadow{
+    width: 16rem;
+    height: 1.705rem;
+    position: absolute;
+    top: 4.89rem;
+    left: -2.52rem;
+    background: url(../images/mobile/list/shadow.png) no-repeat;
+    background-size: cover;
+    z-index: 1;
+}*/
+.shuju .title{
+	width: 3.853rem;
+	height: 1.129rem;
+	position: absolute;
+	top: 0rem;
+	left: -0.376rem;
+	background: url(../images/mobile/list/text1.png) no-repeat;
+    background-size: cover;
+}
+.shuju .btn{
+	width: 2.635rem;
+	height: 0.682rem;
+	position: absolute;
+	top: 0rem;
+	left: 8.411rem;
+	background: url(../images/mobile/list/btn1.png) no-repeat;
+    background-size: cover;
+}
+.shuju .shuju_list{
+	width: 11.882rem;
+	height: 5.2rem;
+	/*background: red;*/
+	position: absolute;
+	/*top: 1.423rem;
+	left: 0rem;*/
+	top: 1.247rem;
+	left: -0.176rem;
+	overflow: hidden;
+}
+.shuju .shuju_list .list{
+	width: 11.199rem;
+	/*background: blue;*/
+	overflow: hidden;
+	padding: 0.176rem 0 0 0.176rem;
+}
+.shuju .shuju_list .list .item{
+	width: 2.682rem;
+	height: 2.682rem;
+	float: left;
+	background: #fff;
+	margin-right: 0.117rem;
+	margin-bottom: 0.117rem;
+    text-align: center;
+    box-shadow: 0 0 0.176rem rgba(96, 107, 132, 0.25);
+    border-radius: 12px;
+}
+.shuju .shuju_list .list .item .date{
+	font-size: 0.258rem;
+	background: -webkit-linear-gradient(left, #537cfc , #8fdeef);     /* 背景色渐变 */
+    -webkit-background-clip: text;         /* 规定背景的划分区域 */
+    -webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+    line-height: 0.870rem;
+    margin-top: 0.258rem;
+    font-family: arial;
+}
+.shuju .shuju_list .list .item .km{
+	font-weight: bold;
+	font-size: 0.541rem;
+	background: -webkit-linear-gradient(left, #537cfc , #8fdeef);     /* 背景色渐变 */
+    -webkit-background-clip: text;         /* 规定背景的划分区域 */
+    -webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+    line-height: 0.5rem;
+    font-family: arial;
+}
+.shuju .shuju_list .list .item .time{
+	font-size: 0.498rem;
+	background: -webkit-linear-gradient(left, #537cfc , #8fdeef);     /* 背景色渐变 */
+    -webkit-background-clip: text;         /* 规定背景的划分区域 */
+    -webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+    line-height: 0.764rem;
+    font-family: arial;
+}
+
+
+/* 海报列表 */
+.haibao{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+}
+.haibao .title{
+	width: 2.8rem;
+	height: 1.270rem;
+	position: absolute;
+	top: 0.670rem;
+	left: 1.4588rem;
+	background: url(../images/mobile/list/text2.png) no-repeat;
+    background-size: cover;
+}
+.haibao .btn{
+	width: 2.635rem;
+	height: 0.682rem;
+	position: absolute;
+	top: 0.823rem;
+	right: 2.588rem;
+	background: url(../images/mobile/list/btn2.png) no-repeat;
+    background-size: cover;
+}
+.haibao_img{
+	display: none;
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	z-index: 70;
+}
+.haibao_img img{
+	width: 16rem;
+	height: 7.90rem;
+}
+
+.haibao .haibao_list{
+	width: 16rem;
+	height: 4.352rem;
+	/*background: red;*/
+	position: absolute;
+	top: 2.447rem;
+	left: 0rem;
+
+}
+.haibao .haibao_list .list{
+	height: 4.352rem;
+	margin-left: -238px;
+}
+.haibao .haibao_list .list .item{
+	width: 8.847rem;
+	height: 4.352rem;
+	float: left;
+	background: #fff;
+	margin-right: 15px;
+    box-shadow: 0 0 1rem rgba(96, 107, 132, 0.25);
+}
+.haibao .haibao_list .list .item img{
+	width: 8.847rem;
+	height: 4.352rem;
+}
+
+
+
+/*判断安卓切换 css*/
+.android_css #testdrive .booking .booking_btn{
+	bottom: 0.881rem;
+}
+.android_css #testdrive .booking .booking_spot{
+	bottom: 1.106rem;
+}
+.android_css .testdrive_lastp .lastp_btn{
+	bottom: 0.881rem;
+}
+.android_css #runner_area .introduce{
+	height: 6.611rem;
+	background: url(../images/mobile/runner/bg6.png) no-repeat;
+	background-size:cover;
+}
+.android_css #kol_slide .login_btn{
+	bottom: 0.881rem;
+}
+.android_css #kol_slide .spot{
+	bottom: 1.106rem;
+}
+
+/*触发焦点（注册登录 预约试驾）*/ 
+#main .focus{
+	background-image:none!important;
+}
+
+/*判断横盘竖屏*/
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+	#shu_tips{display:block}
+  
+} 
+@media screen and (orientation: landscape) {
+  /*横屏 css*/  
+  #shu_tips{display:none}
+   
+}

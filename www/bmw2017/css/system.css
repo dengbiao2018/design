@@ -1,0 +1,70 @@
+img { border:0;}
+ul li { list-style:none;}
+body,ul,li,div,dl,dd,dt,img,p,h1,h2,h3 { margin:0; padding:0;}
+ul,li { display:block; list-style:none;}
+.pointer { cursor:pointer}
+.clear { clear:both; height:0; line-height:0; font-size:0;}
+h1,h2,h3 { font-size: inherit; display:inline; font-weight:normal}
+em{font-style:normal}
+*:focus{outline:none;}
+body,html{
+	overflow:hidden;
+	padding:0;margin:0;
+	background:#8e8e8e;
+	font-family:"黑体";
+}
+/* 竖屏提示 */
+#shu_tips{
+	width: 16rem;
+	height: 26rem;
+	position: absolute;
+	background: url(../images/mobile/global/tips.jpg) no-repeat;
+	background-size:cover;
+	z-index: 51;
+}
+.system_404{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	background: url(../images/mobile/global/system_img1.png) no-repeat;
+	background-size:cover;
+}
+.system_404 .btn{
+	width: 1.823rem;
+	height: 0.529rem;
+	position: absolute;
+	top: 5.235rem;
+	left: 50%;
+	margin-left: -0.910rem;
+}
+.system_error{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	background: url(../images/mobile/global/system_img2.png) no-repeat;
+	background-size:cover;
+}
+.system_error .btn{
+	width: 1.058rem;
+	height: 1.058rem;
+	position: absolute;
+	top: 4.423rem;
+	left: 50%;
+	margin-left: -0.529rem;
+}
+
+/*判断横盘竖屏*/
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+	#shu_tips{display:block}
+  
+} 
+@media screen and (orientation: landscape) {
+  /*横屏 css*/  
+  #shu_tips{display:none}
+   
+}

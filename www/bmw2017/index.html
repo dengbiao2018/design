@@ -1,0 +1,596 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/bmw_pc.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/wxmoment.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/global_pc.js"></script>
+<script type="text/javascript" src="js/bmw_pc.js"></script>
+<script type="text/javascript" src="js/layui/layui.all.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<title>BMW</title>
+</head>
+<script type="text/javascript">
+	
+	var device = {
+		Android: function() {  
+			return navigator.userAgent.match(/Android/i) ? true : false;  
+		},  
+		BlackBerry: function() {  
+			return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
+		},  
+		iOS: function() {  
+			//return navigator.userAgent.match(/iPad|iPod|iPhone/i) ? true : false;
+			return navigator.userAgent.match(/iPod|iPhone/i) ? true : false;
+		},
+		ipad: function() {  
+		//return navigator.userAgent.match(/iPad|iPod|iPhone/i) ? true : false;
+			return navigator.userAgent.match(/iPad/i) ? true : false;
+		},
+		iphone: function(){
+			return navigator.userAgent.match(/iPhone/i) ? true : false;  
+		},
+		Windows: function() {  
+			return navigator.userAgent.match(/IEMobile/i) ? true : false;  
+		},  
+		any: function() {  
+			return (device.Android() || device.BlackBerry()  || device.Windows() || device.iOS());  
+		}
+	};
+	
+	if(device.any())
+	{
+		window.location.href = "mo";
+	}
+</script>
+<script>
+var myScroll;
+var myScroll2;
+
+function loaded () {
+	myScroll = new IScroll('.register', { mouseWheel: true, scrollbars: true, click: true });
+}
+
+function loaded2 () {
+	myScroll2 = new IScroll('.shuju_list', { mouseWheel: true, scrollbars: true, click: true });
+}
+$(document).ready(function(){
+	loaded2();
+});
+
+</script>
+
+<body>
+	
+	<div id="main">
+		<!-- loading -->
+		<div id="loading">
+			<span class="load_number"></span>
+			<img class="tiao_active" src="images/pc/loading/line.png"/>
+			<img class="tiao" src="images/pc/loading/line_r.png"/>
+		</div>
+		<!-- /loading -->
+		
+		<!-- logo -->
+		
+		<div id="logo">
+			<img class="log_img" src="images/pc/logo.png"/>
+		</div>
+		<!-- /logo -->
+
+		<!-- 顶部导航(nav) -->
+		<div class="nav_up"></div>
+		<div id="nav">
+			<div class="nav_link">
+				<div class="close"></div>
+				<div data="1" id="item_runner" class="item current"></div>
+				<!-- <div data="2" id="item_list" class="item"></div> -->
+				<div data="3" id="item_testdrive" class="item"></div>
+				<div data="4" id="item_msg" class="item"></div>
+			</div>	
+		</div>	
+		<!-- /顶部导航(nav) -->
+
+		<!-- tips(提示信息页面) -->
+		<div id="tips_area" class="nav_con">
+			<div class="next_btn">
+				<img src="images/pc/1_1/btn1.png">
+			</div>
+		</div>
+		<!-- /tips(提示信息页面) -->
+
+		<!-- runner(部分) -->
+		<div id="runner_area" class="nav_con" style="display:none;">
+
+			
+			
+			<!-- kol区域 -->
+			<div id="kol_slide" class="">
+				<ul class="kol_list">
+					<li class="kol_img1"></li>
+					<li class="kol_img2"></li>
+					<li class="kol_img3"></li>
+					<li class="kol_img4"></li>
+				</ul>
+
+				<div class="pointers">
+					<span class="current">&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+				</div>
+				
+				<div class="next_btn">
+					<img src="images/pc/1_1/regest.png">
+				</div>
+
+			</div>
+			<!-- /kol区域 -->
+
+			<!-- 注册报名 -->
+			<div id="yp" class="register_login" style="display:none">
+
+				<!-- register -->
+				<div class="register">
+					
+					<div class="register_box">
+						<div class="t_1"><img src="images/pc/1_2/text1.png"/></div>
+
+						<div class="input_box">
+							<div class="info_name">
+								<input class="i_name info_css" type="text" maxlength="5" name="name" placeholder="姓名" />
+								<span></span>
+							</div>
+							<div class="info_phone">
+								<input class="i_phone info_css" type="text" maxlength="11" name="name" placeholder="手机" />
+								<span class="obtain">获取验证码</span>
+							</div>
+							<div class="info_code">
+								<input class="i_code info_css" type="text" maxlength="4" name="name" placeholder="验证码" />
+								<span></span>
+							</div>
+						</div>
+
+						<div class="t_2"><img src="images/pc/1_2/text3.png"/></div>
+
+						<div class="app_select" style="display:none">
+
+							<div class="app_select_con">
+
+								<div data="app1" id="gd_app" alt="咕咚" class="item current"></div>
+								<div data="app2" id="ypq_app" alt="悦跑圈" class="item"></div>
+								<div data="app3" id="ydq_app" alt="悦动圈" class="item"></div>
+								<div data="app4" id="zdy_app" alt="手动输入" class="item"></div>
+
+							</div>
+
+						</div>
+						<div class="app_id app_gd" style="display:none">
+							<input class="i_id info_css" type="text" maxlength="4" name="name" placeholder="咕咚跑步ID" />
+						</div>
+
+						<div class="app_id app_yd" style="display:none">
+							<input class="i_id info_css" type="text" maxlength="4" name="name" placeholder="悦动用户ID" />
+						</div>
+						<div data="0" class="agreement" style="display:none"></div>
+
+						<div class="register_submit"></div>
+					</div>
+
+				</div>
+				<!-- /register -->
+				
+			</div>
+			<!-- /注册报名 -->
+
+		</div>
+		<!-- /runner(部分) -->
+
+		<!-- testdrive(试驾部分) -->
+		<div id="testdrive" class="nav_con" style="display:none;">
+			
+			<!-- 试驾开始 -->
+			<div class="booking ">
+				<ul class="booking_list ">
+					<li class="listi3 "></li>
+					<li class=""></li>
+				</ul>
+				<ul class="booking_spot">
+					<li class="act"></li>
+					<li></li>
+				</ul>
+				<div class="booking_btn"></div>
+			</div>
+			<!-- /试驾开始 -->
+
+			<!-- 试驾表单 -->
+			<div class="testdrive_from testdrive_fromi3 ">
+				<div class="from_box">
+					<div class="entry_title"></div>
+					<div class="sex">
+						<label>
+							<input class="r_input" name="radio" type="radio" value="" />
+							<div class="sir_i"></div>
+						</label>
+						<label>
+							<input class="r_input" name="radio" type="radio" value="" />
+							<div class="maam_i"></div>
+						</label>
+					</div>
+					<div class="name">
+						<input class="xs_input" type="text" maxlength="5" name="name" placeholder="姓氏"/>
+						<input class="mz_input" type="text" maxlength="5" name="name" placeholder="名字"/>
+					</div>
+					<div class="phone f_css">
+						<input class="phone_input" type="text" maxlength="11" name="phone" placeholder="手机"/>
+						<span class="phone_ico"></span>
+					</div>
+					<div class="city_box">
+						<select name="" class="city">
+							<option value="1">车系</option>
+							<option value="2">I3</option>
+							<option value="3">I8</option>
+						</select>
+					</div>
+					<div class="agree agree_active">
+						<div data="0" class="agree_a"></div>
+					</div>
+
+					<input type="button" value="" class="app_btn app_btn_active" />
+				</div>
+			</div>
+			<!-- /试驾表单 -->
+
+			<!-- 试驾最终页 -->
+			<div class="testdrive_lastp ">
+				<div class="lastp_btn"></div>
+			</div>
+			<!-- /试驾最终页 -->
+
+		</div>
+		<!-- /testdrive(试驾部分) -->
+	 
+		<!-- list(列表部分) -->
+		<div id="list_area" class="nav_con" style="display:none;">
+			<!-- 数据 -->
+			<div class="shuju">
+				<div class="title"><img src="images/pc/list/text1.png"/></div>
+				<div class="shuju_list">
+					<div class="list">
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+						<div class="item">
+							<div class="date">2017.11.01</div>
+							<div class="km">5.11KM</div>
+							<div class="time">01:37:01</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /数据 -->
+			<!-- 海报 -->
+			<div class="haibao"></div>
+			<!-- /海报 -->
+		</div>
+		<!-- /list(列表部分) -->
+	
+	</div>
+	
+</body>
+</html>
+
+<script>
+	
+
+
+
+	//表单交互
+	$(function($) {
+	
+		var event = "click";
+		var data_ary = {};
+		$('#tips_area .next_btn').on(event,function(){
+			$('#tips_area').hide();
+			$('#runner_area,#kol_slide').fadeIn();
+		});
+
+		$('#kol_slide .next_btn').on(event,function(){
+			$('#kol_slide').hide();
+			$('.register_login').fadeIn();
+		});
+
+		$('.booking_btn').on(event,function(){
+			$('.booking').hide();
+			$('.testdrive_from').fadeIn();
+		})
+
+		$('.app_btn').on(event,function(){
+			$('.testdrive_from ').hide();
+			$('.testdrive_lastp').fadeIn();
+		})
+
+		//验证手机(当手机输入框失去焦点:取值去验证是否注册)
+		var reg = /^1[0-9]{10}$/; //验证规则
+		$('.i_phone').focusout(function() {
+			var val = $(this).val();
+			
+			//添加提示信息
+			if(!val || val == ''){
+				layer.msg('手机号码不能为空');
+				return false;
+			}else if(!reg.test(val)){
+				layer.msg('请输入正确手机号码');
+				return false;
+			}else{
+				//归叔自己弄
+                $.ajax({
+                    type: "GET",
+                    url: "/check/" + val,
+                    data: "",
+                    success: function(msg) {
+                        var code = msg.code;
+                        if (code == "200") {
+                            is_regist = true;
+                        } else {
+                            //如果没有注册过把昵称选项给显示出来
+                            $('.info_name').show();
+                            is_regist = false;
+                        }
+                    }
+                });
+			}
+		});
+		
+		//点击获取手机验证码按钮
+		var setinterval_obj,
+			setinterval_seds=60
+			get_code = true;
+		$('.obtain').on(event,function(){
+			var mobile = $('.i_phone').val();
+			if(!reg.test(mobile)){
+				layer.msg('请输入正确手机号码');
+				return false;
+			}
+			//归叔你这里自己写发送验证码逻辑
+			$.ajax({
+				type: "GET",
+				url: "/sms/" + mobile,
+				data: "",
+				success: function(msg) {
+					var code = msg.code;
+					if (code == "200") {
+						layer.msg('发送成功');
+					}
+				}
+			});
+			
+			//倒计时锁键
+			if(get_code){
+				get_code = false;
+				
+				setinterval_obj = setInterval(function(){
+					--setinterval_seds;
+					//console.log(setinterval_seds);
+					$('.obtain').text('验证码('+setinterval_seds+')');
+					if(setinterval_seds == 1){
+						clearInterval(setinterval_obj);
+						setinterval_seds=0;
+						$(this).html('获取验证码');
+					}
+				},1000)
+			}
+		});
+		
+		//检查验证码是否正确
+		$('.info_code .i_code').focusout(function() {
+			//alert(112233);
+			$(document).ready(function(){
+				loaded ();
+			});		
+			$('.app_select,.app_gd,.agreement').show();
+			var vcode = $(this).val();
+			var mobile = $('.info_phone .i_phone').val();
+			
+			//检查验证码
+			$.ajax({
+				type: "GET",
+				url: "/check/" + mobile + "/" + vcode,
+				data: "",
+				success: function(msg) {
+					var code = msg.code;
+					if (code == "200") {
+						//激活下一步按钮(如果验证码填写正确可以按下一步)
+						$('.info_btn').addClass('info_btn_active');
+					} else {
+						layer.msg('验证码错误');
+					}
+				}
+			});
+		});
+		
+		
+		
+		//点击注册提交按钮
+		$('.register .register_submit').on(event,function(){
+			//可以提交的状态
+			if($('.register .register_submit').hasClass('register_submit_active')){
+				//取APP分类(app1:咕咚,app2:悦跑圈,app3:悦动圈,app4:自定义)
+				get_apptype = $('.app_select_con .current').attr('data');
+				if(get_apptype == 'app1'){//如果是咕咚需要添加相对的内容
+					//取咕咚的值
+					var get_gdval = $('.user_gd').val();
+					if(!get_gdval || get_gdval ==""){
+						layer.msg('请填写咕咚的XXX');
+						return false;
+					} else {
+						//layer.msg(get_gdval);
+					}
+				}
+
+				if(get_apptype == 'app2'){//如果是咕咚需要添加相对的内容
+					//取咕咚的值
+					var get_gdval = $('.user_yd').val();
+					if(!get_gdval || get_gdval ==""){
+						layer.msg('请填写越跑的XXX');
+						return false;
+					} else {
+						//layer.msg(get_gdval);
+					}
+				}
+				//提交
+				var pt;
+				switch (get_apptype) {
+					case 'app1': //咕咚
+						pt = 1;
+						break;
+					case 'app2': //悦跑
+						pt = 2;
+						break;
+					case 'app3': //悦动
+						pt = 3;
+						break;
+					case 'app4': //手动输入
+						pt = 0;
+						break;
+					default:
+						pt = -1;
+						break;
+				}
+				if (pt >= 0) {
+					$("#pt").val(pt);
+					$("form").attr("action", "/mobile/regist");
+					$("form").submit()
+				}
+			} else {
+				layer.msg('请授权于宝马');
+			}
+		});
+
+		
+		//点击协议按钮(取协议的值0:未同意,1:同意s)
+		var appagree_1 ={dom:'.register .agreement',isclick:0};
+		appagree_setval(appagree_1);
+
+		
+
+
+		//选APP选项
+		$('.app_select_con .item').each(function(i){
+			var tmp = $(this);
+			tmp.on('click',function(){
+				
+				$('.app_select_con .item').removeClass('current');
+				tmp.addClass('current');
+				if(tmp.attr('data') == 'app1'){
+					$('.app_id').hide();
+					$('.app_gd').show();
+				}else if(tmp.attr('data') == 'app2'){
+					$('.app_id').hide();
+					$('.app_yd').show();
+				}else{
+
+					$('.app_id').hide();
+				}
+			});
+		});
+
+		
+
+
+		//组数据给归叔
+		data_ary.nickname = $('.i_name').val();
+		data_ary.tel = $('.i_phone').val();
+		
+	});
+</script>

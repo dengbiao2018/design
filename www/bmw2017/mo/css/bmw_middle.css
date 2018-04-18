@@ -1,0 +1,126 @@
+img { border:0;}
+ul li { list-style:none;}
+body,ul,li,div,dl,dd,dt,img,p,h1,h2,h3 { margin:0; padding:0;}
+ul,li { display:block; list-style:none;}
+.pointer { cursor:pointer}
+.clear { clear:both; height:0; line-height:0; font-size:0;}
+h1,h2,h3 { font-size: inherit; display:inline; font-weight:normal}
+em{font-style:normal}
+*:focus{outline:none;}
+body,html{
+	overflow:hidden;
+	padding:0;margin:0;
+	background:#8e8e8e;
+	font-family:"黑体";
+}
+#shu_tips{
+	width: 16rem;
+	height: 7.90rem;
+	position: absolute;
+	background: url(../images/mobile/middle/bg2.jpg) no-repeat;
+	background-size:cover;
+	z-index: 51;
+	left: 0;
+	top: 0;
+}
+
+#info_main{
+	width: 16rem;
+	height: 26rem;
+	background: url(../images/mobile/middle/bg1.jpg) no-repeat;
+	background-size:cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#info_main .info_inputbox{
+	width: 9.95rem;
+	height: 10.3rem;
+	position: absolute;
+	bottom: 2.1rem;
+	left: 50%;
+	margin-left: -4.975rem; 
+}
+#info_main .info_inputbox .info_name{
+	background: url(../images/mobile/middle/ico1.png) 0.275rem 0.74rem no-repeat;
+    background-size: cover;
+    background-size: 0.85rem 0.6rem;
+    border-bottom: solid 0.023rem #fff!important;
+}
+#info_main .n_text{
+	background: url(../images/mobile/middle/text1.png) 1.275rem 0.825rem no-repeat!important;
+    background-size: cover!important;
+    background-size: 1.05rem 0.55rem!important;
+}
+
+#info_main .info_inputbox .info_phone{
+	background: url(../images/mobile/middle/ico2.png) 0.35rem 0.58rem no-repeat;
+    background-size: cover;
+    background-size: 0.55rem 0.85rem;
+    position: relative;
+    border-bottom: solid 0.023rem #fff!important;
+}
+#info_main .p_text{
+	background: url(../images/mobile/middle/text2.png) 1.275rem 0.735rem no-repeat!important;
+    background-size: cover!important;
+    background-size: 2.3rem 0.55rem!important;
+}
+
+#info_main .info_inputbox .info_phone .obtain{
+    font-size: 0.55rem;
+    color: #fff;
+    position: absolute;
+    top: 0.65rem;
+    right: 0.152rem;
+}
+#info_main .info_inputbox .info_code{
+    background: url(../images/mobile/middle/ico3.png) 0.275rem 0.68rem no-repeat;
+    background-size: cover;
+    background-size: 0.8rem 0.7rem;
+    border-bottom: solid 0.023rem #fff!important;
+}
+#info_main .c_text{
+    background: url(../images/mobile/middle/text3.png) 1.275rem 0.72rem no-repeat!important;
+    background-size: cover!important;
+    background-size: 1.7rem 0.6rem!important;
+}
+#info_main .info_inputbox .start_btn{
+	width: 9.95rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    background: url(../images/mobile/middle/btn1.png) no-repeat;
+    background-size: cover;
+    margin-top: 0.6rem;
+    border-radius: 0;
+    text-indent: 0.729rem!important;
+}
+#info_main .info_inputbox .make_btn{
+	width: 9.95rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    background: url(../images/mobile/middle/btn2.png) no-repeat;
+    background-size: cover;
+    margin-top: 0.6rem;
+    border-radius: 0;
+    text-indent: 0.729rem!important;
+}
+#info_main .info_css{
+	width: 9.95rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 0.258rem;
+    -webkit-appearance: none;
+    border-radius: 0;
+    text-indent: 1.25rem!important;
+}
+
+
+
+/*触发焦点（注册登录 预约试驾）*/ 
+#main .focus{
+	background-image:none!important;
+}

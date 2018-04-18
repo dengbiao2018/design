@@ -382,6 +382,7 @@ ul,li,ol,ul {
     cursor: zoom-in;
 }
 .load-win{
+	opacity: 0.5;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -392,6 +393,7 @@ ul,li,ol,ul {
 .load-page-css{
 	display: none;
     padding-bottom: 25px;
+    opacity: 0.5;
 }
 .load-page{
 	position: absolute;
