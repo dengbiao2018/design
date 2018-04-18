@@ -52,6 +52,12 @@ $(function() {
 
 			},100);
 
+			setTimeout(function(){
+
+				clearInterval(timer);   
+
+			},_loading + '00');
+
 		};
 
 		//随机数
@@ -111,11 +117,7 @@ $(function() {
 			},100)
 		};
 
-		setTimeout(function(){
-
-			clearInterval(timer);   
-
-		},_loading + '00');
+		
 
 		if(item.length >= json.length - _loading)
 		{	

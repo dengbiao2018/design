@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>捷豹-XF</title>
+
+<script type="text/javascript">
+	
+var device = {
+	Android: function() {  
+		return navigator.userAgent.match(/Android/i) ? true : false;  
+	},  
+	BlackBerry: function() {  
+		return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
+	},  
+	iOS: function() {  
+		//return navigator.userAgent.match(/iPad|iPod|iPhone/i) ? true : false;
+		return navigator.userAgent.match(/iPod|iPhone/i) ? true : false;
+	},
+	ipad: function() {  
+	//return navigator.userAgent.match(/iPad|iPod|iPhone/i) ? true : false;
+	    return navigator.userAgent.match(/iPad/i) ? true : false;
+	},
+	iphone: function(){
+		return navigator.userAgent.match(/iPhone/i) ? true : false;  
+	},
+	Windows: function() {  
+		return navigator.userAgent.match(/IEMobile/i) ? true : false;  
+	},  
+	any: function() {  
+		return (device.Android() || device.BlackBerry()  || device.Windows() || device.iOS());  
+	}
+};
+
+if(device.any())
+{
+	window.location.href = "mo";
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/car.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/car.js"></script>
+</head>
+<body>
+<div id="Jaguar">
+    <div class="shade">
+    	<div class="shade_a"></div>
+    	<div class="shade_b">
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    	</div>
+    </div>
+    <div class="bg">
+       <!--第一个flash-->
+       <div class="swf_a">
+		<object width="940" height="498" codebase="http://download.macromedia.com/pub/shockwave/cabs/../../flash/swflash.cab#version=6,0,29,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+				<param value="" name="FlashVars">
+				<param value="swf/a_alp.swf" name="Movie">
+				<param value="swf/a_alp.swf" name="Src">
+				<param value="transparent" name="wmode">
+				<param value="-1" name="Play">
+				<param value="-1" name="Loop">
+				<param value="High" name="Quality">
+				<param value="" name="SAlign">
+				<param value="-1" name="Menu">
+				<param value="" name="Base">
+				<param value="ShowAll" name="Scale">
+				<param value="0" name="DeviceFont">
+				<param value="0" name="EmbedMovie">
+				<param value="" name="BGColor">
+				<param value="" name="SWRemote">
+				<param value="" name="MovieData">
+				<param value="1" name="SeamlessTabbing">
+				<param name="allowscriptaccess" value="always">
+	            <embed width="940" height="498" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="swf/a_alp.swf">
+	    </object>
+     </div>
+      <!--第二个flash-->
+     <div class="swf_b">
+		<object width="940" height="498" codebase="http://download.macromedia.com/pub/shockwave/cabs/../../flash/swflash.cab#version=6,0,29,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+				<param value="" name="FlashVars">
+				<param value="swf/b_alp.swf" name="Movie">
+				<param value="swf/b_alp.swf" name="Src">
+				<param value="transparent" name="wmode">
+				<param value="-1" name="Play">
+				<param value="-1" name="Loop">
+				<param value="High" name="Quality">
+				<param value="" name="SAlign">
+				<param value="-1" name="Menu">
+				<param value="" name="Base">
+				<param value="ShowAll" name="Scale">
+				<param value="0" name="DeviceFont">
+				<param value="0" name="EmbedMovie">
+				<param value="" name="BGColor">
+				<param value="" name="SWRemote">
+				<param value="" name="MovieData">
+				<param value="1" name="SeamlessTabbing">
+				<param name="allowscriptaccess" value="always">
+	            <embed width="940" height="498" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="swf/b_alp.swf">
+	    </object>
+     </div>
+      <!--第三个flash-->
+     <div class="swf_c">
+		<object width="940" height="498" codebase="http://download.macromedia.com/pub/shockwave/cabs/../../flash/swflash.cab#version=6,0,29,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+				<param value="" name="FlashVars">
+				<param value="swf/c_alp.swf" name="Movie">
+				<param value="swf/c_alp.swf" name="Src">
+				<param value="transparent" name="wmode">
+				<param value="-1" name="Play">
+				<param value="-1" name="Loop">
+				<param value="High" name="Quality">
+				<param value="" name="SAlign">
+				<param value="-1" name="Menu">
+				<param value="" name="Base">
+				<param value="ShowAll" name="Scale">
+				<param value="0" name="DeviceFont">
+				<param value="0" name="EmbedMovie">
+				<param value="" name="BGColor">
+				<param value="" name="SWRemote">
+				<param value="" name="MovieData">
+				<param value="1" name="SeamlessTabbing">
+				<param name="allowscriptaccess" value="always">
+	            <embed width="940" height="498" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="swf/c_alp.swf">
+	    </object>
+     </div>
+    </div>
+    <div class="car">
+        <ul>
+            <li class="car_white"></li>
+            <li class="car_red"></li>
+            <li class="car_blue"></li>
+        </ul>
+    </div>
+     <div class="make">
+		    <div class="btn_redCar">
+		       <div class="redCar_text">
+		    	   <img src="images/redText_1.png" class="redText_1" />
+		    	   <img src="images/redText_2.png" class="redText_2" />
+	    	   </div>
+	    	   <a href="javascript:" class="btn"></a>
+	    	    
+		    </div>
+		    <div class="btn_whiteCar">
+		        <div class="whiteCar_text">
+		    	   <img src="images/whiteText_1.png" class="whiteText_1" />
+		    	   <img src="images/whiteText_2.png" class="whiteText_2" />
+	    	    </div>
+	            <a href="javascript:" class="btn"></a>
+		    </div>
+		    <div class="btn_blueCar">
+		    	<div class="blueCar_text">
+		    	   <img src="images/blueText_1.png" class="blueText_1" />
+		    	   <img src="images/blueText_2.png" class="blueText_2" />
+	    	    </div>
+	    	    <a href="javascript:" class="btn"></a>
+		    </div>	
+		    <a href="javascript:" class="order" ></a>
+		 </div>		     	
+     </div>
+</div>
+</body>
+</html>
