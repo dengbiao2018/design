@@ -366,15 +366,15 @@ $(function() {
 
 				img_a.on('click',function() {
 
-					if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
+					// if (navigator.userAgent.match(/iPod|iPhone/i) ? true : false) {
 
-						_this.children('.img-box').addClass('itemActive');
-					}
-					else if (navigator.userAgent.match(/Android/i) ? true : false) {
+					// 	_this.children('.img-box').addClass('itemActive');
+					// }
+					// else if (navigator.userAgent.match(/Android/i) ? true : false) {
 
-						_this.children('.img-box').addClass('itemActive');
+					// 	_this.children('.img-box').addClass('itemActive');
 
-					}
+					// }
 					
 					index = _this.index() + 1;
 					imgHref();
