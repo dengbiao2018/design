@@ -214,6 +214,9 @@ ul,li,ol,ul {
 	z-index: 111111;
 	opacity: 0.5;
 }
+.personal .MediaImage{
+	max-width: 640px;
+}
 .MediaImage{
 	max-width: 960px;
 	margin: 90px auto 0;
