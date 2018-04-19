@@ -2,7 +2,7 @@
 
 var json = [  
 	{ 	// img1
-		num:1,
+		num:2,
 		title:'clemm',
 		link:'<a href="https://bcy.net/start/" target="_blank">https://bcy.net/start/</a>',
 		date:'一月 28，2017',
@@ -26,13 +26,13 @@ var json = [
 		date:'四月 28，2017',
 	},
 	{ 	// img5
-		num:4,
+		num:15,
 		title:'alicebbrown',
 		link:'<a href="http://www.pinterest.com/" target="_blank">http://www.pinterest.com/</a>',
 		date:'七月 28，2017',
 	},
 	{ 	// img6
-		num:10,
+		num:12,
 		title:'carlalrosado',
 		link:'<a href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>',
 		date:'六月 28，2017',
@@ -128,13 +128,13 @@ var json = [
 		date:'二月 28，2017',
 	},
 	{ 	// img22
-		num:3,
+		num:4,
 		title:'linnealinnanmaki',
 		link:'<a href="https://www.dandad.org/" target="_blank">https://www.dandad.org/</a>',
 		date:'三月 28，2017',
 	},
 	{ 	// img23
-		num:3,
+		num:10,
 		title:'briannnalynne3',
 		link:'<a href="https://juejin.im/" target="_blank">https://juejin.im/</a>',
 		date:'四月 28，2017',
