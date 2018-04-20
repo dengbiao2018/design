@@ -2,6 +2,171 @@
 
 $(function() {
 
+	//personal图片预加载
+	var imgSrcArr = [
+		'images/personal/img1/img1.jpg',
+		'images/personal/img2/img1.jpg',
+		'images/personal/img3/img1.jpg',
+		'images/personal/img4/img1.jpg',
+		'images/personal/img5/img1.jpg',
+		'images/personal/img6/img1.jpg',
+		'images/personal/img7/img1.jpg',
+		'images/personal/img8/img1.jpg',
+		'images/personal/img9/img1.jpg',
+		'images/personal/img10/img1.jpg',
+		'images/personal/img11/img1.jpg',
+		'images/personal/img12/img1.jpg',
+		'images/personal/img13/img1.jpg',
+		'images/personal/img14/img1.jpg',
+		'images/personal/img15/img1.jpg',
+		'images/personal/img16/img1.jpg',
+		'images/personal/img17/img1.jpg',
+		'images/personal/img18/img1.jpg',
+		'images/personal/img19/img1.jpg',
+		'images/personal/img20/img1.jpg',
+		'images/personal/img21/img1.jpg',
+		'images/personal/img22/img1.jpg',
+		'images/personal/img23/img1.jpg',
+		'images/personal/img24/img1.jpg',
+		'images/personal/img25/img1.jpg'
+	];
+
+	//预加载的操作
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img1/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 5; j++){
+		imgSrcArr.push("images/personal/img2/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 8; j++){
+		imgSrcArr.push("images/personal/img3/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 7; j++){
+		imgSrcArr.push("images/personal/img4/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 15; j++){
+		imgSrcArr.push("images/personal/img5/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 11; j++){
+		imgSrcArr.push("images/personal/img6/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img7/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 9; j++){
+		imgSrcArr.push("images/personal/img11/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img12/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 6; j++){
+		imgSrcArr.push("images/personal/img13/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img16/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img18/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 3; j++){
+		imgSrcArr.push("images/personal/img19/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 8; j++){
+		imgSrcArr.push("images/personal/img20/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 3; j++){
+		imgSrcArr.push("images/personal/img22/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 9; j++){
+		imgSrcArr.push("images/personal/img23/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img24/img"+j+".jpg");
+	}
+	for(var j=2 ;j <= 1; j++){
+		imgSrcArr.push("images/personal/img25/img"+j+".jpg");
+	}
+
+	//work图片预加载
+	var workImgSrcArr = [
+		'images/work/img1/cover.jpg',
+		'images/work/img2/cover.jpg',
+		'images/work/img3/cover.jpg',
+		'images/work/img4/cover.jpg',
+		'images/work/img5/cover.jpg',
+		'images/work/img6/cover.jpg',
+		'images/work/img7/cover.jpg',
+		'images/work/img8/cover.jpg',
+		'images/work/img9/cover.jpg',
+		'images/work/img10/cover.jpg',
+		'images/work/img11/cover.jpg',
+		'images/work/img12/cover.jpg',
+		'images/work/img13/cover.jpg',
+		'images/work/img14/cover.jpg',
+		'images/work/img15/cover.jpg',
+		'images/work/img16/cover.jpg'
+	];
+
+	//预加载的操作
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img1/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img2/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img3/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 8; j++){
+		workImgSrcArr.push("images/work/img4/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 7; j++){
+		workImgSrcArr.push("images/work/img5/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img6/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img7/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img8/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img9/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 3; j++){
+		workImgSrcArr.push("images/work/img10/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 6; j++){
+		workImgSrcArr.push("images/work/img11/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img12/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 5; j++){
+		workImgSrcArr.push("images/work/img13/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 8; j++){
+		workImgSrcArr.push("images/work/img14/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 6; j++){
+		workImgSrcArr.push("images/work/img15/img"+j+".jpg");
+	}
+	for(var j=1 ;j <= 7; j++){
+		workImgSrcArr.push("images/work/img16/img"+j+".jpg");
+	}
+
+	var imgWrap = [];
+
+	function preloadImg(arr) {
+	    for(var i =0; i< arr.length ;i++) {
+	        imgWrap[i] = new Image();
+	        imgWrap[i].src = arr[i];
+	    }
+	}
+
+
 	//数据加载
 	var Null = 1,
 		_work = 6, _personal = 15, //默认显示图片个数 
@@ -102,6 +267,7 @@ $(function() {
 	    	});
 
 			imgLoad();
+
 	    }
 
 		function imgLoad(){
@@ -171,6 +337,18 @@ $(function() {
 
 		$('img').load(function(){
 		    if(!--imgNum){
+		    	
+		    	//图片加载
+		    	if (loc == 'index.html') {
+		    		preloadImg(workImgSrcArr);
+				} else if (loc == 'personal.html') {
+					preloadImg(imgSrcArr);
+				}
+				else
+				{
+					preloadImg(workImgSrcArr);
+				}
+		    	
 		    	clearInterval(scroll);
 		    	$('.load-win').remove();
 		    	wrap.removeClass('load-svg');
