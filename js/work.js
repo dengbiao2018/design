@@ -116,7 +116,7 @@ var imgSrcArr1 = [
 	'images/work/img13/cover.jpg',
 	'images/work/img14/cover.jpg',
 	'images/work/img15/cover.jpg',
-	'images/work/img16/cover.jpg'
+	'images/work/img16/cover.jpg',
     'images/work/img1/img1.jpg',
     'images/work/img1/img2.jpg',
     'images/work/img1/img3.jpg',
