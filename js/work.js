@@ -100,7 +100,7 @@ var json = [
 ];
 
 //图片预加载
-var imgSrcArr1 = [
+var imgSrcArr = [
 	'images/work/img1/cover.jpg',
 	'images/work/img2/cover.jpg',
 	'images/work/img3/cover.jpg',
