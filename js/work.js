@@ -117,9 +117,6 @@ var imgSrcArr1 = [
 	'images/work/img14/cover.jpg',
 	'images/work/img15/cover.jpg',
 	'images/work/img16/cover.jpg'
-];
-
-var imgSrcArr2 = [
     'images/work/img1/img1.jpg',
     'images/work/img1/img2.jpg',
     'images/work/img1/img3.jpg',
@@ -210,7 +207,7 @@ var imgSrcArr2 = [
     'images/work/img16/img5.jpg',
     'images/work/img16/img6.jpg',
     'images/work/img16/img7.jpg'
-]
+];
 
 var imgWrap = [];
 
@@ -221,8 +218,6 @@ function preloadImg(arr) {
     }
 }
 
-preloadImg(imgSrcArr1);
-
-preloadImg(imgSrcArr2);
+preloadImg(imgSrcArr);
 
 
