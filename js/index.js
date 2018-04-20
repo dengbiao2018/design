@@ -450,6 +450,22 @@ $(function() {
 
 	//图片预加载
     var imgSrcArr = [
+    	'images/work/img1/cover.jpg',
+    	'images/work/img2/cover.jpg',
+    	'images/work/img3/cover.jpg',
+    	'images/work/img4/cover.jpg',
+    	'images/work/img5/cover.jpg',
+    	'images/work/img6/cover.jpg',
+    	'images/work/img7/cover.jpg',
+    	'images/work/img8/cover.jpg',
+    	'images/work/img9/cover.jpg',
+    	'images/work/img10/cover.jpg',
+    	'images/work/img11/cover.jpg',
+    	'images/work/img12/cover.jpg',
+    	'images/work/img13/cover.jpg',
+    	'images/work/img14/cover.jpg',
+    	'images/work/img15/cover.jpg',
+    	'images/work/img16/cover.jpg',
         'images/work/img1/img1.jpg',
         'images/work/img1/img2.jpg',
         'images/work/img1/img3.jpg',
