@@ -319,6 +319,7 @@ ul,li,ol,ul {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
+    z-index: 111111111!important;
 }
 .nextPost:hover,.prevPost:hover{
 	/*opacity: 1;*/
