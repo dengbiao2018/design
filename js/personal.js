@@ -154,7 +154,7 @@ var json = [
 ];	
 
 //图片预加载
-var imgSrcArr = [
+var imgSrcArr1 = [
 	'images/personal/img1/img1.jpg',
 	'images/personal/img2/img1.jpg',
 	'images/personal/img3/img1.jpg',
@@ -179,7 +179,10 @@ var imgSrcArr = [
 	'images/personal/img22/img1.jpg',
 	'images/personal/img23/img1.jpg',
 	'images/personal/img24/img1.jpg',
-	'images/personal/img25/img1.jpg',
+	'images/personal/img25/img1.jpg'
+];
+
+var imgSrcArr2 = [
     'images/personal/img1/img2.jpg',
     'images/personal/img2/img2.jpg',
     'images/personal/img2/img3.jpg',
@@ -282,4 +285,6 @@ function preloadImg(arr) {
     }
 }
 
-preloadImg(imgSrcArr);
+preloadImg(imgSrcArr1);
+
+preloadImg(imgSrcArr2);

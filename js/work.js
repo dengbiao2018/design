@@ -100,7 +100,7 @@ var json = [
 ];
 
 //图片预加载
-var imgSrcArr = [
+var imgSrcArr1 = [
 	'images/work/img1/cover.jpg',
 	'images/work/img2/cover.jpg',
 	'images/work/img3/cover.jpg',
@@ -116,7 +116,10 @@ var imgSrcArr = [
 	'images/work/img13/cover.jpg',
 	'images/work/img14/cover.jpg',
 	'images/work/img15/cover.jpg',
-	'images/work/img16/cover.jpg',
+	'images/work/img16/cover.jpg'
+];
+
+var imgSrcArr2 = [
     'images/work/img1/img1.jpg',
     'images/work/img1/img2.jpg',
     'images/work/img1/img3.jpg',
@@ -207,7 +210,7 @@ var imgSrcArr = [
     'images/work/img16/img5.jpg',
     'images/work/img16/img6.jpg',
     'images/work/img16/img7.jpg'
-];
+]
 
 var imgWrap = [];
 
@@ -218,6 +221,8 @@ function preloadImg(arr) {
     }
 }
 
-preloadImg(imgSrcArr);
+preloadImg(imgSrcArr1);
+
+preloadImg(imgSrcArr2);
 
 
