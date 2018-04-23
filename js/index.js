@@ -47,7 +47,7 @@ $(function() {
 	for(var j=2 ;j <= 15; j++){
 		imgSrcArr.push("images/personal/img5/img"+j+".jpg");
 	}
-	for(var j=2 ;j <= 11; j++){
+	for(var j=2 ;j <= 12; j++){
 		imgSrcArr.push("images/personal/img6/img"+j+".jpg");
 	}
 	for(var j=2 ;j <= 1; j++){
